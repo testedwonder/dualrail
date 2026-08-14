@@ -3,7 +3,7 @@ title: Error-Aware Gates and Measurement
 kind: index
 status: draft
 prerequisites: []
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: []
 ---
 
 # Error-aware gates and measurement

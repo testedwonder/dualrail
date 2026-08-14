@@ -1,4 +1,4 @@
-import { BookOpen, Database, Filter, RotateCcw, Route, Search } from 'lucide-react'
+import { BookOpen, Filter, RotateCcw, Route, Search } from 'lucide-react'
 import { filterDocuments, getPersonalEntry } from '../lib/knowledge'
 import type {
   KnowledgeDocument,
@@ -24,7 +24,6 @@ function groupLabel(document: KnowledgeDocument) {
 }
 
 function collectionIcon(collection: LibraryFilters['collection']) {
-  if (collection === 'base') return <Database size={15} />
   if (collection === 'path') return <Route size={15} />
   return <BookOpen size={15} />
 }
@@ -69,7 +68,7 @@ export function LibrarySidebar({
         </label>
 
         <div className="segmented-control" aria-label="Document collection">
-          {(['topic', 'base', 'path', 'all'] as const).map((collection) => (
+          {(['topic', 'path', 'all'] as const).map((collection) => (
             <button
               type="button"
               key={collection}
@@ -77,7 +76,7 @@ export function LibrarySidebar({
               onClick={() => patch({ collection, topic: 'all' })}
             >
               {collectionIcon(collection)}
-              <span>{collection === 'topic' ? 'Topics' : collection === 'base' ? 'Sources' : collection === 'path' ? 'Paths' : 'All'}</span>
+              <span>{collection === 'topic' ? 'Topics' : collection === 'path' ? 'Paths' : 'All'}</span>
             </button>
           ))}
         </div>

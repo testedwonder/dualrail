@@ -3,7 +3,7 @@ title: Superconducting Circuit QED and Control
 kind: index
 status: draft
 prerequisites: []
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: []
 ---
 
 # Superconducting circuit QED and control

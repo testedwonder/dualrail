@@ -163,3 +163,27 @@ source_files: [base/DWave_Application_and_Study_Materials.md]
 - **Decision:** Document only the existing offline application and source-backed tree. Do not add Ariadion, paid APIs, monetization, licensing, or Feedback 2/3 features in this batch.
 - **Reason:** The user explicitly asked that Feedback 2 and 3 provide context but not be implemented yet, and the core must remain usable without subscriptions or credentials.
 - **Consequence:** The README states current boundaries honestly. Optional integrations and commercial licensing remain deliberate future decisions rather than hidden dependencies.
+
+## D-027: Exclude private source archives from the application boundary
+
+- **Decision:** Build the application only from learner-facing `knowledge/` documents and a neutral public technical source registry. Do not read or bundle `base/` documents, source paths, personal profiles, positions, application material, or interview preparation.
+- **Reason:** Feedback 4 makes the application the public focus and requests removal of person- and position-related source material from the user-facing repository experience.
+- **Consequence:** Index generation fails if forbidden text, blocked profile or hiring domains, unlinked research sources, or a `base/` path enters the app payload. Historical source archives remain outside app navigation and search.
+
+## D-028: Keep research proposals local until explicit review
+
+- **Decision:** Store proposed public sources and corrections in a separate versioned browser-local queue with JSON export.
+- **Reason:** The research interface needs a contribution mechanism without requiring a server, account, paid API, or automatic mutation of canonical evidence.
+- **Consequence:** Proposals cannot silently change knowledge pages. A human or later repository workflow must review exported proposals before incorporation.
+
+## D-029: Visualize dual-rail state space, not hardware geometry
+
+- **Decision:** Use one full-bleed Three.js scene to represent the normalized state $\cos(\theta/2)|1,0\rangle+e^{i\phi}\sin(\theta/2)|0,1\rangle$ through two mode rings, amplitude fields, relative phase, and coherence.
+- **Reason:** The roadmap requests immersive 3D learning, while unsupported cavity geometry or physical dynamics would turn an educational control into a false hardware claim.
+- **Consequence:** The scene displays exact state-vector probabilities and phase controls, carries a visible state-space boundary, and links back to canonical state-notation and Born-rule pages.
+
+## D-030: Load the 3D engine only on demand
+
+- **Decision:** Lazy-load Three.js and the Lab view as a separate production chunk.
+- **Reason:** The reader, map, progress, and research workflows should not pay the initial parse and transfer cost for an optional 3D experience.
+- **Consequence:** The production build emits a separate Lab chunk; WebGL cleanup disposes geometry, materials, controls, observers, animation frames, and renderer resources when the view unmounts.

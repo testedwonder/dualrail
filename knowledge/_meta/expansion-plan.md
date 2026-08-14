@@ -94,13 +94,47 @@ Delivered:
 - current limitations and an explicit free, offline core boundary;
 - deterministic validation for README presence, local links, and complete canonical-page coverage.
 
-## Next bounded batch: roadmap item 6
+## Completed: roadmap item 6 research interface
 
-Add the public-source research interface requested by the roadmap. It must remain useful without paid services, distinguish authority and evidence levels, and provide a local mechanism for proposed sources or corrections. Feedback 2 and 3 must receive separate assessment before their coding, Ariadion, ADHD-design, licensing, monetization, or optional-integration requests are implemented.
+Completed on 2026-08-14.
+
+Delivered:
+
+- a first-class **Research** application view;
+- 24 normalized public technical sources across publications, preprints, official records, education, documentation, and first-party technical material;
+- source search plus authority and topic filters;
+- direct links from each source to supporting learner pages;
+- a four-step credibility guide for claim match, authority, reproducibility, and boundaries;
+- a versioned local source/correction proposal queue with JSON export;
+- a neutral `knowledge/research/` source registry;
+- a self-enforcing app boundary with zero `base/` reads, paths, person or position material, profile domains, application content, or interview content;
+- 25 app tests covering research filters, navigation, proposal validation, persistence and deletion, and payload privacy.
+
+## Completed: roadmap item 7 visual and immersive polish
+
+Completed on 2026-08-14.
+
+Delivered:
+
+- a first-class **Lab** main view;
+- a full-bleed Three.js dual-rail state-space scene with orbit interaction;
+- exact population and relative-phase controls with four state presets;
+- visible amplitudes, basis probabilities, normalization, phase marker, and coherence link;
+- canonical links to state notation and the Born rule;
+- synchronous, animation-frame, and state-change rendering to prevent blank hidden-tab canvases;
+- responsive desktop and mobile scene/control composition;
+- restrained view transitions and control-state polish across the app;
+- lazy-loaded Three.js production chunk;
+- 8 focused state-math and Lab component tests, bringing the app suite to 34 tests;
+- desktop and mobile screenshots plus WebGL canvas-pixel checks proving nonblank rendering.
+
+## Next bounded batch: roadmap item 8
+
+Run final bug, performance, accessibility, and content-consistency work across the app and knowledge system. Assess Feedback 2–4 before deciding whether coding labs, Ariadion, ADHD-focused modes, licensing, monetization, optional integrations, or additional quantum-hardware topics belong in this release.
 
 ## Later roadmap items
 
-Items 6-8 remain outside this batch: the public-source research interface, immersive visual polish and simulations, and final bug and optimization work.
+Item 8 remains outside this batch: final bug and optimization work.
 
 ## Future maintenance rule
 

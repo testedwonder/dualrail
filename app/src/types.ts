@@ -44,15 +44,49 @@ export interface TopicSummary {
 export interface KnowledgeIndex {
   generatedAt: string
   documents: KnowledgeDocument[]
+  researchSources: ResearchSource[]
   topics: TopicSummary[]
   stats: {
     documents: number
     knowledgeDocuments: number
     topicItems: number
     baseDocuments: number
+    sourceFiles: number
+    researchSources: number
     topics: number
     exercises: number
   }
+}
+
+export type ResearchAuthority = 'peer-reviewed' | 'preprint' | 'government' | 'educational' | 'documentation' | 'first-party' | 'secondary'
+
+export interface ResearchSourceDocument {
+  id: string
+  title: string
+  topic: string | null
+  topicTitle: string | null
+}
+
+export interface ResearchSource {
+  id: string
+  url: string
+  label: string
+  hostname: string
+  authority: ResearchAuthority
+  rank: number
+  authorityLabel: string
+  documents: ResearchSourceDocument[]
+  topics: string[]
+}
+
+export interface ResearchProposal {
+  id: string
+  kind: 'source' | 'correction'
+  title: string
+  url: string
+  documentId: string
+  details: string
+  createdAt: string
 }
 
 export interface PersonalEntry {
@@ -69,11 +103,11 @@ export interface PersonalExport {
   entries: PersonalState
 }
 
-export type MainView = 'library' | 'map' | 'progress'
+export type MainView = 'library' | 'map' | 'progress' | 'research' | 'lab'
 
 export interface LibraryFilters {
   query: string
-  collection: 'all' | 'topic' | 'base' | 'path'
+  collection: 'all' | 'topic' | 'path'
   topic: string
   kind: string
   relationship: 'all' | 'prerequisites' | 'next-steps' | 'terminal'

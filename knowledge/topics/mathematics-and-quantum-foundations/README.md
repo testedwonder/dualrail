@@ -3,7 +3,7 @@ title: Mathematics and Quantum Foundations
 kind: index
 status: draft
 prerequisites: []
-source_files: [base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md]
+source_files: []
 exercise_id: foundations-diagnostic
 ---
 
@@ -40,7 +40,7 @@ Use the ordered [Foundations for quantum states and calibration](../../learning-
 
 ## Evidence boundary
 
-The foundations are synthesized from the [dated authoritative-source portfolio](../../../base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md). They are not attributed to the original D-Wave compendium and do not describe private hardware or calibration behavior.
+The foundations are synthesized from the [dated public technical source registry](../../research/public-technical-sources.md). They do not describe private hardware or calibration behavior.
 
 Sources and coverage: [references](references.md).
 

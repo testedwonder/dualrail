@@ -3,7 +3,7 @@ title: Quantum-Control Software
 kind: index
 status: draft
 prerequisites: []
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: []
 ---
 
 # Quantum-control software

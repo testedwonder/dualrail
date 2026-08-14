@@ -1,9 +1,11 @@
-import { startTransition, useEffect, useRef, useState, type ChangeEvent } from 'react'
+import { lazy, startTransition, Suspense, useEffect, useRef, useState, type ChangeEvent } from 'react'
 import {
+  Atom,
   BarChart3,
   BookOpen,
   Download,
   Menu,
+  Microscope,
   Network,
   PanelRightOpen,
   SlidersHorizontal,
@@ -15,6 +17,7 @@ import { DocumentReader } from './components/DocumentReader'
 import { KnowledgeMap } from './components/KnowledgeMap'
 import { LibrarySidebar } from './components/LibrarySidebar'
 import { ProgressDashboard } from './components/ProgressDashboard'
+import { ResearchDashboard } from './components/ResearchDashboard'
 import { StudyPanel } from './components/StudyPanel'
 import { knowledgeIndex } from './data'
 import {
@@ -27,7 +30,10 @@ import {
   savePersonalState,
   updatePersonalEntry,
 } from './lib/knowledge'
-import type { LibraryFilters, MainView, PersonalEntry, PersonalState } from './types'
+import { loadResearchProposals, saveResearchProposals } from './lib/research'
+import type { LibraryFilters, MainView, PersonalEntry, PersonalState, ResearchProposal } from './types'
+
+const DualRailLab = lazy(() => import('./components/DualRailLab').then((module) => ({ default: module.DualRailLab })))
 
 const defaultDocumentId = 'knowledge/topics/dual-rail-qubits/fundamentals/quantum-state-and-fock-notation.md'
 const validDocumentIds = new Set(knowledgeIndex.documents.map((document) => document.id))
@@ -44,6 +50,7 @@ function App() {
   const [view, setView] = useState<MainView>('library')
   const [selectedId, setSelectedId] = useState(initialDocumentId)
   const [personalState, setPersonalState] = useState<PersonalState>(() => loadPersonalState())
+  const [researchProposals, setResearchProposals] = useState<ResearchProposal[]>(() => loadResearchProposals())
   const [filters, setFilters] = useState<LibraryFilters>(defaultFilters)
   const [libraryOpen, setLibraryOpen] = useState(false)
   const [studyOpen, setStudyOpen] = useState(false)
@@ -111,6 +118,11 @@ function App() {
     })
   }
 
+  function updateResearchProposals(proposals: ResearchProposal[]) {
+    setResearchProposals(proposals)
+    saveResearchProposals(proposals)
+  }
+
   function downloadPersonalData() {
     const payload = exportPersonalState(personalState)
     const blob = new Blob([`${JSON.stringify(payload, null, 2)}\n`], { type: 'application/json' })
@@ -171,6 +183,12 @@ function App() {
           </button>
           <button type="button" className={view === 'progress' ? 'active' : ''} onClick={() => chooseView('progress')}>
             <BarChart3 size={18} /><span>Progress</span>
+          </button>
+          <button type="button" className={view === 'research' ? 'active' : ''} onClick={() => chooseView('research')}>
+            <Microscope size={18} /><span>Research</span>
+          </button>
+          <button type="button" className={view === 'lab' ? 'active' : ''} onClick={() => chooseView('lab')}>
+            <Atom size={18} /><span>Lab</span>
           </button>
         </nav>
 
@@ -246,6 +264,23 @@ function App() {
           onOpenTopic={openTopic}
           onReset={resetPersonalData}
         />
+      )}
+
+      {view === 'research' && (
+        <ResearchDashboard
+          sources={knowledgeIndex.researchSources}
+          documents={knowledgeIndex.documents}
+          topics={knowledgeIndex.topics}
+          proposals={researchProposals}
+          onProposalsChange={updateResearchProposals}
+          onSelect={navigateDocument}
+        />
+      )}
+
+      {view === 'lab' && (
+        <Suspense fallback={<main className="lab-loading"><Atom size={24} /><span>Preparing state space…</span></main>}>
+          <DualRailLab onNavigate={navigateDocument} />
+        </Suspense>
       )}
 
       {(libraryOpen || studyOpen) && <button type="button" className="drawer-backdrop" onClick={() => { setLibraryOpen(false); setStudyOpen(false) }} aria-label="Close drawer" />}

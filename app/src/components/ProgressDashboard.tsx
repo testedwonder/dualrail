@@ -1,5 +1,5 @@
-import { ArrowRight, BookCheck, Database, NotebookPen, RotateCcw, Sparkles } from 'lucide-react'
-import { getPersonalEntry, recommendedDocuments, summarizeProgress, understandingLabel } from '../lib/knowledge'
+import { ArrowRight, BookCheck, RotateCcw, Sparkles } from 'lucide-react'
+import { getPersonalEntry, recommendedDocuments, summarizeProgress } from '../lib/knowledge'
 import type { KnowledgeDocument, PersonalState, TopicSummary } from '../types'
 
 interface ProgressDashboardProps {
@@ -20,9 +20,7 @@ export function ProgressDashboard({
   onReset,
 }: ProgressDashboardProps) {
   const topicDocuments = documents.filter((document) => document.collection === 'topic' && document.isRateable)
-  const baseDocuments = documents.filter((document) => document.collection === 'base')
   const topicProgress = summarizeProgress(topicDocuments, personalState)
-  const baseProgress = summarizeProgress(baseDocuments, personalState)
   const recommendations = recommendedDocuments(documents, personalState)
 
   return (
@@ -42,7 +40,7 @@ export function ProgressDashboard({
         <div><strong>{topicProgress.ratedCount}/{topicProgress.total}</strong><span>topics rated</span></div>
         <div><strong>{topicProgress.masteredCount}</strong><span>confident topics</span></div>
         <div><strong>{topicProgress.notesCount}</strong><span>topic notes</span></div>
-        <div><strong>{baseProgress.average}</strong><span>source average</span></div>
+        <div><strong>{topics.length}</strong><span>topic families</span></div>
       </section>
 
       <section className="progress-section">
@@ -71,26 +69,7 @@ export function ProgressDashboard({
         </div>
       </section>
 
-      <div className="progress-columns">
-        <section className="progress-section">
-          <div className="progress-section-heading">
-            <Database size={19} />
-            <h2>Source understanding</h2>
-          </div>
-          <div className="source-progress-list">
-            {baseDocuments.map((document) => {
-              const entry = getPersonalEntry(document, personalState)
-              return (
-                <button type="button" key={document.id} onClick={() => onSelect(document.id)}>
-                  <span className="source-progress-score">{entry.understanding}</span>
-                  <span><strong>{document.title}</strong><small>{understandingLabel(entry.understanding)}</small></span>
-                  {entry.notes.trim() && <NotebookPen size={15} />}
-                </button>
-              )
-            })}
-          </div>
-        </section>
-
+      <div className="progress-columns progress-columns-single">
         <section className="progress-section">
           <div className="progress-section-heading">
             <Sparkles size={19} />

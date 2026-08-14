@@ -113,7 +113,6 @@ export function filterDocuments(
   const query = filters.query.trim().toLocaleLowerCase()
   return documents.filter((document) => {
     if (filters.collection === 'topic' && !(document.collection === 'topic' && document.isRateable)) return false
-    if (filters.collection === 'base' && document.collection !== 'base') return false
     if (filters.collection === 'path' && document.collection !== 'learning-path') return false
     if (filters.topic !== 'all' && document.topic !== filters.topic) return false
     if (filters.kind !== 'all' && document.kind !== filters.kind) return false

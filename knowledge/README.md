@@ -8,7 +8,7 @@ source_files: []
 
 # Fundamentals-first knowledge tree
 
-This is the entry point for a source-traceable learning system built from the preserved material in [`base/`](../base/DWave_Application_and_Study_Materials.md). The implemented tree covers every reusable technical concept that the local corpus explains substantively. Terms merely listed in a resume are excluded until an authoritative source can support a real teaching page.
+This is the content index behind the [Dualrail Atlas application](../app/README.md). The implemented tree covers reusable technical concepts with explicit prerequisites, evidence boundaries, examples, and self-checks. Terms without adequate authoritative support remain excluded.
 
 ## Start here
 
@@ -65,8 +65,9 @@ Most technical pages remain `draft` because this run validates local provenance 
 - [Complexity model](_meta/complexity-model.md)
 - [Feedback assessment 1](_meta/feedback-assessment.md)
 - [Validation report](_meta/validation-report.md)
+- [Public technical source registry](research/public-technical-sources.md)
 
-The source compendium contains private application and interview material. Generated pages deliberately omit personal contact details, salary notes, and interview logistics.
+The application index contains learner-facing knowledge and public technical references only.
 
 ## Visual application
 
@@ -77,10 +78,10 @@ npm install
 npm run dev
 ```
 
-The interface provides a searchable and filterable library, rendered Markdown and MathJax, code-copy controls, prerequisite and related-page navigation, a topic-scoped relationship map, source links, local notes and ratings, JSON backup and restore, progress views, and five immediate-feedback foundation exercises. It indexes canonical topics and all four files in `base/`.
+The interface provides a searchable and filterable library, rendered Markdown and MathJax, code-copy controls, prerequisite and related-page navigation, a topic-scoped relationship map, public technical research, local source and correction proposals, notes and ratings, JSON backup and restore, progress views, five immediate-feedback foundation exercises, and a full-bleed Three.js dual-rail state lab.
 
 The application regenerates its read-only corpus index before development, tests, and production builds. See the [application guide](../app/README.md) for the data boundary and validation commands.
 
 ## Current boundary
 
-Roadmap items 1-5 cover the source-backed definition tree, derived study metadata, visual study application, feedback intake, sourced foundation expansion, prerequisite rewiring, interactive exercises, and the exhaustive [repository guide](../README.md). [Feedback assessment 1](_meta/feedback-assessment.md) records the completed foundation batch. The public research interface, immersive visual work, and final optimization remain later items; Feedback 2 and 3 are context only until separately assessed.
+Roadmap items 1-7 cover the linked definition tree, derived study metadata, visual study application, feedback intake, sourced foundation expansion, prerequisite rewiring, interactive exercises, exhaustive [repository guide](../README.md), public technical research workflow, and an immersive 3D state lab. [Feedback assessment 1](_meta/feedback-assessment.md) records the completed foundation batch. Final bug and optimization work remains; Feedback 2–4 require separate assessment before their broader feature and content requests are implemented.

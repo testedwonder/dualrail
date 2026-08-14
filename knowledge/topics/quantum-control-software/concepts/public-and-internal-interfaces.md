@@ -49,7 +49,7 @@ A generic circuit interface can hide timing, erasure checks, or branching that c
 
 ## Boundary
 
-Public product pages do not reveal D-Wave's private experiment services, calibration registry, controller protocol, or Luke Mastalli-Kelly's ownership of any API.
+Public product pages do not reveal private experiment services, calibration registries, controller protocols, or any individual contributor's ownership of an API.
 
 ## Example and non-example
 

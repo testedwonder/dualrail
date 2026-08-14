@@ -10,11 +10,37 @@ source_files: []
 
 Date: 2026-08-14
 
-Scope: Phase 1 architecture, the Luke Mastalli-Kelly research supplement, and `NEXT.md` roadmap items 1-5: recursive source-backed definitions, semantic navigation, complexity heatmaps, manual understanding metadata, the Dualrail Atlas visual study application, feedback assessment, sourced mathematics and quantum foundations, and the complete repository guide.
+Scope: `NEXT.md` roadmap items 1-7: recursive source-backed definitions, semantic navigation, complexity heatmaps, manual understanding metadata, the Dualrail Atlas application, feedback assessment, sourced mathematics and quantum foundations, repository guide, public technical research, and immersive visual learning.
 
 ## Result
 
-The seven-topic technical tree contains 66 content pages. Dualrail Atlas indexes 93 knowledge files and all 4 base documents into a read-only visual reader, graph, progress system, and five-exercise foundation lab. The repository README now provides quick-start routes, complete canonical navigation, application and personal-data instructions, source-evaluation guidance, and current boundaries. The expanded architecture, source artifacts, derived metadata, personal-data boundary, exercises, guide, and executable checks pass.
+The seven-topic technical tree contains 66 content pages. Dualrail Atlas indexes 94 knowledge files into 78 learner-facing documents, a 24-source public technical registry, a read-only reader, graph, progress system, five foundation exercises, local proposal queue, and full-bleed Three.js dual-rail Lab. The application bundle reads no private source archives and exposes no source-archive path, personal profile, position, application, or interview content. The architecture, derived metadata, personal-data boundary, exercises, guide, research workflow, 3D lab, and executable checks pass.
+
+### Three-dimensional Lab checks
+
+Result: **PASS** - the dual-rail state-space scene is nonblank, responsive, interactive, and mathematically bounded.
+
+- 5 pure state-math tests cover basis endpoints, balanced states, phase-only changes, normalization, clamping, wrapping, and formatting.
+- 3 Lab component tests cover default state, sliders, presets, reset, and canonical navigation.
+- Cold-load desktop WebGL canvas: `1440 x 836`, luminance range `38–240`, and 26 sampled luminance buckets.
+- Cold-load mobile WebGL canvas: `390 x 338`, luminance range `26–240`, and 27 sampled luminance buckets, with both mode rings above the control band and no horizontal document overflow.
+- Desktop and mobile screenshots confirm text fit, stable controls, visible state probabilities, and no incoherent overlap.
+- Orbit interaction, balanced-positive and balanced-negative presets, phase marker, and state updates were exercised in Chromium.
+- Three.js is emitted as a separate lazy-loaded Lab chunk. Browser resource timing confirmed the Lab module was absent before opening the tab and present afterward.
+- The scene is visibly labeled as state-space visualization rather than hardware geometry.
+
+### Research and app privacy checks
+
+Result: **PASS** - the research workflow is public-source-only and the private-source boundary is enforced during indexing.
+
+- 24 public technical sources are normalized and classified by authority.
+- Every source links to at least one learner-facing study page; 26 source-to-page links are present.
+- Search, authority filtering, topic filtering, supporting-page navigation, proposal validation, persistence after reload, deletion, and export affordance are covered by tests or browser checks.
+- A saved correction proposal survived reload in version-1 local storage and the temporary browser validation entry was removed.
+- The generated payload contains zero `base/` strings and zero matches for blocked person, position, application, resume, or interview terms.
+- Profile, hiring, and biography domains are blocked from the registry.
+- Desktop and `390 x 844` mobile views have no document-level horizontal overflow; research controls remain visible.
+- No API key, server, subscription, or paid service is needed. External network access occurs only when the learner chooses to open a public URL.
 
 ### Repository README checks
 
@@ -50,9 +76,9 @@ npm test
 npm run build
 ```
 
-Result: **PASS** - 17 Vitest checks across 4 files, followed by a successful TypeScript and Vite production build.
+Result: **PASS** - 34 Vitest checks across 8 files, followed by a successful TypeScript and Vite production build.
 
-The tests cover rating bounds, malformed-entry sanitation, JSON import/export round trips, combined library filters, progress summaries, internal Markdown-link resolution, real-corpus rendering, local persistence, search, progress navigation, complex-plane math, eigenvector classification, seeded measurement sampling, calibration ordering, immediate feedback, reset, and keyboard activation. The pretest and prebuild hooks regenerate 93 knowledge files, 66 rateable topic items, 4 base documents, and 5 exercise IDs.
+The tests cover rating bounds, malformed-entry sanitation, JSON import/export round trips, filters, progress summaries, Markdown-link resolution, rendering, persistence, search, progress navigation, complex-plane math, eigenvector classification, seeded sampling, calibration ordering, immediate feedback, reset, keyboard activation, research filtering, proposals, and payload privacy. The pretest and prebuild hooks regenerate 94 knowledge files, 66 rateable topic items, 24 public sources, and 5 exercise IDs.
 
 Browser validation at desktop and emulated `390 x 844` mobile geometry also passed:
 
@@ -221,4 +247,4 @@ The [complexity model](complexity-model.md) is also marked `verified`, but that 
 
 ## Stop point
 
-Roadmap items 1-5 are complete. The next bounded action is roadmap item 6: add a free-core public-source research interface and local correction workflow after separately assessing Feedback 2 and 3.
+Roadmap items 1-7 are complete. The next bounded action is roadmap item 8: final bug, performance, accessibility, and consistency work after separately assessing Feedback 2–4. Current reported Copilot spend is `$129.92 / $200`, leaving `$70.08` before this item-7 pass is added.

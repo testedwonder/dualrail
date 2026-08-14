@@ -1,6 +1,6 @@
 # Dualrail Atlas
 
-Dualrail Atlas is a local-first study system for quantum foundations, dual-rail qubits, superconducting control, calibration, quantum-control software, and annealing evidence. The repository combines a source-traceable Markdown knowledge tree with a visual React application for reading, search, graph navigation, exercises, personal notes, and understanding ratings.
+Dualrail Atlas is a local-first study application for quantum foundations, dual-rail qubits, superconducting control, calibration, quantum-control software, and annealing evidence. The application is the focus of this repository: it combines reading, search, graph navigation, exercises, public technical research, corrections, personal notes, and understanding ratings.
 
 The core application is free to run, works without API keys or paid services, and does not rewrite canonical source material.
 
@@ -47,8 +47,9 @@ Open the Vite URL, normally <http://127.0.0.1:5173/>. See the [application guide
 5. Add **Personal notes** for questions, explanations in your own words, or recall prompts.
 6. Use **Progress** to review topic averages, source ratings, notes, and the study queue.
 7. Export personal data from the header when you want a JSON backup; import that file to restore it.
+8. Use **Research** to evaluate public technical sources and keep a local queue of proposed sources or corrections.
 
-Ratings and notes live in browser local storage. They never modify files under `knowledge/` or `base/`. Complexity is generated from prerequisite depth and direct prerequisite count; see the [complexity model](knowledge/_meta/complexity-model.md).
+Ratings and notes live in browser local storage. They never modify canonical knowledge or public research records. Complexity is generated from prerequisite depth and direct prerequisite count; see the [complexity model](knowledge/_meta/complexity-model.md).
 
 ## Interactive Exercises
 
@@ -59,6 +60,8 @@ Five local exercises provide immediate, specific feedback without external servi
 - [Matrix and eigenvector explorer](knowledge/topics/mathematics-and-quantum-foundations/fundamentals/eigenvalues-and-eigenvectors.md)
 - [Born-rule measurement lab](knowledge/topics/mathematics-and-quantum-foundations/concepts/quantum-measurement-and-born-rule.md)
 - [Gate-to-calibration ordering](knowledge/topics/calibration-systems/fundamentals/from-gates-to-calibration.md)
+
+The application also includes a full-bleed **Dual-rail state space** Lab. It uses Three.js to visualize population and relative phase across two logical modes while keeping the mathematical state and probabilities visible in stable controls. The visualization is explicitly not a literal hardware model.
 
 The measurement lab uses a visible deterministic seed. Its counts illustrate finite sampling; they are not hardware data or a device-noise simulation.
 
@@ -181,15 +184,13 @@ The canonical tree currently contains 66 content pages across seven topics. Topi
 - [End-to-End Benchmarking](knowledge/topics/annealing-and-evidence/concepts/end-to-end-benchmarking.md)
 - [References and time-sensitive boundaries](knowledge/topics/annealing-and-evidence/references.md)
 
-## Sources And Research
+## Public Technical Research
 
-### Repository Source Records
+### Research Registry
 
-- [D-Wave Application and Study Materials](base/DWave_Application_and_Study_Materials.md): preserved source compendium containing converted study and application materials.
-- [Mathematics and Quantum Foundations Authoritative Sources](base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md): dated OpenStax, MIT OpenCourseWare, and IBM Quantum Learning source map.
-- [Luke Mastalli-Kelly Public Evidence Portfolio](base/Luke_Mastalli_Kelly_Public_Evidence_Portfolio.md): evidence-bounded public professional research.
-- [Realistic Conversation Portfolio for Luke Mastalli-Kelly](base/Luke_Mastalli_Kelly_Realistic_Conversation_Portfolio.md): explicitly simulated interview practice, not factual quotation.
-- [Source inventory](knowledge/_meta/source-inventory.md): coverage state and evidence gaps for every source artifact.
+- [Public technical source registry](knowledge/research/public-technical-sources.md): dated OpenStax, MIT OpenCourseWare, and IBM Quantum Learning starting points.
+- The in-app **Research** view also gathers public papers, preprints, official records, first-party technical sources, and documentation already cited by the knowledge tree.
+- Source and correction proposals remain local until exported as JSON for repository review.
 
 ### Authoritative Starting Points
 
@@ -244,7 +245,6 @@ Submit new content suggestions or corrections through [FEEDBACK.md](FEEDBACK.md)
 - The application is local-first and requires no paid API or subscription.
 - Personal notes and ratings stay in browser storage unless explicitly exported.
 - Technical pages remain `draft` unless their declared evidence and checks justify `verified`.
-- The original PDFs represented by the preserved compendium are not present, so conversion fidelity cannot be visually rechecked.
-- Resume-only algorithms and project internals remain excluded until authoritative sources or repositories are available.
+- Unsupported algorithms and project internals remain excluded until authoritative sources or repositories are available.
 - Density matrices, generalized measurements, open-system dynamics, and device-specific pulse physics remain outside the current foundation scope.
-- Feedback #2 and #3 are read as future constraints; their coding-example, Ariadion, licensing, monetization, and optional-integration work is not implemented by roadmap item 5.
+- Roadmap item 6 incorporates Feedback #4's app-first privacy boundary. The broader Feedback #2–4 requests for coding labs, Ariadion, ADHD-focused modes, licensing, monetization, optional integrations, and recursive subject expansion remain pending separate assessment.

@@ -3,7 +3,7 @@ title: Dual-Rail Qubits and Erasures
 kind: index
 status: draft
 prerequisites: []
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: []
 ---
 
 # Dual-rail qubits and erasures

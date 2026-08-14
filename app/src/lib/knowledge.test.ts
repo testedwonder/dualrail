@@ -108,7 +108,7 @@ describe('knowledge navigation', () => {
     expect(filterDocuments(documents, state, { ...defaultFilters, query: 'photon' })).toEqual([alpha])
     expect(filterDocuments(documents, state, { ...defaultFilters, maximumComplexity: 5 })).toEqual([alpha])
     expect(filterDocuments(documents, state, { ...defaultFilters, understanding: 'confident' })).toEqual([alpha])
-    expect(filterDocuments(documents, state, { ...defaultFilters, collection: 'base' })).toEqual([source])
+    expect(filterDocuments(documents, state, { ...defaultFilters, collection: 'all', query: 'source corpus' })).toEqual([source])
   })
 
   it('summarizes only rateable documents with stable progress counts', () => {
