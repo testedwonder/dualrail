@@ -1,0 +1,67 @@
+name: Bug report
+description: Report reproducible behavior in the website or installable app.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Dualrail Atlas. This report is public and the project currently has one primary maintainer. Do not include passwords, API keys, private notes, contact details, or undisclosed security vulnerabilities.
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: Public-report checks
+      options:
+        - label: I removed private or sensitive information from this report.
+          required: true
+        - label: This is a normal product bug, not an undisclosed security vulnerability.
+          required: true
+        - label: I reproduced this on the latest available release.
+          required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Surface
+      options:
+        - Website on desktop
+        - Website on mobile
+        - Installed PWA on Android
+        - Installed PWA on iOS or iPadOS
+        - Knowledge content
+        - Build or contributor tooling
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: What happened?
+      description: Describe the observed behavior and its impact.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      placeholder: |
+        1. Open...
+        2. Select...
+        3. Observe...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and operating system
+      placeholder: Chrome 140 on Android 16
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Optional evidence
+      description: Add a redacted screenshot, console message, or other non-sensitive evidence.

@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/mathematics-and-quantum-foundations/fundamentals/eigenvalues-and-eigenvectors.md, topics/mathematics-and-quantum-foundations/concepts/quantum-states-and-bra-ket-notation.md]
 next_steps: [topics/mathematics-and-quantum-foundations/concepts/quantum-measurement-and-born-rule.md, topics/mathematics-and-quantum-foundations/concepts/unitary-evolution-and-quantum-gates.md, topics/mathematics-and-quantum-foundations/concepts/oscillators-quantization-and-number-states.md]
 related: [topics/mathematics-and-quantum-foundations/fundamentals/matrices-and-linear-operators.md]
-source_files: [base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md]
+source_files: [knowledge/topics/mathematics-and-quantum-foundations/references.md]
 complexity_depth: 4
 complexity_prerequisite_count: 2
 complexity_score: 3.46
@@ -71,7 +71,7 @@ One measurement returns $+1$ or $-1$, never $0.5$. The value $0.5$ summarizes th
 
 ## Source boundary
 
-MIT's 8.04 and 8.05 course collections explicitly cover expectation values, operators, eigenstates, bras, kets, and observables. [Source record](../../../../base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md#mit-opencourseware-operators-observables-and-oscillator-physics).
+MIT's 8.04 and 8.05 course collections explicitly cover expectation values, operators, eigenstates, bras, kets, and observables. [public claim map](../references.md#claim-map).
 
 This page stays finite-dimensional and does not claim that every physically relevant operator is a small bounded matrix.
 
@@ -83,6 +83,6 @@ This page stays finite-dimensional and does not claim that every physically rele
 
 ## Sources and status
 
-Source-backed by [MIT OpenCourseWare through the dated source portfolio](../../../../base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md#mit-opencourseware-operators-observables-and-oscillator-physics). Status: `draft`.
+Source-backed by [public claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Mathematics and quantum foundations](../README.md)

@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/calibration-systems/concepts/calibration-validity.md, topics/calibration-systems/concepts/calibration-dependencies.md, topics/quantum-control-software/concepts/reliable-orchestration.md]
 next_steps: [topics/quantum-control-software/concepts/observability.md, topics/quantum-control-software/concepts/test-portfolio.md]
 related: [topics/calibration-systems/concepts/calibration-record.md, topics/calibration-systems/examples/dependency-invalidation.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/quantum-control-software/references.md]
 complexity_depth: 10
 complexity_prerequisite_count: 3
 complexity_score: 7.65
@@ -65,6 +65,6 @@ Overwrite the current parameter after a fit improves one objective, then try to 
 
 ## Sources and status
 
-Source-backed by the [calibration-loop invariants, source page 8](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide) and repeated-CZ source pages 13-19. Status: `draft`.
+Public context and model boundaries are recorded in the [claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Quantum-control software](../README.md)

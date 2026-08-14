@@ -27,7 +27,7 @@ def topic(
         f"prerequisites: {prerequisites}\n"
         f"next_steps: {next_steps}\n"
         f"related: {related}\n"
-        "source_files: [base/source.md]\n"
+        "source_files: [knowledge/topics/test/references.md]\n"
         f"{understanding_line}"
         "---\n\n"
         f"# {title}\n\n"

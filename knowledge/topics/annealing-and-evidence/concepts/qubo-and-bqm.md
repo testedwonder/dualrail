@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/annealing-and-evidence/concepts/ising-model.md]
 next_steps: [topics/annealing-and-evidence/concepts/minor-embedding.md, topics/annealing-and-evidence/examples/binary-quadratic-objective.md]
 related: [topics/annealing-and-evidence/algorithms/annealing-sampling-workflow.md, topics/annealing-and-evidence/concepts/hybrid-solver.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/annealing-and-evidence/references.md]
 complexity_depth: 2
 complexity_prerequisite_count: 1
 complexity_score: 1.73
@@ -65,6 +65,6 @@ QUBO is “unconstrained” in form. Real constraints are commonly encoded as pe
 
 ## Sources and status
 
-Source-backed by the [D-Wave technology study, source page 4](../../../../base/DWave_Application_and_Study_Materials.md#6-d-wave-company-history-research-and-industry-study). Status: `draft`.
+Source-backed by the [public claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Annealing and evidence](../README.md)

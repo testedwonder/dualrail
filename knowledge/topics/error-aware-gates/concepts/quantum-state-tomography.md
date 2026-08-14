@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/dual-rail-qubits/fundamentals/quantum-state-and-fock-notation.md, topics/circuit-qed/concepts/readout-chain-and-iq-data.md]
 next_steps: [topics/error-aware-gates/examples/repeated-cz-experiment.md]
 related: [topics/error-aware-gates/concepts/spam.md, topics/error-aware-gates/concepts/randomized-benchmarking.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/error-aware-gates/references.md]
 complexity_depth: 7
 complexity_prerequisite_count: 2
 complexity_score: 5.31
@@ -63,6 +63,6 @@ One measurement basis cannot reveal every component of a state. The repeated-CZ 
 
 ## Sources and status
 
-Source-backed by the [gate glossary and paper briefs, source pages 7 and 10](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide). Status: `draft`.
+Source-backed by the [public claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Error-aware gates](../README.md)

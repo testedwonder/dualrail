@@ -5,7 +5,7 @@ status: draft
 prerequisites: []
 next_steps: [topics/annealing-and-evidence/concepts/quantum-advantage.md, topics/annealing-and-evidence/concepts/end-to-end-benchmarking.md]
 related: [topics/annealing-and-evidence/concepts/quantum-processing-time-and-time-to-solution.md, topics/quantum-control-software/concepts/acquisition-and-provenance.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/annealing-and-evidence/references.md]
 complexity_depth: 0
 complexity_prerequisite_count: 0
 complexity_score: 0.0
@@ -66,6 +66,6 @@ A yes at one level does not imply the next.
 
 ## Sources and status
 
-Source-backed by the [evidence table and research synthesis, source pages 2 and 6](../../../../base/DWave_Application_and_Study_Materials.md#6-d-wave-company-history-research-and-industry-study). Status: `draft`.
+Source-backed by the [public claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Annealing and evidence](../README.md)

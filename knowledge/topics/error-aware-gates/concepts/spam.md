@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/dual-rail-qubits/concepts/code-space.md, topics/circuit-qed/concepts/readout-chain-and-iq-data.md]
 next_steps: [topics/error-aware-gates/algorithms/logical-measurement-with-erasure-detection.md, topics/error-aware-gates/examples/repeated-cz-experiment.md]
 related: [topics/error-aware-gates/concepts/quantum-state-tomography.md, topics/quantum-control-software/concepts/outcome-semantics.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/error-aware-gates/references.md]
 complexity_depth: 8
 complexity_prerequisite_count: 2
 complexity_score: 5.92
@@ -63,6 +63,6 @@ A gate experiment measures an end-to-end circuit. Without separating SPAM from g
 
 ## Sources and status
 
-Source-backed by the [2024 paper brief, source page 9](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide). Status: `draft`.
+Source-backed by the [public claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Error-aware gates](../README.md)

@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/quantum-control-software/concepts/experiment-description-and-semantic-layer.md]
 next_steps: [topics/quantum-control-software/concepts/realtime-control-and-error-handling.md, topics/quantum-control-software/concepts/test-portfolio.md]
 related: [topics/circuit-qed/concepts/beamsplitter-and-parametric-drive.md, topics/quantum-control-software/concepts/reliable-orchestration.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/quantum-control-software/references.md]
 complexity_depth: 10
 complexity_prerequisite_count: 1
 complexity_score: 6.65
@@ -64,6 +64,6 @@ Timing is part of physical correctness. A compiler-controller disagreement can r
 
 ## Sources and status
 
-Source-backed by the [reference stack and reliability table, source pages 11-12](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide). Status: `draft`.
+Source-backed by the [public claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Quantum-control software](../README.md)

@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/dual-rail-qubits/concepts/leakage-and-erasure.md]
 next_steps: [topics/error-aware-gates/algorithms/logical-measurement-with-erasure-detection.md, topics/quantum-control-software/concepts/realtime-control-and-error-handling.md]
 related: [topics/quantum-control-software/concepts/outcome-semantics.md, topics/dual-rail-qubits/concepts/pauli-errors-and-error-hierarchy.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/dual-rail-qubits/references.md]
 complexity_depth: 11
 complexity_prerequisite_count: 1
 complexity_score: 7.27
@@ -63,6 +63,6 @@ These actions can use the same erasure signal but solve different problems. A la
 
 ## Sources and status
 
-Source-backed by the [dual-rail guide, source page 5](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide). Status: `draft`.
+Source-backed by the [public claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Dual-rail qubits](../README.md)

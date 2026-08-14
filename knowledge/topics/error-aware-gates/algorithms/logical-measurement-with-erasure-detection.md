@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/dual-rail-qubits/concepts/code-space.md, topics/dual-rail-qubits/concepts/leakage-and-erasure.md, topics/circuit-qed/concepts/readout-chain-and-iq-data.md, topics/error-aware-gates/concepts/spam.md]
 next_steps: [topics/quantum-control-software/concepts/outcome-semantics.md, topics/quantum-control-software/concepts/realtime-control-and-error-handling.md]
 related: [topics/dual-rail-qubits/concepts/detection-correction-and-postselection.md, topics/error-aware-gates/concepts/quantum-state-tomography.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/error-aware-gates/references.md]
 complexity_depth: 11
 complexity_prerequisite_count: 4
 complexity_score: 8.77
@@ -90,6 +90,6 @@ return combine_without_collapsing_categories(check, assignment)
 
 ## Sources and status
 
-Source-backed by the [2024 measurement brief, source page 9](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide) and checked arXiv abstract. Status: `draft`; implementation details are intentionally generic.
+Source-backed by the [public claim map](../references.md#claim-map) and checked arXiv abstract. Status: `draft`; implementation details are intentionally generic.
 
 Parent: [Error-aware gates](../README.md)

@@ -3,14 +3,10 @@ title: Mathematics and Quantum Foundations References
 kind: index
 status: verified
 prerequisites: []
-source_files: [base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md]
+source_files: [knowledge/research/public-technical-sources.md]
 ---
 
 # Mathematics and quantum foundations references
-
-## Local provenance record
-
-The [authoritative-source portfolio](../../../base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md) records all public URLs, the 2026-08-14 access date, verified coverage, authority order, and limitations.
 
 ## Claim map
 
@@ -21,6 +17,8 @@ The [authoritative-source portfolio](../../../base/Mathematics_and_Quantum_Found
 | Probability and repeated trials | OpenStax *Introductory Statistics 2e* |
 | State vectors, Born probabilities, and unitary gates | IBM Quantum Learning, *Basics of Quantum Information* |
 | Operators, observables, dynamics, and oscillator number states | MIT OpenCourseWare 8.04 and 8.05 lecture-note collections |
+
+Exact URLs and the shared access date are recorded in the [public technical source registry](../../research/public-technical-sources.md).
 
 ## Interpretation boundary
 

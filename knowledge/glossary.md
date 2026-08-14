@@ -3,7 +3,7 @@ title: Glossary
 kind: index
 status: draft
 prerequisites: []
-source_files: [base/DWave_Application_and_Study_Materials.md, base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md]
+source_files: [knowledge/research/public-technical-sources.md]
 ---
 
 # Glossary
@@ -122,6 +122,6 @@ These are short lookup definitions. Follow each link for prerequisites, examples
 
 ## Scope exclusions
 
-The source lists QFT, Grover search, VQE, QAOA, BB84, quantum kernels, density matrices, partial trace, and several project-specific tools without enough local explanation to build source-grounded canonical pages. They remain inventoried but excluded until an authoritative source or the relevant project repository is added.
+QFT, Grover search, VQE, QAOA, BB84, quantum kernels, density matrices, and partial trace remain excluded until a dedicated sourced learning path is accepted.
 
-**Source status:** Domain definitions trace to the [local compendium](../base/DWave_Application_and_Study_Materials.md). Foundation definitions trace to the [dated authoritative-source portfolio](../base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md). Each full page states its exact evidence and limits.
+**Source status:** Definitions trace to the [public technical registry](research/public-technical-sources.md) through each topic's claim map. Every full page states its evidence and limits.

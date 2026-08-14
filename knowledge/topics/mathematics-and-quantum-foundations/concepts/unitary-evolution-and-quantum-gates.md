@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/mathematics-and-quantum-foundations/concepts/quantum-states-and-bra-ket-notation.md, topics/mathematics-and-quantum-foundations/concepts/quantum-operators-observables-and-expectation-values.md]
 next_steps: [topics/calibration-systems/fundamentals/from-gates-to-calibration.md]
 related: [topics/error-aware-gates/concepts/single-qubit-dual-rail-control.md]
-source_files: [base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md]
+source_files: [knowledge/topics/mathematics-and-quantum-foundations/references.md]
 complexity_depth: 5
 complexity_prerequisite_count: 2
 complexity_score: 4.08
@@ -47,7 +47,7 @@ Therefore $U^{-1}=U^\dagger$, and
 
 $$\|U|\psi\rangle\|=\||\psi\rangle\|.$$
 
-IBM Quantum Learning identifies unitary matrices as the linear maps that take valid finite state vectors to valid state vectors. [Source record](../../../../base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md#ibm-quantum-learning-state-vectors-measurement-and-gates).
+IBM Quantum Learning identifies unitary matrices as the linear maps that take valid finite state vectors to valid state vectors. [public claim map](../references.md#claim-map).
 
 ## Worked examples
 
@@ -83,6 +83,6 @@ The unitary is the intended logical transformation. Real hardware approximates t
 
 ## Sources and status
 
-Source-backed by [IBM Quantum Learning through the dated source portfolio](../../../../base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md#ibm-quantum-learning-state-vectors-measurement-and-gates). Status: `draft`.
+Source-backed by [public claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Mathematics and quantum foundations](../README.md)

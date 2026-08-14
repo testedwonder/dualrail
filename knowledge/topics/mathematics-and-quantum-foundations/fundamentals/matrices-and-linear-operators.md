@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/mathematics-and-quantum-foundations/fundamentals/vectors-bases-and-inner-products.md]
 next_steps: [topics/mathematics-and-quantum-foundations/fundamentals/eigenvalues-and-eigenvectors.md]
 related: [topics/mathematics-and-quantum-foundations/concepts/unitary-evolution-and-quantum-gates.md]
-source_files: [base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md]
+source_files: [knowledge/topics/mathematics-and-quantum-foundations/references.md]
 complexity_depth: 2
 complexity_prerequisite_count: 1
 complexity_score: 1.73
@@ -47,7 +47,7 @@ An operator $A$ is linear when
 
 $$A(\alpha u+\beta v)=\alpha Au+\beta Av.$$
 
-MIT's linear-transformation session describes matrix-vector multiplication as turning an input vector into an output vector and matrices as representations of linear transformations. [Source record](../../../../base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md#mit-opencourseware-matrices-and-linear-transformations).
+MIT's linear-transformation session describes matrix-vector multiplication as turning an input vector into an output vector and matrices as representations of linear transformations. [public claim map](../references.md#claim-map).
 
 ## Read a matrix by columns
 
@@ -77,6 +77,6 @@ If $A$ acts first and $B$ acts second, the combined matrix is $BA$. Matrix order
 
 ## Sources and status
 
-Source-backed by [MIT OpenCourseWare through the dated source portfolio](../../../../base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md#mit-opencourseware-matrices-and-linear-transformations). Status: `draft`.
+Source-backed by [public claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Mathematics and quantum foundations](../README.md)

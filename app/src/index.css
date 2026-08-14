@@ -16,6 +16,11 @@
   --blue: #2969a7;
   --gold: #c99323;
   --focus: #0e7468;
+  --viewport-height: 100vh;
+}
+
+@supports (height: 100dvh) {
+  :root { --viewport-height: 100dvh; }
 }
 
 * {
@@ -33,7 +38,7 @@ body,
 }
 
 body {
-  min-height: 100vh;
+  min-height: var(--viewport-height);
   overflow: hidden;
   background-color: #edf2ef;
   background-image:

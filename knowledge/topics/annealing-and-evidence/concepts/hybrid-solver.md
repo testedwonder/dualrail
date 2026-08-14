@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/annealing-and-evidence/algorithms/annealing-sampling-workflow.md]
 next_steps: [topics/annealing-and-evidence/concepts/end-to-end-benchmarking.md]
 related: [topics/annealing-and-evidence/concepts/minor-embedding.md, topics/annealing-and-evidence/concepts/quantum-advantage.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/annealing-and-evidence/references.md]
 complexity_depth: 5
 complexity_prerequisite_count: 1
 complexity_score: 3.58
@@ -61,6 +61,6 @@ Call a large problem “solved by the quantum computer” when most search and c
 
 ## Sources and status
 
-Source-backed by the [platform and strategy pages, source pages 4-5 and 10](../../../../base/DWave_Application_and_Study_Materials.md#6-d-wave-company-history-research-and-industry-study). Status: `draft`.
+Source-backed by the [public claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Annealing and evidence](../README.md)

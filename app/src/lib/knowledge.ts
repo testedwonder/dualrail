@@ -74,11 +74,12 @@ export function savePersonalState(
   storage.setItem(PERSONAL_STORAGE_KEY, JSON.stringify(payload))
 }
 
-export function exportPersonalState(state: PersonalState): PersonalExport {
+export function exportPersonalState(state: PersonalState, progress?: ProgressSummary): PersonalExport {
   return {
     version: 1,
     exportedAt: new Date().toISOString(),
     entries: sanitizeEntries(state),
+    ...(progress ? { progress } : {}),
   }
 }
 

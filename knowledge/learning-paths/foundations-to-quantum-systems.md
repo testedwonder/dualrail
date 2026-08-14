@@ -3,7 +3,7 @@ title: Foundations for Quantum States and Calibration
 kind: index
 status: draft
 prerequisites: []
-source_files: [base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md]
+source_files: [knowledge/topics/mathematics-and-quantum-foundations/references.md]
 learning_path: [topics/mathematics-and-quantum-foundations/fundamentals/complex-numbers-and-phase.md, topics/mathematics-and-quantum-foundations/fundamentals/vectors-bases-and-inner-products.md, topics/mathematics-and-quantum-foundations/fundamentals/matrices-and-linear-operators.md, topics/mathematics-and-quantum-foundations/fundamentals/eigenvalues-and-eigenvectors.md, topics/mathematics-and-quantum-foundations/fundamentals/probability-and-measurement-statistics.md, topics/mathematics-and-quantum-foundations/concepts/quantum-states-and-bra-ket-notation.md, topics/mathematics-and-quantum-foundations/concepts/quantum-operators-observables-and-expectation-values.md, topics/mathematics-and-quantum-foundations/concepts/quantum-measurement-and-born-rule.md, topics/mathematics-and-quantum-foundations/concepts/unitary-evolution-and-quantum-gates.md, topics/mathematics-and-quantum-foundations/concepts/oscillators-quantization-and-number-states.md, topics/dual-rail-qubits/fundamentals/quantum-state-and-fock-notation.md, topics/calibration-systems/fundamentals/from-gates-to-calibration.md]
 ---
 

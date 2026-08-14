@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/annealing-and-evidence/algorithms/annealing-sampling-workflow.md]
 next_steps: [topics/annealing-and-evidence/concepts/quantum-advantage.md, topics/annealing-and-evidence/concepts/end-to-end-benchmarking.md]
 related: [topics/annealing-and-evidence/concepts/evidence-levels.md, topics/annealing-and-evidence/concepts/hybrid-solver.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/annealing-and-evidence/references.md]
 complexity_depth: 5
 complexity_prerequisite_count: 1
 complexity_score: 3.58
@@ -57,6 +57,6 @@ Compare QPU anneal time against a classical solver's full wall-clock workflow an
 
 ## Sources and status
 
-Source-backed by the [annealing glossary and debate, source pages 7 and 12](../../../../base/DWave_Application_and_Study_Materials.md#6-d-wave-company-history-research-and-industry-study). Status: `draft`.
+Source-backed by the [public claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Annealing and evidence](../README.md)

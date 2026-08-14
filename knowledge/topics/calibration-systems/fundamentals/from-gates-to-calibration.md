@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/mathematics-and-quantum-foundations/concepts/unitary-evolution-and-quantum-gates.md, topics/mathematics-and-quantum-foundations/concepts/quantum-measurement-and-born-rule.md]
 next_steps: [topics/calibration-systems/concepts/calibration-record.md, topics/error-aware-gates/concepts/controlled-z-gate.md]
 related: [topics/quantum-control-software/concepts/production-stack.md, topics/error-aware-gates/examples/repeated-cz-experiment.md]
-source_files: [base/DWave_Application_and_Study_Materials.md, base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md]
+source_files: [knowledge/topics/calibration-systems/references.md]
 exercise_id: gate-calibration-order
 complexity_depth: 6
 complexity_prerequisite_count: 2
@@ -53,21 +53,21 @@ The prerequisite pages establish two things this explanation now relies on expli
 ## Step by step
 
 1. **Name the intended operation.** A gate describes a controlled change to one or more qubits.
-2. **Identify the physical controls.** In the source’s superconducting-hardware example, shaped microwave or flux signals have chosen frequencies, amplitudes, phases, and durations.
+2. **Identify the physical controls.** In a superconducting-hardware example, shaped microwave or flux signals have chosen frequencies, amplitudes, phases, and durations.
 3. **Measure a response.** Run an experiment over candidate settings and collect many observations.
 4. **Fit a model.** Estimate the setting that best produces the intended response, together with uncertainty and residual error.
 5. **Validate outside the fitting step.** Check bounds, repeatability, and held-out behavior before treating the result as usable.
 6. **Preserve the evidence.** Store the value with its device identity, units, source run, time, software, assumptions, and status.
 
-**Source-backed fact:** The repeated-CZ guide describes this six-part shape: choose a quantity, sweep controls, acquire measurements, fit, validate, then store or promote. It also lists frequency, amplitude, duration, phase or wait time, and readout threshold as example parameters. [C1, source page 10](../references.md#local-source)
+**Explanatory workflow:** choose a quantity, sweep controls, acquire measurements, fit, validate, then store or promote. Example parameters include frequency, amplitude, duration, phase or wait time, and readout threshold. [Claim map](../references.md#claim-map)
 
 **Explanation:** “Calibration” names the whole evidence-producing process. The fitted number is only one output of that process.
 
 ## What the CZ example contributes
 
-CZ, short for controlled-Z, is a two-qubit gate that applies a conditional phase. The source’s repeated-CZ discussion uses it as a stress test: a small systematic mismatch may be hard to see after one gate but easier to see after many repetitions.
+CZ, short for controlled-Z, is a two-qubit gate that applies a conditional phase. Repeated CZ operations can act as a stress test: a small systematic mismatch may be hard to see after one gate but easier to see after many repetitions.
 
-**Source-backed fact:** In the reported experiment summarized by the corpus, sequences reached 103 CZ gates. Short-depth behavior looked roughly linear, while fidelity and purity at larger depths showed an unexpected approximately quadratic decrease. The cited authors proposed calibration-parameter drift or coupler-frequency fluctuation as possible causes and left the root cause open. [C1, source pages 6–9](../references.md#local-source)
+**System-specific public result:** the cited open paper reports sequences reaching 103 CZ gates, with long-depth fidelity and purity behavior not explained by a simple short-depth linear model. Calibration-parameter drift or coupler-frequency fluctuation remained candidate causes rather than an established root cause. [Claim map](../references.md#claim-map)
 
 This pilot uses that observation to motivate software requirements. It does not establish the physical cause.
 
@@ -112,7 +112,7 @@ The definition has four limits:
 
 ## Sources and status
 
-- Main evidence: [Repeated-CZ fundamentals, source pages 4–10](../../../../base/DWave_Application_and_Study_Materials.md#4-repeated-cz-calibration-question-fundamentals).
-- Gate and measurement prerequisites: [authoritative foundations portfolio](../../../../base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md).
+- Main evidence: [public claim map](../references.md#claim-map).
+- Gate and measurement prerequisites: [public claim map](../references.md#claim-map).
 - Claim map: [Calibration references](../references.md).
-- Status: `draft`. Local evidence and links are explicit; the external paper cited by the compendium was not independently checked in this run.
+- Status: `draft`. Public evidence and explanatory boundaries are explicit; repository checks do not independently reproduce the experiment.

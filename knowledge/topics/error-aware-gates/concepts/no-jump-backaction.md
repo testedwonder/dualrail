@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/error-aware-gates/algorithms/swap-wait-swap-cz.md, topics/circuit-qed/concepts/coherence-times.md, topics/dual-rail-qubits/concepts/detection-correction-and-postselection.md]
 next_steps: [topics/error-aware-gates/examples/repeated-cz-experiment.md]
 related: [topics/error-aware-gates/concepts/control-target-asymmetry.md, topics/dual-rail-qubits/concepts/photon-loss-and-vacuum.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/error-aware-gates/references.md]
 complexity_depth: 12
 complexity_prerequisite_count: 3
 complexity_score: 8.88
@@ -61,6 +61,6 @@ Assuming “nothing happened” means the state evolved exactly as if loss were 
 
 ## Sources and status
 
-Source-backed by the [dual-rail glossary, source page 20](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide) and checked SWS preprint Appendix F. Status: `draft`.
+Source-backed by the [public claim map](../references.md#claim-map) and checked SWS preprint Appendix F. Status: `draft`.
 
 Parent: [Error-aware gates](../README.md)

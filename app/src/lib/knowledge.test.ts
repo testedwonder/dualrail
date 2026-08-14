@@ -75,6 +75,11 @@ describe('personal study data', () => {
       valid: { understanding: 3, notes: '', updatedAt: '' },
     })
   })
+
+  it('includes a derived progress snapshot in portable exports', () => {
+    const progress = { average: 6.5, ratedCount: 2, total: 4, notesCount: 1, masteredCount: 1 }
+    expect(exportPersonalState({}, progress).progress).toEqual(progress)
+  })
 })
 
 describe('knowledge navigation', () => {
@@ -89,11 +94,11 @@ describe('knowledge navigation', () => {
     defaultUnderstanding: 3,
   })
   const source = makeDocument({
-    id: 'base/source.md',
-    path: 'base/source.md',
-    title: 'Source corpus',
-    searchableText: 'source corpus',
-    collection: 'base',
+    id: 'knowledge/learning-paths/source-guide.md',
+    path: 'knowledge/learning-paths/source-guide.md',
+    title: 'Source guide',
+    searchableText: 'source guide',
+    collection: 'learning-path',
     topic: null,
     topicTitle: null,
     complexity: null,
@@ -108,7 +113,7 @@ describe('knowledge navigation', () => {
     expect(filterDocuments(documents, state, { ...defaultFilters, query: 'photon' })).toEqual([alpha])
     expect(filterDocuments(documents, state, { ...defaultFilters, maximumComplexity: 5 })).toEqual([alpha])
     expect(filterDocuments(documents, state, { ...defaultFilters, understanding: 'confident' })).toEqual([alpha])
-    expect(filterDocuments(documents, state, { ...defaultFilters, collection: 'all', query: 'source corpus' })).toEqual([source])
+    expect(filterDocuments(documents, state, { ...defaultFilters, collection: 'all', query: 'source guide' })).toEqual([source])
   })
 
   it('summarizes only rateable documents with stable progress counts', () => {

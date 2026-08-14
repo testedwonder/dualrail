@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/annealing-and-evidence/concepts/quantum-annealing.md]
 next_steps: [topics/annealing-and-evidence/concepts/minor-embedding.md]
 related: [topics/annealing-and-evidence/concepts/ising-model.md, topics/annealing-and-evidence/algorithms/annealing-sampling-workflow.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/annealing-and-evidence/references.md]
 complexity_depth: 1
 complexity_prerequisite_count: 1
 complexity_score: 1.12
@@ -59,6 +59,6 @@ Comparing qubit counts without considering whether the problem's logical graph f
 
 ## Sources and status
 
-Source-backed by the [connectivity table, source page 4](../../../../base/DWave_Application_and_Study_Materials.md#6-d-wave-company-history-research-and-industry-study). Time-sensitive generation values remain attributed. Status: `draft`.
+Source-backed by the [public claim map](../references.md#claim-map). Time-sensitive generation values remain attributed. Status: `draft`.
 
 Parent: [Annealing and evidence](../README.md)

@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/dual-rail-qubits/fundamentals/quantum-state-and-fock-notation.md]
 next_steps: [topics/dual-rail-qubits/concepts/dual-rail-encoding.md]
 related: [topics/dual-rail-qubits/concepts/leakage-and-erasure.md, topics/quantum-control-software/concepts/outcome-semantics.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/dual-rail-qubits/references.md]
 complexity_depth: 7
 complexity_prerequisite_count: 1
 complexity_score: 4.81
@@ -70,6 +70,6 @@ Calling a dual-rail qubit a “physical qubit” does not mean it is one element
 
 ## Sources and status
 
-Source-backed by the [dual-rail guide, source pages 5 and 20](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide). Status: `draft`.
+Source-backed by the [public claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Dual-rail qubits](../README.md)

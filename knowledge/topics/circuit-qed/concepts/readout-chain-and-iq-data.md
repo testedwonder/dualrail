@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/circuit-qed/concepts/circuit-qed-and-dispersive-interaction.md, topics/circuit-qed/concepts/coherence-times.md]
 next_steps: [topics/error-aware-gates/algorithms/logical-measurement-with-erasure-detection.md, topics/quantum-control-software/concepts/acquisition-and-provenance.md]
 related: [topics/error-aware-gates/concepts/spam.md, topics/quantum-control-software/concepts/outcome-semantics.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/circuit-qed/references.md]
 complexity_depth: 3
 complexity_prerequisite_count: 2
 complexity_score: 2.85
@@ -63,6 +63,6 @@ Thresholds, classifiers, gain, phase, timing, and schema versions can change ass
 
 ## Sources and status
 
-Source-backed by the [device-physics stack, source page 6](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide) and repeated-CZ source pages 6 and 13. Status: `draft`.
+Supported by the [public claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Circuit QED and control](../README.md)

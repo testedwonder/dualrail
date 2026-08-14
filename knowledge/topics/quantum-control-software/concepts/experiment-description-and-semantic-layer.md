@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/quantum-control-software/concepts/production-stack.md, topics/quantum-control-software/concepts/public-and-internal-interfaces.md]
 next_steps: [topics/quantum-control-software/concepts/compiler-and-scheduler.md, topics/quantum-control-software/concepts/outcome-semantics.md]
 related: [topics/calibration-systems/concepts/calibration-record.md, topics/error-aware-gates/algorithms/swap-wait-swap-cz.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/quantum-control-software/references.md]
 complexity_depth: 9
 complexity_prerequisite_count: 2
 complexity_score: 6.54
@@ -70,6 +70,6 @@ A `CZ` operation identifies control and target orientation, required calibration
 
 ## Sources and status
 
-Source-backed by repeated-CZ source page 13 and the [reference stack, source page 11](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide). Status: `draft`.
+Public context and model boundaries are recorded in the [claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Quantum-control software](../README.md)

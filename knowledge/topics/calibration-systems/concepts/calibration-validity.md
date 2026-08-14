@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/calibration-systems/concepts/calibration-record.md]
 next_steps: [topics/calibration-systems/concepts/calibration-dependencies.md, topics/calibration-systems/concepts/stale-parameter-vs-changing-device.md]
 related: [topics/quantum-control-software/concepts/promotion-and-rollback.md, topics/quantum-control-software/concepts/observability.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/calibration-systems/references.md]
 complexity_depth: 8
 complexity_prerequisite_count: 1
 complexity_score: 5.42
@@ -51,7 +51,7 @@ A physical system and its control chain can change. Software must know when to t
 
 ## Conditions of validity
 
-**Source-backed fact:** The corpus describes five useful validity mechanisms and a hybrid. [C3, source page 15](../references.md#local-source)
+**Reference model:** five useful validity mechanisms and a hybrid are described below. They are design options, not a claim about one deployed system. [Claim map](../references.md#claim-map)
 
 | Mechanism | Rule | Limit |
 | --- | --- | --- |
@@ -85,7 +85,7 @@ Before calling a record valid, name:
 - the validation metric and threshold;
 - whether the use is exploratory, short-depth qualification, or a production default.
 
-**Source-backed fact:** The corpus explicitly asks whether validity proven for short benchmark sequences also covers long-depth sequences. [C3, source page 15](../references.md#local-source)
+**Evaluation question:** does validity demonstrated by short benchmark sequences extend to long-depth sequences? [Claim map](../references.md#claim-map)
 
 ## Examples and non-examples
 
@@ -119,5 +119,5 @@ Before calling a record valid, name:
 
 ## Sources and status
 
-- Main evidence: [Repeated-CZ fundamentals, source page 15](../../../../base/DWave_Application_and_Study_Materials.md#4-repeated-cz-calibration-question-fundamentals).
+- Main evidence: [public claim map](../references.md#claim-map).
 - Status: `draft`. The validity models are source-backed; no private implementation or live policy is claimed.

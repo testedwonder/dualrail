@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/quantum-control-software/concepts/production-stack.md]
 next_steps: [topics/quantum-control-software/concepts/experiment-description-and-semantic-layer.md]
 related: [topics/quantum-control-software/concepts/realtime-control-and-error-handling.md, topics/quantum-control-software/concepts/compiler-and-scheduler.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/quantum-control-software/references.md]
 complexity_depth: 8
 complexity_prerequisite_count: 1
 complexity_score: 5.42
@@ -65,6 +65,6 @@ Public product pages do not reveal private experiment services, calibration regi
 
 ## Sources and status
 
-Source-backed by the [public-interface summary, source page 11](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide) and public product pages. Status: `draft`.
+Source-backed by the [public claim map](../references.md#claim-map) and public product pages. Status: `draft`.
 
 Parent: [Quantum-control software](../README.md)

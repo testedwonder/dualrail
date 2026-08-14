@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/calibration-systems/concepts/calibration-validity.md, topics/calibration-systems/concepts/calibration-dependencies.md]
 next_steps: [topics/calibration-systems/algorithms/diagnose-calibration-drift.md, topics/quantum-control-software/concepts/observability.md]
 related: [topics/error-aware-gates/examples/repeated-cz-experiment.md, topics/quantum-control-software/concepts/acquisition-and-provenance.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/calibration-systems/references.md]
 complexity_depth: 9
 complexity_prerequisite_count: 2
 complexity_score: 6.54
@@ -54,7 +54,7 @@ Refreshing an old record can fix stale selection. It cannot stabilize a target t
 
 ## Compare the two hypotheses
 
-**Source-backed distinction:** [C4, source page 17](../references.md#local-source)
+**Diagnostic distinction:** [Claim map](../references.md#claim-map)
 
 | Question | Stale parameter | Changing device |
 | --- | --- | --- |
@@ -78,7 +78,7 @@ A physical change can make a once-correct record stale. Weak invalidation can th
 
 ## Timescale is part of the definition
 
-**Source-backed fact:** The corpus distinguishes drift across weeks, hours, minutes, and shots because each can require a different response. [C2, source page 11](../references.md#local-source)
+**Explanatory model:** drift across weeks, hours, minutes, and shots can require different responses. [Claim map](../references.md#claim-map)
 
 - Across weeks, scheduled qualification and trend monitoring may be enough.
 - Across hours, validity windows and canaries may catch aging records.
@@ -121,6 +121,6 @@ A physical change can make a once-correct record stale. Weak invalidation can th
 
 ## Sources and status
 
-- Main evidence: [Repeated-CZ fundamentals, source pages 11–12 and 17](../../../../base/DWave_Application_and_Study_Materials.md#4-repeated-cz-calibration-question-fundamentals).
-- Unresolved source claim: The corpus reports calibration drift and coupler-frequency fluctuation as proposed causes of long repeated-CZ degradation, not established causes.
+- Main evidence: [public claim map](../references.md#claim-map).
+- Unresolved public claim: calibration drift and coupler-frequency fluctuation remain proposed causes of long repeated-CZ degradation, not established causes.
 - Status: `draft`. The distinction is source-backed; no diagnosis of the reported device is claimed.

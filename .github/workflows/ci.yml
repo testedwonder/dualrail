@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+
+      - name: Install application dependencies
+        run: npm ci --prefix app
+
+      - name: Audit application dependencies
+        run: npm audit --prefix app --audit-level=low
+
+      - name: Run Python regression suite
+        run: python -B -m unittest discover -s tests -v
+
+      - name: Check generated complexity
+        run: python -B tools/update_complexity.py --check
+
+      - name: Validate knowledge tree
+        run: python -B tools/validate_knowledge.py
+
+      - name: Test and build application
+        run: npm --prefix app run check
+
+      - name: Check whitespace
+        run: git diff --check

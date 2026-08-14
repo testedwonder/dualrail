@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/mathematics-and-quantum-foundations/fundamentals/matrices-and-linear-operators.md]
 next_steps: [topics/mathematics-and-quantum-foundations/concepts/quantum-operators-observables-and-expectation-values.md]
 related: [topics/mathematics-and-quantum-foundations/fundamentals/vectors-bases-and-inner-products.md]
-source_files: [base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md]
+source_files: [knowledge/topics/mathematics-and-quantum-foundations/references.md]
 exercise_id: matrix-eigenvector
 complexity_depth: 3
 complexity_prerequisite_count: 1
@@ -80,6 +80,6 @@ The vector $(1,1)^T$ is not an eigenvector because $A(1,1)^T=(2,-1)^T$, which is
 
 ## Sources and status
 
-Source-backed by [MIT OpenCourseWare's eigenvalue unit through the dated source portfolio](../../../../base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md#mit-opencourseware-eigenvalues-and-complex-matrices). Status: `draft`; the embedded explorer uses deterministic two-dimensional examples.
+Source-backed by [public claim map](../references.md#claim-map). Status: `draft`; the embedded explorer uses deterministic two-dimensional examples.
 
 Parent: [Mathematics and quantum foundations](../README.md)

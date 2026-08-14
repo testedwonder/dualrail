@@ -25,7 +25,7 @@ const blockedResearchHosts = new Set([
   'me.sh',
   'api.openalex.org',
 ])
-const blockedAppText = /Luke|Mastalli|Vi Connelly|hiring manager|Staff Quantum|Quantum Software Engineer|cover letter|resume|interview|base\//i
+const publicSourcePattern = /^knowledge\/(?:research\/public-technical-sources\.md|topics\/[a-z0-9-]+\/references\.md)$/
 
 function toPosix(value) {
   return value.split(path.sep).join('/')
@@ -59,17 +59,10 @@ function stripGeneratedBlocks(body) {
     .trim()
 }
 
-function sanitizeAppBody(body) {
-  return body
-    .replace(/\[([^\]]+)\]\((?:\.\.\/)*base\/[^)]+\)/g, '$1')
-    .replace(/`?base\/[A-Za-z0-9_./-]+`?/g, 'source archive')
-}
-
 function appVisiblePath(relativePath) {
   if (relativePath.startsWith('knowledge/_meta/')) return false
-  if (relativePath.startsWith('knowledge/research/')) return false
+  if (relativePath.startsWith('knowledge/research/') && relativePath !== 'knowledge/research/public-technical-sources.md') return false
   if (relativePath === 'knowledge/README.md') return false
-  if (/^knowledge\/topics\/[^/]+\/references\.md$/.test(relativePath)) return false
   return relativePath.startsWith('knowledge/')
 }
 
@@ -123,7 +116,6 @@ function sourceAuthority(hostname) {
 }
 
 function collectionFor(relativePath) {
-  if (relativePath.startsWith('base/')) return 'base'
   if (relativePath.startsWith('knowledge/topics/')) return 'topic'
   if (relativePath.startsWith('knowledge/learning-paths/')) return 'learning-path'
   if (relativePath.startsWith('knowledge/_meta/')) return 'meta'
@@ -139,9 +131,9 @@ async function parseDocument(absolutePath) {
   const raw = await fs.readFile(absolutePath, 'utf8')
   const parsed = matter(raw)
   const relativePath = toPosix(path.relative(repositoryRoot, absolutePath))
-  const body = sanitizeAppBody(stripGeneratedBlocks(parsed.content))
+  const body = stripGeneratedBlocks(parsed.content)
   const title = String(parsed.data.title ?? relativePath.split('/').at(-1)?.replace(/\.md$/, '') ?? relativePath)
-  const kind = String(parsed.data.kind ?? (relativePath.startsWith('base/') ? 'source' : 'document'))
+  const kind = String(parsed.data.kind ?? 'document')
   const topic = topicFor(relativePath)
   const complexityScore = Number(parsed.data.complexity_score)
   const understanding = Number(parsed.data.understanding)
@@ -164,7 +156,7 @@ async function parseDocument(absolutePath) {
     prerequisites: asArray(parsed.data.prerequisites),
     nextSteps: asArray(parsed.data.next_steps),
     related: asArray(parsed.data.related),
-    sourceFiles: asArray(parsed.data.source_files).filter((reference) => !reference.startsWith('base/')),
+    sourceFiles: asArray(parsed.data.source_files),
     externalLinks: references.map((reference) => reference.url),
     externalReferences: references,
     complexity: Number.isFinite(complexityScore)
@@ -181,7 +173,7 @@ async function parseDocument(absolutePath) {
       ? understanding
       : 0,
     exerciseId: parsed.data.exercise_id ? String(parsed.data.exercise_id) : null,
-    isRateable: relativePath.startsWith('base/') || contentKinds.has(kind),
+    isRateable: contentKinds.has(kind),
     isPrivate: /private|personal|contact/i.test(privacy),
     wordCount: plainText(body).split(/\s+/).filter(Boolean).length,
   }
@@ -226,9 +218,11 @@ for (const document of [...allKnowledgeDocuments, ...researchDocuments]) {
     const portfolioTopic = document.path === 'knowledge/research/public-technical-sources.md'
       ? topicIndexBySlug.get('mathematics-and-quantum-foundations')
       : null
-    const supportingDocument = appDocumentIds.has(document.id)
-      ? document
-      : document.topic
+    const supportingDocument = document.path === 'knowledge/research/public-technical-sources.md'
+      ? portfolioTopic
+      : appDocumentIds.has(document.id)
+        ? document
+        : document.topic
         ? topicIndexBySlug.get(document.topic)
         : portfolioTopic
     if (supportingDocument) {
@@ -254,7 +248,7 @@ const researchSources = [...researchSourceMap.values()]
   .sort((left, right) => right.rank - left.rank || left.label.localeCompare(right.label))
 
 documents.sort((left, right) => {
-  const collectionOrder = ['topic', 'learning-path', 'base', 'root', 'meta']
+  const collectionOrder = ['topic', 'learning-path', 'root', 'meta']
   const collectionDifference = collectionOrder.indexOf(left.collection) - collectionOrder.indexOf(right.collection)
   if (collectionDifference !== 0) return collectionDifference
   return left.title.localeCompare(right.title)
@@ -278,14 +272,17 @@ const contentCount = documents.filter((document) => document.collection === 'top
 const indexedExerciseIds = new Set(documents.map((document) => document.exerciseId).filter(Boolean))
 const missingExerciseIds = [...expectedExerciseIds].filter((exerciseId) => !indexedExerciseIds.has(exerciseId))
 const unknownExerciseIds = [...indexedExerciseIds].filter((exerciseId) => !expectedExerciseIds.has(exerciseId))
-const privateDocuments = documents.filter((document) => blockedAppText.test(
-  `${document.path}\n${document.title}\n${document.body}\n${document.searchableText}`,
-))
 const blockedSources = researchSources.filter((source) => blockedResearchHosts.has(source.hostname))
 const unlinkedSources = researchSources.filter((source) => source.documents.length === 0)
-if (knowledgeFiles.length < 94 || documents.length < 78 || contentCount < 66 || researchSources.length < 24) {
+const invalidProvenance = documents.filter((document) => (
+  document.isRateable && (
+    document.sourceFiles.length === 0
+    || document.sourceFiles.some((reference) => !publicSourcePattern.test(reference))
+  )
+))
+if (documents.length !== 86 || contentCount !== 66 || researchSources.length !== 24 || topics.length !== 7) {
   throw new Error(
-    `Knowledge index is incomplete: ${knowledgeFiles.length} knowledge files, ${documents.length} learner documents, ${contentCount} topic items, and ${researchSources.length} public sources.`,
+    `Knowledge index is incomplete: ${documents.length} learner documents, ${contentCount} topic items, ${topics.length} topics, and ${researchSources.length} public sources.`,
   )
 }
 if (missingExerciseIds.length || unknownExerciseIds.length) {
@@ -293,9 +290,9 @@ if (missingExerciseIds.length || unknownExerciseIds.length) {
     `Exercise index mismatch. Missing: ${missingExerciseIds.join(', ') || 'none'}. Unknown: ${unknownExerciseIds.join(', ') || 'none'}.`,
   )
 }
-if (privateDocuments.length || blockedSources.length || unlinkedSources.length) {
+if (blockedSources.length || unlinkedSources.length || invalidProvenance.length) {
   throw new Error(
-    `App privacy or research boundary failed. Private documents: ${privateDocuments.map((document) => document.path).join(', ') || 'none'}. Blocked sources: ${blockedSources.map((source) => source.hostname).join(', ') || 'none'}. Sources without study pages: ${unlinkedSources.map((source) => source.url).join(', ') || 'none'}.`,
+    `App public boundary failed. Blocked sources: ${blockedSources.map((source) => source.hostname).join(', ') || 'none'}. Sources without study pages: ${unlinkedSources.map((source) => source.url).join(', ') || 'none'}. Invalid provenance: ${invalidProvenance.map((document) => document.path).join(', ') || 'none'}.`,
   )
 }
 
@@ -308,7 +305,6 @@ const output = {
     documents: documents.length,
     knowledgeDocuments: knowledgeFiles.length,
     topicItems: contentCount,
-    baseDocuments: 0,
     sourceFiles: researchDocuments.length,
     researchSources: researchSources.length,
     topics: topics.length,

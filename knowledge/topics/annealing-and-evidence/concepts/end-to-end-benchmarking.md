@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/annealing-and-evidence/concepts/quantum-advantage.md, topics/annealing-and-evidence/concepts/evidence-levels.md, topics/annealing-and-evidence/algorithms/annealing-sampling-workflow.md]
 next_steps: [topics/annealing-and-evidence/README.md]
 related: [topics/annealing-and-evidence/concepts/hybrid-solver.md, topics/annealing-and-evidence/concepts/minor-embedding.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/annealing-and-evidence/references.md]
 complexity_depth: 7
 complexity_prerequisite_count: 3
 complexity_score: 5.81
@@ -68,6 +68,6 @@ Compare a 20-microsecond anneal with an untuned classical program's total wall t
 
 ## Sources and status
 
-Source-backed by the [research and industry assessment, source pages 2, 6-8, and 13](../../../../base/DWave_Application_and_Study_Materials.md#6-d-wave-company-history-research-and-industry-study). Status: `draft`.
+Source-backed by the [public claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Annealing and evidence](../README.md)

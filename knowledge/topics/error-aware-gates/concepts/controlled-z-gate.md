@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/dual-rail-qubits/concepts/dual-rail-encoding.md, topics/circuit-qed/concepts/circuit-qed-and-dispersive-interaction.md]
 next_steps: [topics/error-aware-gates/algorithms/swap-wait-swap-cz.md]
 related: [topics/error-aware-gates/concepts/control-target-asymmetry.md, topics/calibration-systems/fundamentals/from-gates-to-calibration.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/error-aware-gates/references.md]
 complexity_depth: 9
 complexity_prerequisite_count: 2
 complexity_score: 6.54
@@ -65,6 +65,6 @@ Calling any operation with roughly the right average fidelity a suitable CZ with
 
 ## Sources and status
 
-Source-backed by repeated-CZ source page 4 and the [gate summary, source page 7](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide). Status: `draft`.
+Supported by the [public claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Error-aware gates](../README.md)

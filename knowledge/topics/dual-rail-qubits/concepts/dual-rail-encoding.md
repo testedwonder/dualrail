@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/dual-rail-qubits/fundamentals/quantum-state-and-fock-notation.md, topics/dual-rail-qubits/concepts/code-space.md, topics/circuit-qed/concepts/microwave-cavity.md]
 next_steps: [topics/dual-rail-qubits/concepts/photon-loss-and-vacuum.md, topics/error-aware-gates/concepts/single-qubit-dual-rail-control.md]
 related: [topics/dual-rail-qubits/concepts/leakage-and-erasure.md, topics/circuit-qed/concepts/beamsplitter-and-parametric-drive.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/dual-rail-qubits/references.md]
 complexity_depth: 8
 complexity_prerequisite_count: 3
 complexity_score: 6.42
@@ -71,6 +71,6 @@ The information is not simply “which cavity.” It also includes the relative 
 
 ## Sources and status
 
-Source-backed by the [dual-rail guide, source page 5](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide) and its cited Teoh et al. foundation. Status: `draft`.
+Source-backed by the [public claim map](../references.md#claim-map) and its cited Teoh et al. foundation. Status: `draft`.
 
 Parent: [Dual-rail qubits](../README.md)

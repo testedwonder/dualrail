@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/calibration-systems/concepts/stale-parameter-vs-changing-device.md]
 next_steps: [topics/quantum-control-software/concepts/observability.md, topics/calibration-systems/references.md]
 related: [topics/error-aware-gates/examples/repeated-cz-experiment.md, topics/quantum-control-software/concepts/acquisition-and-provenance.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/calibration-systems/references.md]
 complexity_depth: 10
 complexity_prerequisite_count: 1
 complexity_score: 6.65
@@ -96,7 +96,7 @@ If one of these is false, report the gap instead of forcing a classification.
 
 ## Procedure
 
-This procedure adapts the source’s eight-step diagnostic sequence. [C4, source page 18](../references.md#local-source)
+This procedure is an explanatory eight-step diagnostic assembled from the topic's public system evidence and software boundaries. [Claim map](../references.md#claim-map)
 
 1. **Freeze identity.** Capture device, software, waveform, analysis, calibration graph, clocks, and relevant environment.
 2. **Measure before.** Run a direct check, such as spectroscopy, or the closest validated proxy; run a gate canary under the same captured state.
@@ -190,6 +190,6 @@ Neither case identifies the microscopic cause without additional measurements.
 
 ## Sources and status
 
-- Main procedure: [Repeated-CZ fundamentals, source page 18](../../../../base/DWave_Application_and_Study_Materials.md#4-repeated-cz-calibration-question-fundamentals).
+- Main procedure: [public claim map](../references.md#claim-map).
 - Inputs and failure patterns: same embedded source, pages 6, 11–19.
 - Status: `draft`. The procedure is source-backed and operationally elaborated; it has not been run on real hardware data in this repository.

@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/annealing-and-evidence/concepts/qubo-and-bqm.md, topics/annealing-and-evidence/concepts/minor-embedding.md]
 next_steps: [topics/annealing-and-evidence/concepts/hybrid-solver.md, topics/annealing-and-evidence/concepts/quantum-processing-time-and-time-to-solution.md, topics/annealing-and-evidence/concepts/end-to-end-benchmarking.md]
 related: [topics/annealing-and-evidence/concepts/quantum-annealing.md, topics/annealing-and-evidence/examples/binary-quadratic-objective.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/annealing-and-evidence/references.md]
 complexity_depth: 4
 complexity_prerequisite_count: 2
 complexity_score: 3.46
@@ -87,6 +87,6 @@ return validate_against_original_problem(candidates)
 
 ## Sources and status
 
-Source-backed by the [five-stage workflow, source page 4](../../../../base/DWave_Application_and_Study_Materials.md#6-d-wave-company-history-research-and-industry-study). Status: `draft`; no D-Wave API is invented.
+Source-backed by the [public claim map](../references.md#claim-map). Status: `draft`; no D-Wave API is invented.
 
 Parent: [Annealing and evidence](../README.md)

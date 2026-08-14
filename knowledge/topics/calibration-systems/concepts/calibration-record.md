@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/calibration-systems/fundamentals/from-gates-to-calibration.md]
 next_steps: [topics/calibration-systems/concepts/calibration-validity.md, topics/calibration-systems/concepts/calibration-dependencies.md]
 related: [topics/quantum-control-software/concepts/acquisition-and-provenance.md, topics/quantum-control-software/concepts/promotion-and-rollback.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/calibration-systems/references.md]
 complexity_depth: 7
 complexity_prerequisite_count: 1
 complexity_score: 4.81
@@ -51,7 +51,7 @@ Without context, two values can look interchangeable even when they came from di
 
 ## Required information
 
-**Source-backed fact:** The corpus proposes the following fields for a useful calibration record. [C3, source page 14](../references.md#local-source)
+**Reference model:** the following fields make a calibration record inspectable and revocable. They are a software design proposal, not a universal hardware schema. [Claim map](../references.md#claim-map)
 
 | Field | Question answered |
 | --- | --- |
@@ -132,6 +132,6 @@ The number `5.012e9` gains meaning from the unit, target, source, uncertainty, a
 
 ## Sources and status
 
-- Main evidence: [Repeated-CZ fundamentals, source pages 13–14](../../../../base/DWave_Application_and_Study_Materials.md#4-repeated-cz-calibration-question-fundamentals).
-- Supporting model: [Dual-rail conversation guide, source page 8](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide).
+- Main evidence: [public claim map](../references.md#claim-map).
+- Supporting model: [public claim map](../references.md#claim-map).
 - Status: `draft`. The field set is source-backed as a reference model, not verified as any private production schema.

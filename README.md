@@ -1,5 +1,7 @@
 # Dualrail Atlas
 
+[![CI](https://github.com/testedwonder/dualrail/actions/workflows/ci.yml/badge.svg)](https://github.com/testedwonder/dualrail/actions/workflows/ci.yml)
+
 Dualrail Atlas is a local-first study application for quantum foundations, dual-rail qubits, superconducting control, calibration, quantum-control software, and annealing evidence. The application is the focus of this repository: it combines reading, search, graph navigation, exercises, public technical research, corrections, personal notes, and understanding ratings.
 
 The core application is free to run, works without API keys or paid services, and does not rewrite canonical source material.
@@ -38,16 +40,25 @@ npm run dev
 
 Open the Vite URL, normally <http://127.0.0.1:5173/>. See the [application guide](app/README.md) for detailed controls and validation commands.
 
+### Website And Mobile Release
+
+Version `0.1.0` builds as an installable offline-first web app. GitHub Pages deployment, Android/iOS installation, and the remaining post-publication settings are documented in [INSTRUCTIONS.md](INSTRUCTIONS.md).
+
+The static release needs no database, API key, subscription, or app-store account. Personal data remains local and moves between devices through Settings export/import. See [PRIVACY.md](PRIVACY.md), [SECURITY.md](SECURITY.md), and [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ### Study Workflow
 
-1. Use **Library** to search or filter topics, source documents, and learning paths.
+1. Use **Library** to search or filter topics and learning paths.
 2. Read the page's prerequisites before its body; use **Next** for forward movement and **Related** for optional context.
-3. Use **Map** to inspect prerequisite, next-step, related, and source relationships.
+3. Use **Map** to inspect prerequisite, next-step, and related relationships. The visible spectrum explains complexity color.
 4. Set **Understanding** from `0` to `10`. This is your self-assessment, not the page's complexity.
 5. Add **Personal notes** for questions, explanations in your own words, or recall prompts.
-6. Use **Progress** to review topic averages, source ratings, notes, and the study queue.
-7. Export personal data from the header when you want a JSON backup; import that file to restore it.
+6. Use **Progress** to review topic averages, notes, and the study queue.
+7. Use **Settings** to export or import notes, ratings, and the current progress snapshot.
 8. Use **Research** to evaluate public technical sources and keep a local queue of proposed sources or corrections.
+9. Open green verification marks to inspect test counts, checked behavior, and claim boundaries.
+
+Green verification marks open scoped test digests. They report what was checked and the boundary of the claim; they do not replace scientific peer review.
 
 Ratings and notes live in browser local storage. They never modify canonical knowledge or public research records. Complexity is generated from prerequisite depth and direct prerequisite count; see the [complexity model](knowledge/_meta/complexity-model.md).
 
@@ -211,7 +222,7 @@ The canonical tree currently contains 66 content pages across seven topics. Topi
 6. **Currency:** Record access and publication dates for product capabilities or other changing facts.
 7. **Boundary:** Preserve unresolved questions. Do not convert a plausible explanation into an established cause.
 
-See [Evidence Levels](knowledge/topics/annealing-and-evidence/concepts/evidence-levels.md), [Quantum Advantage](knowledge/topics/annealing-and-evidence/concepts/quantum-advantage.md), and the [source inventory](knowledge/_meta/source-inventory.md) for the repository's applied standard.
+See [Evidence Levels](knowledge/topics/annealing-and-evidence/concepts/evidence-levels.md), [Quantum Advantage](knowledge/topics/annealing-and-evidence/concepts/quantum-advantage.md), and the [public technical registry](knowledge/research/public-technical-sources.md) for the repository's applied standard.
 
 ## Maintenance And Validation
 
@@ -223,22 +234,25 @@ After editing prerequisites or adding a canonical page:
 & "$env:LOCALAPPDATA\Programs\Python\Python311\python.exe" -B tools\validate_knowledge.py
 & "$env:LOCALAPPDATA\Programs\Python\Python311\python.exe" -B -m unittest discover -s tests -v
 cd app
-npm run check
+npm run release:check
 ```
 
-The validator checks metadata, links and anchors, source references, reachability, prerequisite cycles, learning-path order, generated complexity, executable examples, privacy patterns, and content structure. Application tests cover the reader, personal-data persistence, filters, progress, deterministic exercise logic, immediate feedback, reset, and keyboard interaction.
+The validator checks metadata, links and anchors, source references, reachability, prerequisite cycles, learning-path order, generated complexity, executable examples, privacy patterns, and content structure. Application tests cover the reader, Settings data portability, filters, progress, map legend, verification digests, research proposals, deterministic exercises, 3D state math, reset, and keyboard interaction.
 
 Repository architecture and decisions:
 
 - [Knowledge-tree root](knowledge/README.md)
 - [Concept and prerequisite map](knowledge/_meta/concept-map.md)
 - [Complexity model](knowledge/_meta/complexity-model.md)
-- [Decision ledger](knowledge/_meta/decision-ledger.md)
-- [Expansion plan](knowledge/_meta/expansion-plan.md)
-- [Feedback assessment 1](knowledge/_meta/feedback-assessment.md)
 - [Validation report](knowledge/_meta/validation-report.md)
+- [Release-candidate review](REVIEW.md)
+- [Release instructions](INSTRUCTIONS.md)
+- [Privacy](PRIVACY.md), [security](SECURITY.md), and [contributing](CONTRIBUTING.md)
+- [License](LICENSE) and [dependency licensing](LICENSING.md)
+- [Funding plan](FUNDING.md)
+- [Future roadmap suggestions](ROADMAP_SUGGESTIONS.md)
 
-Submit new content suggestions or corrections through [FEEDBACK.md](FEEDBACK.md). Each feedback batch should be assessed before it changes canonical content.
+Report product bugs through Settings in the application or the structured [GitHub issue form](https://github.com/testedwonder/dualrail/issues/new?template=bug-report.yml). Submit source and content corrections through the Research proposal queue or a focused GitHub issue.
 
 ## Current Boundaries
 
@@ -247,4 +261,4 @@ Submit new content suggestions or corrections through [FEEDBACK.md](FEEDBACK.md)
 - Technical pages remain `draft` unless their declared evidence and checks justify `verified`.
 - Unsupported algorithms and project internals remain excluded until authoritative sources or repositories are available.
 - Density matrices, generalized measurements, open-system dynamics, and device-specific pulse physics remain outside the current foundation scope.
-- Roadmap item 6 incorporates Feedback #4's app-first privacy boundary. The broader Feedback #2–4 requests for coding labs, Ariadion, ADHD-focused modes, licensing, monetization, optional integrations, and recursive subject expansion remain pending separate assessment.
+- Circuit-composer, Ariadion, accessibility-mode, native app-store packaging, naming, marketing, and database accounts remain separate future batches.

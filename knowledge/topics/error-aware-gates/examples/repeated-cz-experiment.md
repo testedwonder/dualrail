@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/error-aware-gates/algorithms/swap-wait-swap-cz.md, topics/error-aware-gates/concepts/quantum-state-tomography.md, topics/error-aware-gates/concepts/randomized-benchmarking.md, topics/error-aware-gates/concepts/spam.md]
 next_steps: [topics/calibration-systems/concepts/stale-parameter-vs-changing-device.md, topics/calibration-systems/algorithms/diagnose-calibration-drift.md]
 related: [topics/error-aware-gates/concepts/no-jump-backaction.md, topics/error-aware-gates/concepts/control-target-asymmetry.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/error-aware-gates/references.md]
 complexity_depth: 11
 complexity_prerequisite_count: 4
 complexity_score: 8.77
@@ -73,6 +73,6 @@ Vary depth independently from elapsed time. If the effect tracks depth but not t
 
 ## Sources and status
 
-Source-backed by repeated-CZ source pages 6-9 and the [2026 paper brief, source page 10](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide). Status: `draft`; reported values were not independently reproduced.
+Supported by the [public claim map](../references.md#claim-map). Status: `draft`; reported values were not independently reproduced.
 
 Parent: [Error-aware gates](../README.md)

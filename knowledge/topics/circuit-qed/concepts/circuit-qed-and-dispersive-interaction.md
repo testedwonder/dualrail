@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/circuit-qed/concepts/transmons-and-anharmonicity.md, topics/circuit-qed/concepts/microwave-cavity.md]
 next_steps: [topics/circuit-qed/concepts/beamsplitter-and-parametric-drive.md, topics/error-aware-gates/concepts/controlled-z-gate.md]
 related: [topics/error-aware-gates/algorithms/swap-wait-swap-cz.md, topics/circuit-qed/concepts/readout-chain-and-iq-data.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/circuit-qed/references.md]
 complexity_depth: 2
 complexity_prerequisite_count: 2
 complexity_score: 2.23
@@ -65,6 +65,6 @@ Dispersive shifts enable conditional phase and readout. In the SWS gate, tempora
 
 ## Sources and status
 
-Source-backed by the [device-physics stack, source page 6](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide) and the checked SWS preprint. Status: `draft`.
+Source-backed by the [public claim map](../references.md#claim-map) and the checked SWS preprint. Status: `draft`.
 
 Parent: [Circuit QED and control](../README.md)

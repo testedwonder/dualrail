@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/error-aware-gates/algorithms/swap-wait-swap-cz.md, topics/dual-rail-qubits/concepts/leakage-and-erasure.md, topics/error-aware-gates/concepts/control-target-asymmetry.md]
 next_steps: [topics/quantum-control-software/concepts/outcome-semantics.md, topics/quantum-control-software/concepts/test-portfolio.md]
 related: [topics/dual-rail-qubits/examples/loss-to-vacuum.md, topics/error-aware-gates/concepts/no-jump-backaction.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/error-aware-gates/references.md]
 complexity_depth: 13
 complexity_prerequisite_count: 3
 complexity_score: 9.5
@@ -62,6 +62,6 @@ Treating leakage as a local flag only is unsafe if it changes neighboring states
 
 ## Sources and status
 
-Source-backed by the [gate summary, source page 7](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide) and checked SWS preprint Appendix E. Status: `draft`.
+Source-backed by the [public claim map](../references.md#claim-map) and checked SWS preprint Appendix E. Status: `draft`.
 
 Parent: [Error-aware gates](../README.md)

@@ -37,53 +37,9 @@ EXPLICIT_ANCHOR_PATTERN = re.compile(
     r"<a\s+[^>]*\bid=[\"']([^\"']+)[\"'][^>]*>", re.IGNORECASE
 )
 HEADING_PATTERN = re.compile(r"^#{1,6}\s+(.+?)\s*#*\s*$", re.MULTILINE)
-SUPPLEMENTAL_BASE_DOCUMENTS = {
-    "Luke_Mastalli_Kelly_Public_Evidence_Portfolio.md": {
-        "kind": "research-portfolio",
-        "required_fields": (
-            "title",
-            "kind",
-            "status",
-            "research_date",
-            "privacy",
-            "subject",
-            "source_files",
-            "external_research",
-        ),
-        "required_markers": (
-            "Source-backed fact",
-            "Corroborated public background",
-            "Provisional inference",
-            "Unresolved question",
-            "Simulation boundary",
-            "TODO: verify",
-        ),
-    },
-    "Luke_Mastalli_Kelly_Realistic_Conversation_Portfolio.md": {
-        "kind": "simulated-conversation-set",
-        "required_fields": (
-            "title",
-            "kind",
-            "status",
-            "research_date",
-            "privacy",
-            "simulation_notice",
-            "source_files",
-        ),
-        "required_markers": (
-            "Simulation notice",
-            "Personal evidence needed",
-            "What remains unknown",
-            "Private boundary",
-            "Claims to avoid",
-            "Sources and status",
-        ),
-    },
-}
-PRIVATE_PATTERN = re.compile(
-    r"ltconnelly|639-9379|C:\\Users\\|api[_-]?key\s*[:=]|"
-    r"password\s*[:=]|bearer\s+[A-Za-z0-9]",
-    re.IGNORECASE,
+PUBLIC_SOURCE_PATTERN = re.compile(
+    r"^knowledge/(?:research/public-technical-sources\.md|"
+    r"topics/[a-z0-9-]+/references\.md)$"
 )
 
 
@@ -100,7 +56,6 @@ class ValidationResult:
     errors: list[str]
     checked_markdown_files: int
     executed_examples: int
-    checked_supplemental_files: int = 0
 
 
 def _display_path(path: Path, repository_root: Path) -> str:
@@ -338,7 +293,6 @@ def _validate_links(
 def _validate_sources(
     documents: dict[Path, Document],
     repository_root: Path,
-    base_root: Path,
     errors: list[str],
 ) -> None:
     for document in documents.values():
@@ -352,13 +306,24 @@ def _validate_sources(
                 )
                 continue
             source_path = (repository_root / Path(reference)).resolve()
-            if not _within(source_path, base_root):
+            if not PUBLIC_SOURCE_PATTERN.fullmatch(reference):
                 errors.append(
-                    f"{document.relative_path}: source file is outside base/: {reference}"
+                    f"{document.relative_path}: source file is not an approved public claim map: {reference}"
                 )
-            elif not source_path.is_file():
+                continue
+            if not source_path.is_file():
                 errors.append(
                     f"{document.relative_path}: unresolved source file: {reference}"
+                )
+                continue
+            source_document = documents.get(source_path)
+            if source_document is None or source_document.metadata.get("kind") != "index":
+                errors.append(
+                    f"{document.relative_path}: source file is not a knowledge index: {reference}"
+                )
+            if source_path == document.path:
+                errors.append(
+                    f"{document.relative_path}: source file cannot reference itself: {reference}"
                 )
 
 
@@ -826,159 +791,18 @@ def _validate_executable_examples(
     return executed
 
 
-def _metadata_list_entries(lines: list[str], field: str) -> list[str]:
-    entries: list[str] = []
-    field_index: int | None = None
-    for index, line in enumerate(lines):
-        if line.startswith(f"{field}:"):
-            field_index = index
-            inline_value = line.split(":", maxsplit=1)[1].strip()
-            if inline_value:
-                parsed = _parse_inline_list(inline_value)
-                return parsed or []
-            break
-
-    if field_index is None:
-        return entries
-
-    for line in lines[field_index + 1 :]:
-        if not line.strip():
-            continue
-        match = re.match(r"^\s+-\s+(.+?)\s*$", line)
-        if match:
-            entries.append(match.group(1).strip("'\""))
-            continue
-        if not line.startswith((" ", "\t")):
-            break
-    return entries
-
-
-def _validate_supplemental_base_documents(
-    repository_root: Path, base_root: Path, errors: list[str]
-) -> int:
-    checked = 0
-    for filename, specification in SUPPLEMENTAL_BASE_DOCUMENTS.items():
-        path = base_root / filename
-        if not path.is_file():
-            continue
-
-        checked += 1
-        relative_path = _display_path(path, repository_root)
-        try:
-            text = path.read_text(encoding="utf-8")
-        except (OSError, UnicodeError) as error:
-            errors.append(f"{relative_path}: cannot read UTF-8 Markdown: {error}")
-            continue
-
-        lines = text.splitlines()
-        if not lines or lines[0].strip() != "---":
-            errors.append(f"{relative_path}: missing opening metadata delimiter")
-            continue
-        try:
-            closing_index = next(
-                index
-                for index, line in enumerate(lines[1:], start=1)
-                if line.strip() == "---"
-            )
-        except StopIteration:
-            errors.append(f"{relative_path}: missing closing metadata delimiter")
-            continue
-
-        metadata_lines = lines[1:closing_index]
-        metadata_keys = {
-            match.group(1)
-            for line in metadata_lines
-            if (match := re.match(r"^([A-Za-z_][\w-]*):", line))
-        }
-        for field in specification["required_fields"]:
-            if field not in metadata_keys:
-                errors.append(
-                    f"{relative_path}: missing supplemental metadata field '{field}'"
-                )
-
-        expected_kind = specification["kind"]
-        if not any(line == f"kind: {expected_kind}" for line in metadata_lines):
-            errors.append(
-                f"{relative_path}: expected supplemental kind '{expected_kind}'"
-            )
-
-        body = "\n".join(lines[closing_index + 1 :]).strip()
-        if not body or not HEADING_PATTERN.search(body):
-            errors.append(f"{relative_path}: supplemental document is empty or has no heading")
-
-        for marker in specification["required_markers"]:
-            if marker not in text:
-                errors.append(
-                    f"{relative_path}: missing supplemental evidence marker '{marker}'"
-                )
-
-        for line_number, line in enumerate(lines, start=1):
-            if line.endswith((" ", "\t")):
-                errors.append(f"{relative_path}:{line_number}: trailing whitespace")
-            if re.match(r"^(<<<<<<<|=======|>>>>>>>)", line):
-                errors.append(f"{relative_path}:{line_number}: conflict marker")
-            if line.startswith("**Luke") and not line.startswith(
-                "**Luke (simulated):**"
-            ):
-                errors.append(
-                    f"{relative_path}:{line_number}: Luke dialogue is not marked simulated"
-                )
-
-        if filename.endswith("Realistic_Conversation_Portfolio.md") and not re.search(
-            r"^\*\*Luke \(simulated\):\*\*", body, re.MULTILINE
-        ):
-            errors.append(f"{relative_path}: no explicitly simulated Luke dialogue")
-
-        private_match = PRIVATE_PATTERN.search(text)
-        if private_match:
-            errors.append(
-                f"{relative_path}: private or credential-like pattern '{private_match.group(0)}'"
-            )
-
-        for source_reference in _metadata_list_entries(metadata_lines, "source_files"):
-            source_path = (base_root / Path(source_reference)).resolve()
-            if not _within(source_path, base_root) or not source_path.is_file():
-                errors.append(
-                    f"{relative_path}: unresolved supplemental source file: {source_reference}"
-                )
-
-        for raw_destination in LINK_PATTERN.findall(body):
-            destination = raw_destination.strip()
-            split = urlsplit(destination)
-            if split.scheme or destination.startswith("//") or not split.path:
-                continue
-            path_text = unquote(split.path)
-            if Path(path_text).is_absolute() or re.match(r"^[A-Za-z]:", path_text):
-                errors.append(
-                    f"{relative_path}: supplemental local link is not relative: {destination}"
-                )
-                continue
-            target = (path.parent / Path(path_text)).resolve()
-            if not _within(target, repository_root) or not target.exists():
-                errors.append(
-                    f"{relative_path}: broken supplemental local link '{destination}'"
-                )
-
-    return checked
-
 
 def validate_repository(
     repository_root: Path, *, run_examples: bool = True
 ) -> ValidationResult:
     repository_root = repository_root.resolve()
     knowledge_root = (repository_root / "knowledge").resolve()
-    base_root = (repository_root / "base").resolve()
     errors: list[str] = []
 
     if not knowledge_root.is_dir():
         return ValidationResult(["knowledge/: directory is missing"], 0, 0)
-    if not base_root.is_dir():
-        return ValidationResult(["base/: source directory is missing"], 0, 0)
 
     _validate_text_quality(repository_root, errors)
-    checked_supplemental_files = _validate_supplemental_base_documents(
-        repository_root, base_root, errors
-    )
 
     documents: dict[Path, Document] = {}
     for path in sorted(knowledge_root.rglob("*.md")):
@@ -988,7 +812,7 @@ def validate_repository(
         errors.extend(parse_errors)
 
     _validate_repository_readme(repository_root, documents, errors)
-    _validate_sources(documents, repository_root, base_root, errors)
+    _validate_sources(documents, repository_root, errors)
     _validate_canonical_slugs(documents, errors)
     prerequisite_graph = _validate_prerequisites(documents, knowledge_root, errors)
     _validate_content_navigation(documents, knowledge_root, errors)
@@ -1012,7 +836,6 @@ def validate_repository(
         errors,
         len(documents),
         executed_examples,
-        checked_supplemental_files,
     )
 
 
@@ -1022,7 +845,7 @@ def main() -> int:
         "--root",
         type=Path,
         default=Path(__file__).resolve().parents[1],
-        help="Repository root containing knowledge/ and base/.",
+        help="Repository root containing the public knowledge tree.",
     )
     parser.add_argument(
         "--skip-examples",
@@ -1039,14 +862,12 @@ def main() -> int:
             print(f"ERROR: {error}")
         print(
             f"FAIL: {len(result.errors)} error(s) across "
-            f"{result.checked_markdown_files} knowledge Markdown file(s) and "
-            f"{result.checked_supplemental_files} supplemental source file(s)."
+            f"{result.checked_markdown_files} knowledge Markdown file(s)."
         )
         return 1
 
     print(
         f"PASS: {result.checked_markdown_files} knowledge Markdown file(s); "
-        f"{result.checked_supplemental_files} supplemental source file(s); "
         f"{result.executed_examples} executable example(s)."
     )
     return 0

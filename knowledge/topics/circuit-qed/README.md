@@ -22,7 +22,7 @@ This topic introduces the physical components and effective interactions that co
 
 ## Boundary
 
-These pages teach the minimum device language used by the corpus. They do not derive a Josephson circuit from first principles or claim hands-on operating guidance for a real cryogenic system.
+These pages teach the minimum device language used by the public sources. They do not derive a Josephson circuit from first principles or claim hands-on operating guidance for a real cryogenic system.
 
 Sources: [references](references.md).
 

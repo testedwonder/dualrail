@@ -55,7 +55,7 @@ export function DocumentReader({ document, personalEntry, onNavigate }: Document
     <article className="reader" aria-labelledby="document-title">
       <header className="reader-header">
         <div className="reader-breadcrumb">
-          <span>{document.collection === 'base' ? 'Source material' : document.topicTitle ?? 'Knowledge base'}</span>
+          <span>{document.topicTitle ?? 'Knowledge base'}</span>
           <span>/</span>
           <span>{document.kind}</span>
         </div>

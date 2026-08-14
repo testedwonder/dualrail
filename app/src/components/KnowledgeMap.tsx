@@ -11,7 +11,7 @@ import {
   type Node,
 } from '@xyflow/react'
 import '@xyflow/react/dist/style.css'
-import { Database, GitBranch, Route, Share2 } from 'lucide-react'
+import { GitBranch, Route, Share2 } from 'lucide-react'
 import { getPersonalEntry } from '../lib/knowledge'
 import type { KnowledgeDocument, PersonalState } from '../types'
 
@@ -55,14 +55,12 @@ export function KnowledgeMap({ documents, personalState, selectedId, onSelect }:
   const [showPrerequisites, setShowPrerequisites] = useState(true)
   const [showNextSteps, setShowNextSteps] = useState(false)
   const [showRelated, setShowRelated] = useState(false)
-  const [showSources, setShowSources] = useState(false)
 
   const allContent = documents.filter((document) => document.collection === 'topic' && document.isRateable)
   const content = topicScope === 'all'
     ? allContent
     : allContent.filter((document) => document.topic === topicScope)
-  const sourceDocuments = showSources ? documents.filter((document) => document.collection === 'base') : []
-  const graphDocuments = [...content, ...sourceDocuments]
+  const graphDocuments = content
   const graphIds = new Set(graphDocuments.map((document) => document.id))
   const rawNodes: Node[] = graphDocuments.map((document) => {
     const entry = getPersonalEntry(document, personalState)
@@ -83,7 +81,7 @@ export function KnowledgeMap({ documents, personalState, selectedId, onSelect }:
         label: (
           <div className="map-node-label">
             <strong>{document.title}</strong>
-            <span>{document.collection === 'base' ? 'source' : document.kind}</span>
+            <span>{document.kind}</span>
             {document.isRateable && <b>{entry.understanding}/10</b>}
           </div>
         ),
@@ -119,9 +117,6 @@ export function KnowledgeMap({ documents, personalState, selectedId, onSelect }:
     if (showRelated) {
       for (const reference of document.related) addEdge(document.id, referencedId(reference), 'related', '#6b69a6')
     }
-    if (showSources) {
-      for (const reference of document.sourceFiles) addEdge(reference, document.id, 'source', '#68736d')
-    }
   }
 
   const nodes = layout(rawNodes, edges)
@@ -141,11 +136,21 @@ export function KnowledgeMap({ documents, personalState, selectedId, onSelect }:
               {topics.map(([slug, title]) => <option key={slug} value={slug}>{title}</option>)}
             </select>
           </label>
+          <div
+            className="complexity-legend"
+            role="group"
+            aria-label="Complexity heatmap legend"
+            title="Graph-relative complexity: 80% longest prerequisite depth and 20% direct prerequisite count"
+          >
+            <span>Complexity</span>
+            <i aria-hidden="true" />
+            <small>Red · lower</small>
+            <small>Violet · higher</small>
+          </div>
           <div className="edge-toggles">
             <label><input type="checkbox" checked={showPrerequisites} onChange={(event) => setShowPrerequisites(event.target.checked)} /><GitBranch size={15} /> Prerequisites</label>
             <label><input type="checkbox" checked={showNextSteps} onChange={(event) => setShowNextSteps(event.target.checked)} /><Route size={15} /> Next</label>
             <label><input type="checkbox" checked={showRelated} onChange={(event) => setShowRelated(event.target.checked)} /><Share2 size={15} /> Related</label>
-            <label><input type="checkbox" checked={showSources} onChange={(event) => setShowSources(event.target.checked)} /><Database size={15} /> Sources</label>
           </div>
         </div>
       </header>

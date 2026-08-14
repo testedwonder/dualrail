@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/annealing-and-evidence/concepts/quantum-annealing.md]
 next_steps: [topics/annealing-and-evidence/concepts/qubo-and-bqm.md]
 related: [topics/annealing-and-evidence/algorithms/annealing-sampling-workflow.md, topics/annealing-and-evidence/concepts/hardware-connectivity.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/annealing-and-evidence/references.md]
 complexity_depth: 1
 complexity_prerequisite_count: 1
 complexity_score: 1.12
@@ -61,6 +61,6 @@ Assuming every real constraint is automatically present because an objective was
 
 ## Sources and status
 
-Source-backed by the [annealing glossary and workflow, source pages 4 and 12](../../../../base/DWave_Application_and_Study_Materials.md#6-d-wave-company-history-research-and-industry-study). Status: `draft`.
+Source-backed by the [public claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Annealing and evidence](../README.md)

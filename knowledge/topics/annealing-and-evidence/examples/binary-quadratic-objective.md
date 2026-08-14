@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/annealing-and-evidence/concepts/qubo-and-bqm.md]
 next_steps: [topics/annealing-and-evidence/concepts/minor-embedding.md, topics/annealing-and-evidence/algorithms/annealing-sampling-workflow.md]
 related: [topics/annealing-and-evidence/concepts/ising-model.md, topics/annealing-and-evidence/concepts/end-to-end-benchmarking.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/annealing-and-evidence/references.md]
 complexity_depth: 3
 complexity_prerequisite_count: 1
 complexity_score: 2.35
@@ -76,6 +76,6 @@ Real constraint encoding and penalty selection can be much harder. This example 
 
 ## Sources and status
 
-Worked from the QUBO form in the [D-Wave technology study, source page 4](../../../../base/DWave_Application_and_Study_Materials.md#6-d-wave-company-history-research-and-industry-study). Status: `draft`; arithmetic is inspectable but no executable claim is made.
+Worked from the QUBO form in the [public claim map](../references.md#claim-map). Status: `draft`; arithmetic is inspectable but no executable claim is made.
 
 Parent: [Annealing and evidence](../README.md)

@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/annealing-and-evidence/concepts/qubo-and-bqm.md, topics/annealing-and-evidence/concepts/hardware-connectivity.md]
 next_steps: [topics/annealing-and-evidence/algorithms/annealing-sampling-workflow.md]
 related: [topics/annealing-and-evidence/concepts/hybrid-solver.md, topics/annealing-and-evidence/concepts/end-to-end-benchmarking.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/annealing-and-evidence/references.md]
 complexity_depth: 3
 complexity_prerequisite_count: 2
 complexity_score: 2.85
@@ -66,6 +66,6 @@ Report only anneal time while ignoring embedding search and chain tuning in an e
 
 ## Sources and status
 
-Source-backed by the [annealing workflow and topology discussion, source page 4](../../../../base/DWave_Application_and_Study_Materials.md#6-d-wave-company-history-research-and-industry-study). Status: `draft`.
+Source-backed by the [public claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Annealing and evidence](../README.md)

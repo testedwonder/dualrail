@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/error-aware-gates/algorithms/logical-measurement-with-erasure-detection.md, topics/dual-rail-qubits/concepts/pauli-errors-and-error-hierarchy.md]
 next_steps: [topics/quantum-control-software/concepts/realtime-control-and-error-handling.md, topics/quantum-control-software/concepts/acquisition-and-provenance.md]
 related: [topics/error-aware-gates/concepts/spam.md, topics/dual-rail-qubits/concepts/detection-correction-and-postselection.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/quantum-control-software/references.md]
 complexity_depth: 12
 complexity_prerequisite_count: 2
 complexity_score: 8.38
@@ -77,6 +77,6 @@ This is an explanatory model, not a D-Wave API.
 
 ## Sources and status
 
-Source-backed by the [measurement brief and public EDH description, source pages 9 and 11](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide). Status: `draft`; the type model is explanatory.
+Source-backed by the [public claim map](../references.md#claim-map). Status: `draft`; the type model is explanatory.
 
 Parent: [Quantum-control software](../README.md)

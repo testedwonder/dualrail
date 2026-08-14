@@ -3,24 +3,12 @@ title: Annealing and Evidence References
 kind: index
 status: draft
 prerequisites: []
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/research/public-technical-sources.md]
 ---
 
 # Annealing and evidence references
 
-## Local source map
-
-| Company-study pages | Supports |
-| ---: | --- |
-| 2-3 | Evidence categories, bounded company assessment, history |
-| 4-5 | Ising/QUBO workflow, embedding, connectivity, full platform |
-| 6-7 | Research record, levels of claims, 2025 debate |
-| 8-10 | Industry evidence, business model, strategy |
-| 11-13 | Interview synthesis, glossary, primary source list |
-
-Local corpus: [D-Wave company history, research, and industry study](../../../base/DWave_Application_and_Study_Materials.md#6-d-wave-company-history-research-and-industry-study).
-
-## Primary sources named by the corpus
+## Claim map
 
 - D-Wave developer documentation. <https://docs.dwavequantum.com/>
 - Rønnow et al., *Defining and detecting quantum speedup*. <https://arxiv.org/abs/1401.2910>

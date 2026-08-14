@@ -5,7 +5,7 @@ status: draft
 prerequisites: []
 next_steps: [topics/mathematics-and-quantum-foundations/fundamentals/vectors-bases-and-inner-products.md]
 related: [topics/mathematics-and-quantum-foundations/concepts/quantum-states-and-bra-ket-notation.md]
-source_files: [base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md]
+source_files: [knowledge/topics/mathematics-and-quantum-foundations/references.md]
 exercise_id: complex-phase
 complexity_depth: 0
 complexity_prerequisite_count: 0
@@ -56,7 +56,7 @@ Quantum amplitudes are complex numbers. Their magnitudes determine probabilities
 
 5. The conjugate $z^*=a-bi$ reflects the point across the real axis, and $zz^*=|z|^2$.
 
-**Source-backed fact:** OpenStax defines standard form, the complex plane, arithmetic, and conjugation. [Source record](../../../../base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md#openstax-complex-numbers).
+**Source-backed fact:** OpenStax defines standard form, the complex plane, arithmetic, and conjugation. [public claim map](../references.md#claim-map).
 
 **Explanation:** Magnitude and phase follow from ordinary plane geometry. The interactive explorer displays both descriptions together.
 
@@ -80,6 +80,6 @@ Multiplying every amplitude in a quantum state by the same phase does not change
 
 ## Sources and status
 
-Source-backed by [OpenStax through the dated source portfolio](../../../../base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md#openstax-complex-numbers). Status: `draft`; the formulas and interaction are locally checked, while the page remains a focused synthesis.
+Source-backed by [public claim map](../references.md#claim-map). Status: `draft`; the formulas and interaction are locally checked, while the page remains a focused synthesis.
 
 Parent: [Mathematics and quantum foundations](../README.md)

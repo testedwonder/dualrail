@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/quantum-control-software/concepts/production-stack.md, topics/calibration-systems/concepts/calibration-record.md, topics/circuit-qed/concepts/readout-chain-and-iq-data.md]
 next_steps: [topics/quantum-control-software/concepts/observability.md, topics/quantum-control-software/concepts/promotion-and-rollback.md]
 related: [topics/quantum-control-software/concepts/outcome-semantics.md, topics/calibration-systems/algorithms/diagnose-calibration-drift.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/quantum-control-software/references.md]
 complexity_depth: 8
 complexity_prerequisite_count: 3
 complexity_score: 6.42
@@ -64,6 +64,6 @@ A CSV containing only final probabilities with no shot order, raw-data reference
 
 ## Sources and status
 
-Source-backed by repeated-CZ source pages 6, 13-14, and 18 and the [calibration invariants, source page 8](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide). Status: `draft`.
+Public context and model boundaries are recorded in the [claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Quantum-control software](../README.md)

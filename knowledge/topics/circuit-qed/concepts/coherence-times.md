@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/circuit-qed/concepts/transmons-and-anharmonicity.md, topics/circuit-qed/concepts/microwave-cavity.md]
 next_steps: [topics/error-aware-gates/concepts/no-jump-backaction.md, topics/calibration-systems/concepts/stale-parameter-vs-changing-device.md]
 related: [topics/dual-rail-qubits/concepts/photon-loss-and-vacuum.md, topics/error-aware-gates/concepts/control-target-asymmetry.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/circuit-qed/references.md]
 complexity_depth: 2
 complexity_prerequisite_count: 2
 complexity_score: 2.23
@@ -65,6 +65,6 @@ Gate duration relative to these times helps set loss and phase-error risk. In th
 
 ## Sources and status
 
-Source-backed by the [glossary and device stack, source pages 6 and 20](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide). Status: `draft`.
+Source-backed by the [public claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Circuit QED and control](../README.md)

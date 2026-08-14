@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/mathematics-and-quantum-foundations/fundamentals/probability-and-measurement-statistics.md, topics/mathematics-and-quantum-foundations/concepts/quantum-operators-observables-and-expectation-values.md]
 next_steps: [topics/dual-rail-qubits/fundamentals/quantum-state-and-fock-notation.md, topics/calibration-systems/fundamentals/from-gates-to-calibration.md]
 related: [topics/mathematics-and-quantum-foundations/concepts/quantum-states-and-bra-ket-notation.md]
-source_files: [base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md]
+source_files: [knowledge/topics/mathematics-and-quantum-foundations/references.md]
 exercise_id: measurement-lab
 complexity_depth: 5
 complexity_prerequisite_count: 2
@@ -48,7 +48,7 @@ standard-basis measurement returns $k$ with probability
 
 $$P(k)=|\alpha_k|^2.$$
 
-The probabilities sum to one because the state is normalized. IBM's course states this rule directly and identifies it as the Born rule. [Source record](../../../../base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md#ibm-quantum-learning-state-vectors-measurement-and-gates).
+The probabilities sum to one because the state is normalized. IBM's course states this rule directly and identifies it as the Born rule. [public claim map](../references.md#claim-map).
 
 ## Worked example
 
@@ -84,6 +84,6 @@ The state predicts probabilities. A finite run produces counts. The embedded lab
 
 ## Sources and status
 
-Source-backed by [IBM Quantum Learning and OpenStax probability through the dated source portfolio](../../../../base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md). Status: `draft`; the interactive counts are deterministic educational samples, not hardware data.
+Source-backed by [public claim map](../references.md#claim-map). Status: `draft`; the interactive counts are deterministic educational samples, not hardware data.
 
 Parent: [Mathematics and quantum foundations](../README.md)

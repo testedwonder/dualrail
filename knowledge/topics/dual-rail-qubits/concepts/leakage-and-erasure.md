@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/dual-rail-qubits/concepts/code-space.md, topics/dual-rail-qubits/concepts/photon-loss-and-vacuum.md]
 next_steps: [topics/dual-rail-qubits/concepts/detection-correction-and-postselection.md, topics/dual-rail-qubits/concepts/pauli-errors-and-error-hierarchy.md]
 related: [topics/quantum-control-software/concepts/outcome-semantics.md, topics/error-aware-gates/concepts/leakage-propagation.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/dual-rail-qubits/references.md]
 complexity_depth: 10
 complexity_prerequisite_count: 2
 complexity_score: 7.15
@@ -67,6 +67,6 @@ A decoder that knows where a fault occurred has less uncertainty than one facing
 
 ## Sources and status
 
-Source-backed by the [dual-rail guide, source pages 5, 9, and 20](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide). Status: `draft`.
+Source-backed by the [public claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Dual-rail qubits](../README.md)

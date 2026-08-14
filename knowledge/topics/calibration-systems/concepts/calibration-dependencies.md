@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/calibration-systems/concepts/calibration-record.md]
 next_steps: [topics/calibration-systems/examples/dependency-invalidation.md, topics/calibration-systems/concepts/stale-parameter-vs-changing-device.md]
 related: [topics/quantum-control-software/concepts/reliable-orchestration.md, topics/quantum-control-software/concepts/promotion-and-rollback.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/calibration-systems/references.md]
 complexity_depth: 8
 complexity_prerequisite_count: 1
 complexity_score: 5.42
@@ -55,7 +55,7 @@ A gate setting is rarely isolated. It may assume particular mode frequencies, pu
 4. Mark those descendants stale before another run can select them as valid.
 5. Recompute or revalidate only the affected branch, then promote a coherent set of versions.
 
-**Source-backed fact:** The corpus gives this example: a change in coupler frequency can affect swap-pulse frequency and wait-time phase; those changes can invalidate a CZ calibration, which can invalidate its benchmark. [C3, source page 16](../references.md#local-source)
+**Explanatory model:** a change in coupler frequency can affect swap-pulse frequency and wait-time phase; those changes can invalidate a CZ calibration, which can invalidate its benchmark. [Claim map](../references.md#claim-map)
 
 ```mermaid
 flowchart TD
@@ -122,6 +122,6 @@ The relation does not mean that every parent change physically alters the child.
 
 ## Sources and status
 
-- Main evidence: [Repeated-CZ fundamentals, source page 16](../../../../base/DWave_Application_and_Study_Materials.md#4-repeated-cz-calibration-question-fundamentals).
-- Supporting production invariants: [Dual-rail conversation guide, source page 8](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide).
+- Main evidence: [public claim map](../references.md#claim-map).
+- Supporting production invariants: [public claim map](../references.md#claim-map).
 - Status: `draft`. The relation and example are source-backed; the invariants are labeled engineering interpretation rather than a private-stack description.

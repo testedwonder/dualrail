@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/error-aware-gates/concepts/single-qubit-dual-rail-control.md, topics/error-aware-gates/concepts/controlled-z-gate.md]
 next_steps: [topics/error-aware-gates/examples/repeated-cz-experiment.md]
 related: [topics/error-aware-gates/concepts/quantum-state-tomography.md, topics/dual-rail-qubits/concepts/pauli-errors-and-error-hierarchy.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/error-aware-gates/references.md]
 complexity_depth: 10
 complexity_prerequisite_count: 2
 complexity_score: 7.15
@@ -62,6 +62,6 @@ Reporting one RB error number while discarding detected erasures without stating
 
 ## Sources and status
 
-Source-backed by the [gate glossary, source page 7](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide) and checked SWS preprint. Status: `draft`.
+Source-backed by the [public claim map](../references.md#claim-map) and checked SWS preprint. Status: `draft`.
 
 Parent: [Error-aware gates](../README.md)

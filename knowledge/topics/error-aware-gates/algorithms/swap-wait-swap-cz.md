@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/error-aware-gates/concepts/controlled-z-gate.md, topics/circuit-qed/concepts/beamsplitter-and-parametric-drive.md, topics/circuit-qed/concepts/transmons-and-anharmonicity.md]
 next_steps: [topics/error-aware-gates/concepts/control-target-asymmetry.md, topics/error-aware-gates/concepts/leakage-propagation.md, topics/error-aware-gates/examples/repeated-cz-experiment.md]
 related: [topics/circuit-qed/concepts/circuit-qed-and-dispersive-interaction.md, topics/calibration-systems/concepts/calibration-dependencies.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/error-aware-gates/references.md]
 complexity_depth: 10
 complexity_prerequisite_count: 3
 complexity_score: 7.65
@@ -97,6 +97,6 @@ The demonstrated gate is sub-microsecond, but the relevant operational cost also
 
 ## Sources and status
 
-Source-backed by the [gate summary, source page 7](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide) and checked SWS preprint Appendix A. Status: `draft`; this page is not executable hardware code.
+Source-backed by the [public claim map](../references.md#claim-map) and checked SWS preprint Appendix A. Status: `draft`; this page is not executable hardware code.
 
 Parent: [Error-aware gates](../README.md)

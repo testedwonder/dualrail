@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/quantum-control-software/concepts/acquisition-and-provenance.md, topics/calibration-systems/concepts/stale-parameter-vs-changing-device.md]
 next_steps: [topics/calibration-systems/algorithms/diagnose-calibration-drift.md, topics/quantum-control-software/concepts/test-portfolio.md]
 related: [topics/quantum-control-software/concepts/reliable-orchestration.md, topics/error-aware-gates/examples/repeated-cz-experiment.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/quantum-control-software/references.md]
 complexity_depth: 10
 complexity_prerequisite_count: 2
 complexity_score: 7.15
@@ -71,6 +71,6 @@ A degraded experiment with normal service metrics points differently from one th
 
 ## Sources and status
 
-Source-backed by the [observability section, source page 12](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide). Status: `draft`.
+Source-backed by the [public claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Quantum-control software](../README.md)

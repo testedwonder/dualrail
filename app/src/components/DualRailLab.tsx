@@ -3,6 +3,7 @@ import { Atom, BookOpen, RotateCcw } from 'lucide-react'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { dualRailState, formatSignedAmplitude } from '../lib/dualRail'
+import { VerificationBadge } from './VerificationBadge'
 
 interface DualRailLabProps {
   onNavigate: (id: string) => void
@@ -28,6 +29,9 @@ const presets = [
 
 const modeA = new THREE.Vector3(-1.75, 0.15, 0)
 const modeB = new THREE.Vector3(1.75, 0.15, 0)
+const modeMidpoint = modeA.clone().add(modeB).multiplyScalar(0.5)
+const modeLabelAAnchor = modeA.clone().add(new THREE.Vector3(0, 1.42, 0))
+const modeLabelBAnchor = modeB.clone().add(new THREE.Vector3(0, 1.42, 0))
 
 function makeMode(color: number, position: THREE.Vector3) {
   const group = new THREE.Group()
@@ -66,14 +70,22 @@ export function DualRailLab({ onNavigate }: DualRailLabProps) {
   const [sceneError, setSceneError] = useState('')
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const sceneRef = useRef<HTMLDivElement>(null)
+  const modeLabelARef = useRef<HTMLDivElement>(null)
+  const modeLabelBRef = useRef<HTMLDivElement>(null)
   const objectsRef = useRef<SceneObjects | null>(null)
   const state = dualRailState(theta, phase)
 
   useEffect(() => {
     const canvas = canvasRef.current
     const container = sceneRef.current
-    if (!canvas || !container) return
+    const modeLabelA = modeLabelARef.current
+    const modeLabelB = modeLabelBRef.current
+    if (!canvas || !container || !modeLabelA || !modeLabelB) return
     const sceneContainer = container
+    const modeLabels = [
+      [modeLabelA, modeLabelAAnchor],
+      [modeLabelB, modeLabelBAnchor],
+    ] as const
     if (typeof WebGLRenderingContext === 'undefined') {
       setSceneError('The state math remains available; this environment does not expose WebGL.')
       return
@@ -106,7 +118,7 @@ export function DualRailLab({ onNavigate }: DualRailLabProps) {
     controls.maxDistance = 11
     controls.minPolarAngle = Math.PI * 0.25
     controls.maxPolarAngle = Math.PI * 0.72
-    controls.target.set(0.8, 0.05, 0)
+    controls.target.copy(modeMidpoint)
 
     scene.add(new THREE.HemisphereLight(0xffffff, 0x8ca59b, 2.25))
     const keyLight = new THREE.DirectionalLight(0xffffff, 2.6)
@@ -182,6 +194,18 @@ export function DualRailLab({ onNavigate }: DualRailLabProps) {
     )
     scene.add(particles)
 
+    const projectedAnchor = new THREE.Vector3()
+    function positionModeLabel(label: HTMLDivElement, anchor: THREE.Vector3) {
+      projectedAnchor.copy(anchor).project(camera)
+      label.style.setProperty('--mode-label-x', `${(projectedAnchor.x * 0.5 + 0.5) * sceneContainer.clientWidth}px`)
+      label.style.setProperty('--mode-label-y', `${(-projectedAnchor.y * 0.5 + 0.5) * sceneContainer.clientHeight}px`)
+      label.style.visibility = projectedAnchor.z >= -1 && projectedAnchor.z <= 1 ? 'visible' : 'hidden'
+    }
+    function renderScene() {
+      renderer.render(scene, camera)
+      for (const [label, anchor] of modeLabels) positionModeLabel(label, anchor)
+    }
+
     objectsRef.current = {
       amplitudeA,
       amplitudeB,
@@ -190,7 +214,7 @@ export function DualRailLab({ onNavigate }: DualRailLabProps) {
       phaseMarker,
       phaseLine,
       coherence,
-      render: () => renderer.render(scene, camera),
+      render: renderScene,
     }
     sceneContainer.dataset.rendererReady = 'true'
 
@@ -201,12 +225,13 @@ export function DualRailLab({ onNavigate }: DualRailLabProps) {
       renderer.setSize(width, height, false)
       camera.aspect = width / height
       camera.updateProjectionMatrix()
+      renderScene()
     }
     const resizeObserver = new ResizeObserver(resize)
     resizeObserver.observe(sceneContainer)
     resize()
     controls.update()
-    renderer.render(scene, camera)
+    renderScene()
 
     let animationFrame = 0
     const startedAt = performance.now()
@@ -219,7 +244,7 @@ export function DualRailLab({ onNavigate }: DualRailLabProps) {
       }
       particles.rotation.y = elapsed * 0.012
       controls.update()
-      renderer.render(scene, camera)
+      renderScene()
       animationFrame = requestAnimationFrame(render)
     }
     animationFrame = requestAnimationFrame(render)
@@ -284,14 +309,14 @@ export function DualRailLab({ onNavigate }: DualRailLabProps) {
       <div className="lab-scene" ref={sceneRef}>
         <canvas ref={canvasRef} className="lab-canvas" role="img" aria-label="Three-dimensional dual-rail state visualization" />
         {sceneError && <p className="lab-renderer-fallback" role="status">{sceneError}</p>}
-        <div className="mode-label mode-label-a"><span>Mode A</span><strong>{(state.probabilityA * 100).toFixed(1)}%</strong></div>
-        <div className="mode-label mode-label-b"><span>Mode B</span><strong>{(state.probabilityB * 100).toFixed(1)}%</strong></div>
+        <div ref={modeLabelARef} className="mode-label mode-label-a"><span>Mode A</span><strong>{(state.probabilityA * 100).toFixed(1)}%</strong></div>
+        <div ref={modeLabelBRef} className="mode-label mode-label-b"><span>Mode B</span><strong>{(state.probabilityB * 100).toFixed(1)}%</strong></div>
         <div className="lab-scene-caption"><span>Coherent single-excitation state</span><b>State-space view · not hardware geometry</b></div>
       </div>
 
       <aside className="lab-control-band" aria-label="Dual-rail state controls">
         <header className="lab-header">
-          <span className="eyebrow"><Atom size={14} /> Interactive state lab</span>
+          <div className="lab-header-meta"><span className="eyebrow"><Atom size={14} /> Interactive state lab</span><VerificationBadge scope="lab" /></div>
           <h1>Dual-rail<br />{' '}state space</h1>
           <p>Explore how population and relative phase shape one excitation across two modes.</p>
         </header>

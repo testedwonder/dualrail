@@ -1,7 +1,7 @@
 {
   "name": "dualrail-atlas",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "index": "node scripts/generate-index.mjs",
@@ -9,10 +9,13 @@
     "dev": "vite --host 127.0.0.1",
     "prebuild": "npm run index",
     "build": "tsc -b && vite build",
+    "postbuild": "node scripts/build-service-worker.mjs && npm run verify:release",
     "pretest": "npm run index",
     "test": "vitest run",
     "test:watch": "vitest",
     "check": "npm run test && npm run build",
+    "verify:release": "node scripts/verify-release.mjs",
+    "release:check": "npm run check && npm audit --audit-level=low",
     "preview": "vite preview --host 127.0.0.1"
   },
   "dependencies": {
@@ -43,7 +46,7 @@
     "@vitejs/plugin-react": "^4.3.3",
     "jsdom": "^25.0.1",
     "typescript": "~5.6.2",
-    "vite": "^5.4.10",
-    "vitest": "^2.1.8"
+    "vite": "^6.4.3",
+    "vitest": "^3.2.6"
   }
 }

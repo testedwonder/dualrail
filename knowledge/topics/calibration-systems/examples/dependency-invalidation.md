@@ -5,7 +5,7 @@ status: verified
 prerequisites: [topics/calibration-systems/concepts/calibration-dependencies.md]
 next_steps: [topics/calibration-systems/concepts/stale-parameter-vs-changing-device.md, topics/quantum-control-software/concepts/promotion-and-rollback.md]
 related: [topics/quantum-control-software/concepts/reliable-orchestration.md, topics/calibration-systems/concepts/calibration-validity.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/calibration-systems/references.md]
 executable_examples: [topics/calibration-systems/examples/calibration_graph.py]
 complexity_depth: 9
 complexity_prerequisite_count: 1
@@ -44,7 +44,7 @@ Next: [Stale parameter versus changing device](../concepts/stale-parameter-vs-ch
 
 Show, with a small deterministic program, why changing one parent must invalidate indirect descendants as well as direct children.
 
-**Source-backed rule:** The corpus says that a coupler-frequency change can invalidate swap-pulse and wait-time settings, then the CZ calibration, then its benchmark. [C3, source page 16](../references.md#local-source)
+**Synthetic rule:** this educational graph models a coupler-frequency change invalidating swap-pulse and wait-time settings, then the CZ calibration and benchmark. [Claim map](../references.md#claim-map)
 
 **Implementation status:** The graph and traversal are a synthetic engineering interpretation. They do not represent D-Wave’s private schema or hardware.
 
@@ -118,6 +118,6 @@ An implementation that returns only `swap-pulse` and `wait-time` misses transiti
 
 ## Sources and status
 
-- Concept source: [Repeated-CZ fundamentals, source page 16](../../../../base/DWave_Application_and_Study_Materials.md#4-repeated-cz-calibration-question-fundamentals).
+- Concept source: [public claim map](../references.md#claim-map).
 - Code: [calibration_graph.py](calibration_graph.py).
 - Status: `verified`. The validator checks metadata, links, source provenance, prerequisite order, and successful execution of the deterministic assertions. This status applies to the example behavior, not to a real hardware implementation.

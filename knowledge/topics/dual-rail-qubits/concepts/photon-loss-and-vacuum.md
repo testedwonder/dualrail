@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/dual-rail-qubits/concepts/dual-rail-encoding.md]
 next_steps: [topics/dual-rail-qubits/concepts/leakage-and-erasure.md, topics/dual-rail-qubits/examples/loss-to-vacuum.md]
 related: [topics/circuit-qed/concepts/coherence-times.md, topics/error-aware-gates/concepts/leakage-propagation.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/dual-rail-qubits/references.md]
 complexity_depth: 9
 complexity_prerequisite_count: 1
 complexity_score: 6.04
@@ -68,6 +68,6 @@ Detecting vacuum does not reconstruct the lost amplitudes. It provides a known f
 
 ## Sources and status
 
-Source-backed by the [dual-rail guide, source page 5](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide). Status: `draft`.
+Source-backed by the [public claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Dual-rail qubits](../README.md)

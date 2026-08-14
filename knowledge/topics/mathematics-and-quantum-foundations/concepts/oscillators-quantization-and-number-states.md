@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/mathematics-and-quantum-foundations/concepts/quantum-operators-observables-and-expectation-values.md]
 next_steps: [topics/dual-rail-qubits/fundamentals/quantum-state-and-fock-notation.md]
 related: [topics/circuit-qed/concepts/microwave-cavity.md]
-source_files: [base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md]
+source_files: [knowledge/topics/mathematics-and-quantum-foundations/references.md]
 complexity_depth: 5
 complexity_prerequisite_count: 1
 complexity_score: 3.58
@@ -65,7 +65,7 @@ For $n=0$, annihilation gives zero rather than a state with negative occupation.
 
 ## Source boundary
 
-MIT 8.04 provides dedicated undergraduate notes on energy eigenstates and the quantum harmonic oscillator. [Source record](../../../../base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md#mit-opencourseware-operators-observables-and-oscillator-physics).
+MIT 8.04 provides dedicated undergraduate notes on energy eigenstates and the quantum harmonic oscillator. [public claim map](../references.md#claim-map).
 
 This page uses the ideal oscillator to establish number-state notation. Real cavities have loss, coupling, drive, and imperfections covered elsewhere.
 
@@ -83,6 +83,6 @@ This page uses the ideal oscillator to establish number-state notation. Real cav
 
 ## Sources and status
 
-Source-backed by [MIT OpenCourseWare through the dated source portfolio](../../../../base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md#mit-opencourseware-operators-observables-and-oscillator-physics). Status: `draft`.
+Source-backed by [public claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Mathematics and quantum foundations](../README.md)

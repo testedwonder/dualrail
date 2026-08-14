@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/circuit-qed/concepts/circuit-qed-and-dispersive-interaction.md]
 next_steps: [topics/error-aware-gates/concepts/single-qubit-dual-rail-control.md, topics/error-aware-gates/algorithms/swap-wait-swap-cz.md]
 related: [topics/dual-rail-qubits/concepts/dual-rail-encoding.md, topics/calibration-systems/fundamentals/from-gates-to-calibration.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/circuit-qed/references.md]
 complexity_depth: 3
 complexity_prerequisite_count: 1
 complexity_score: 2.35
@@ -75,6 +75,6 @@ H / hbar proportional to g(a-dagger b + a b-dagger)
 
 ## Sources and status
 
-Source-backed by the [device-physics and gate summaries, source pages 6-7](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide). Status: `draft`.
+Source-backed by the [public claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Circuit QED and control](../README.md)

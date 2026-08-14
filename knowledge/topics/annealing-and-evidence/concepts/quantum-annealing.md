@@ -5,7 +5,7 @@ status: draft
 prerequisites: []
 next_steps: [topics/annealing-and-evidence/concepts/ising-model.md, topics/annealing-and-evidence/concepts/hardware-connectivity.md]
 related: [topics/annealing-and-evidence/algorithms/annealing-sampling-workflow.md, topics/annealing-and-evidence/concepts/quantum-advantage.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/annealing-and-evidence/references.md]
 complexity_depth: 0
 complexity_prerequisite_count: 0
 complexity_score: 0.0
@@ -60,6 +60,6 @@ A user formulates an objective, maps it to hardware connectivity, runs many stoc
 
 ## Sources and status
 
-Source-backed by the [D-Wave technology study, source page 4](../../../../base/DWave_Application_and_Study_Materials.md#6-d-wave-company-history-research-and-industry-study). Status: `draft`.
+Source-backed by the [public claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Annealing and evidence](../README.md)

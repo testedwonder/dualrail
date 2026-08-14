@@ -12,7 +12,7 @@ source_files: []
 
 Each concept, definition, algorithm, and example carries a derived complexity value and a manual understanding rating. Complexity comes from graph structure; understanding belongs to the learner.
 
-The score is a graph-relative workload proxy, not an intrinsic judgment of intellectual difficulty or importance. A root page receives `0.0` because the tree represents no prerequisites for it, not because the subject is trivial. [Feedback assessment 1](feedback-assessment.md) records a concrete case where missing foundations made that distinction misleading.
+The score is a graph-relative workload proxy, not an intrinsic judgment of intellectual difficulty or importance. A root page receives `0.0` because the tree represents no prerequisites for it, not because the subject is trivial. The current graph represents mathematics and quantum foundations before dependent state and calibration pages.
 
 ## Inputs
 

@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/dual-rail-qubits/concepts/dual-rail-encoding.md, topics/dual-rail-qubits/concepts/photon-loss-and-vacuum.md, topics/dual-rail-qubits/concepts/leakage-and-erasure.md]
 next_steps: [topics/dual-rail-qubits/concepts/detection-correction-and-postselection.md, topics/error-aware-gates/algorithms/logical-measurement-with-erasure-detection.md]
 related: [topics/quantum-control-software/concepts/outcome-semantics.md, topics/error-aware-gates/concepts/leakage-propagation.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/dual-rail-qubits/references.md]
 complexity_depth: 11
 complexity_prerequisite_count: 3
 complexity_score: 8.27
@@ -76,6 +76,6 @@ If the check reports only “measurement failed” with no reliable physical cat
 
 ## Sources and status
 
-Worked directly from the [dual-rail guide, source page 5](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide). Status: `draft`; no executable simulator is claimed.
+Worked directly from the [public claim map](../references.md#claim-map). Status: `draft`; no executable simulator is claimed.
 
 Parent: [Dual-rail qubits](../README.md)

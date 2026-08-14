@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/mathematics-and-quantum-foundations/fundamentals/vectors-bases-and-inner-products.md]
 next_steps: [topics/mathematics-and-quantum-foundations/concepts/quantum-operators-observables-and-expectation-values.md, topics/mathematics-and-quantum-foundations/concepts/unitary-evolution-and-quantum-gates.md]
 related: [topics/dual-rail-qubits/fundamentals/quantum-state-and-fock-notation.md]
-source_files: [base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md]
+source_files: [knowledge/topics/mathematics-and-quantum-foundations/references.md]
 complexity_depth: 2
 complexity_prerequisite_count: 1
 complexity_score: 1.73
@@ -51,7 +51,7 @@ where the amplitudes $\alpha_k$ are complex and
 
 $$\langle\psi|\psi\rangle=\sum_k|\alpha_k|^2=1.$$
 
-IBM Quantum Learning states these two conditions directly for finite state vectors. [Source record](../../../../base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md#ibm-quantum-learning-state-vectors-measurement-and-gates).
+IBM Quantum Learning states these two conditions directly for finite state vectors. [public claim map](../references.md#claim-map).
 
 ## Worked example
 
@@ -81,6 +81,6 @@ Multiplying the entire state by $e^{i\phi}$ leaves all inner-product magnitudes 
 
 ## Sources and status
 
-Source-backed by [IBM Quantum Learning through the dated source portfolio](../../../../base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md#ibm-quantum-learning-state-vectors-measurement-and-gates). Status: `draft`.
+Source-backed by [public claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Mathematics and quantum foundations](../README.md)

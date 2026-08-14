@@ -9,7 +9,7 @@ research_date: 2026-08-14
 
 # Public technical source registry
 
-This registry supplies the public educational sources used by the app's Research view.
+This registry is the allowlist of public sources used by the knowledge tree and the app's Research view.
 
 Access date for all sources: **2026-08-14**.
 
@@ -34,8 +34,29 @@ Access date for all sources: **2026-08-14**.
 - [MIT 8.04 Quantum Physics I, Lecture Notes](https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2013/pages/lecture-notes/)
 - [MIT 8.05 Quantum Physics II, Lecture Notes](https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/pages/lecture-notes/)
 
+## Dual-rail qubits, circuit QED, and gates
+
+- [Teoh et al., Dual-rail encoding with superconducting cavities](https://arxiv.org/abs/2212.12077)
+- [Chou et al., Erasure-detected logical measurements](https://arxiv.org/abs/2307.03169)
+- [Mehta et al., Bias-preserving and error-detectable entangling operations](https://arxiv.org/abs/2503.10935)
+- [Mehta et al., open HTML preprint with appendices](https://arxiv.org/html/2503.10935v1)
+- [Blais et al., Circuit quantum electrodynamics](https://arxiv.org/abs/2005.12667)
+- [Krantz et al., A quantum engineer's guide to superconducting qubits](https://arxiv.org/abs/1904.06560)
+
+## Public quantum-control interfaces
+
+- [Quantum Circuits technology](https://quantumcircuits.com/technology/)
+- [Quantum Circuits product](https://quantumcircuits.com/product/)
+
+## Annealing and evidence
+
+- [D-Wave developer documentation](https://docs.dwavequantum.com/)
+- [Rønnow et al., Defining and detecting quantum speedup](https://arxiv.org/abs/1401.2910)
+- [King et al., Quantum critical dynamics in a 5,000-qubit programmable spin glass](https://www.nature.com/articles/s41586-023-05867-2)
+- [King et al., Beyond-classical computation in quantum simulation](https://www.science.org/doi/10.1126/science.ado6285)
+
 ## Evaluation boundary
 
-These links support introductory definitions and examples. A source's presence does not make every claim verified. Match the exact claim, system, metric, and date; distinguish peer review from preprints and first-party material; inspect methods and uncertainty; and retain unresolved questions.
+These links support definitions, explanatory models, and bounded system-specific examples. A source's presence does not make every claim verified. Match the exact claim, system, metric, and date; distinguish peer review from preprints and first-party material; inspect methods and uncertainty; and retain unresolved questions.
 
 Return to the [knowledge-tree root](../README.md).

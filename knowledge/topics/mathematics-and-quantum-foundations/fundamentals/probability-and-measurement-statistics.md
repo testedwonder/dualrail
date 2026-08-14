@@ -5,7 +5,7 @@ status: draft
 prerequisites: []
 next_steps: [topics/mathematics-and-quantum-foundations/concepts/quantum-measurement-and-born-rule.md]
 related: [topics/mathematics-and-quantum-foundations/concepts/quantum-states-and-bra-ket-notation.md]
-source_files: [base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md]
+source_files: [knowledge/topics/mathematics-and-quantum-foundations/references.md]
 complexity_depth: 0
 complexity_prerequisite_count: 0
 complexity_score: 0.0
@@ -51,7 +51,7 @@ $$P(0)=p,\qquad P(1)=1-p.$$
 
 After $N$ repetitions, if outcome $0$ occurs $n_0$ times, its observed frequency is $f_0=n_0/N$.
 
-**Source-backed fact:** OpenStax distinguishes outcomes, sample spaces, events, probabilities, and long-run relative frequencies. It explicitly notes that a small number of trials need not match the theoretical probability. [Source record](../../../../base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md#openstax-probability-and-repeated-trials).
+**Source-backed fact:** OpenStax distinguishes outcomes, sample spaces, events, probabilities, and long-run relative frequencies. It explicitly notes that a small number of trials need not match the theoretical probability. [public claim map](../references.md#claim-map).
 
 ## Worked example
 
@@ -79,6 +79,6 @@ It predicts the long-run average, not necessarily an outcome that one trial can 
 
 ## Sources and status
 
-Source-backed by [OpenStax through the dated source portfolio](../../../../base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md#openstax-probability-and-repeated-trials). Status: `draft`.
+Source-backed by [public claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Mathematics and quantum foundations](../README.md)

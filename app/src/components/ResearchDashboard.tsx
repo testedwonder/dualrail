@@ -17,6 +17,7 @@ import type {
   ResearchSource,
   TopicSummary,
 } from '../types'
+import { VerificationBadge } from './VerificationBadge'
 
 interface ResearchDashboardProps {
   sources: ResearchSource[]
@@ -93,6 +94,7 @@ export function ResearchDashboard({
           <div><dt>Topics</dt><dd>{new Set(sources.flatMap((source) => source.topics)).size}</dd></div>
           <div><dt>Proposals</dt><dd>{proposals.length}</dd></div>
         </dl>
+        <VerificationBadge scope="research" />
       </header>
 
       <section className="credibility-guide" aria-labelledby="credibility-title">

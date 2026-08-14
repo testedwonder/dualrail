@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/quantum-control-software/concepts/production-stack.md, topics/quantum-control-software/concepts/outcome-semantics.md, topics/quantum-control-software/concepts/compiler-and-scheduler.md]
 next_steps: [topics/calibration-systems/algorithms/diagnose-calibration-drift.md, topics/quantum-control-software/concepts/promotion-and-rollback.md]
 related: [topics/quantum-control-software/concepts/reliable-orchestration.md, topics/quantum-control-software/concepts/observability.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/quantum-control-software/references.md]
 complexity_depth: 13
 complexity_prerequisite_count: 3
 complexity_score: 9.5
@@ -63,6 +63,6 @@ A simulator can test a validity policy but cannot authorize that a calibration i
 
 ## Sources and status
 
-Source-backed by the [test portfolio, source page 12](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide). Status: `draft`.
+Source-backed by the [public claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Quantum-control software](../README.md)

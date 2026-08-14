@@ -48,24 +48,21 @@ The complete formula and spectral mapping are in the [complexity model](_meta/co
 
 ## How to read evidence labels
 
-- **Source-backed fact:** stated in the local source corpus. The page names the source document and source page.
+- **Source-backed fact:** supported by a public source in the topic claim map.
 - **Explanation:** a simpler restatement or consequence of source-backed material.
 - **Analogy:** a teaching aid. It is not evidence that the compared systems are identical.
 - **Provisional inference:** a plausible model that still needs direct evidence.
 - **Unresolved question:** the available source does not settle it.
 
-Most technical pages remain `draft` because this run validates local provenance and structure but does not independently fetch the external papers cited by the compendium.
+Most technical pages remain `draft` because repository checks validate public provenance and structure but do not independently reproduce external results.
 
 ## Architecture and maintenance
 
-- [Source inventory](_meta/source-inventory.md)
 - [Concept and prerequisite map](_meta/concept-map.md)
-- [Decision ledger](_meta/decision-ledger.md)
-- [Bounded expansion plan](_meta/expansion-plan.md)
 - [Complexity model](_meta/complexity-model.md)
-- [Feedback assessment 1](_meta/feedback-assessment.md)
 - [Validation report](_meta/validation-report.md)
 - [Public technical source registry](research/public-technical-sources.md)
+- [Release-candidate review](../REVIEW.md)
 
 The application index contains learner-facing knowledge and public technical references only.
 
@@ -78,10 +75,10 @@ npm install
 npm run dev
 ```
 
-The interface provides a searchable and filterable library, rendered Markdown and MathJax, code-copy controls, prerequisite and related-page navigation, a topic-scoped relationship map, public technical research, local source and correction proposals, notes and ratings, JSON backup and restore, progress views, five immediate-feedback foundation exercises, and a full-bleed Three.js dual-rail state lab.
+The interface provides a searchable and filterable library, rendered Markdown and MathJax, code-copy controls, prerequisite and related-page navigation, a topic-scoped relationship map, public technical research, local source and correction proposals, notes and ratings, JSON backup and restore, progress views, five immediate-feedback foundation exercises, a full-bleed Three.js dual-rail state lab, and an installable offline website/mobile release.
 
 The application regenerates its read-only corpus index before development, tests, and production builds. See the [application guide](../app/README.md) for the data boundary and validation commands.
 
 ## Current boundary
 
-Roadmap items 1-7 cover the linked definition tree, derived study metadata, visual study application, feedback intake, sourced foundation expansion, prerequisite rewiring, interactive exercises, exhaustive [repository guide](../README.md), public technical research workflow, and an immersive 3D state lab. [Feedback assessment 1](_meta/feedback-assessment.md) records the completed foundation batch. Final bug and optimization work remains; Feedback 2–4 require separate assessment before their broader feature and content requests are implemented.
+The current release covers the linked definition tree, derived study metadata, visual study application, sourced foundation expansion, interactive exercises, exhaustive [repository guide](../README.md), public technical research, immersive 3D state lab, GitHub feedback intake, and installable PWA delivery.

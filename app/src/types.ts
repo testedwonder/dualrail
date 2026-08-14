@@ -1,4 +1,4 @@
-export type Collection = 'topic' | 'base' | 'learning-path' | 'meta' | 'root'
+export type Collection = 'topic' | 'learning-path' | 'meta' | 'root'
 
 export interface Complexity {
   score: number
@@ -50,7 +50,6 @@ export interface KnowledgeIndex {
     documents: number
     knowledgeDocuments: number
     topicItems: number
-    baseDocuments: number
     sourceFiles: number
     researchSources: number
     topics: number
@@ -101,6 +100,7 @@ export interface PersonalExport {
   version: 1
   exportedAt: string
   entries: PersonalState
+  progress?: ProgressSummary
 }
 
 export type MainView = 'library' | 'map' | 'progress' | 'research' | 'lab'

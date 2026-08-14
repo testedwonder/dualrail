@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/calibration-systems/fundamentals/from-gates-to-calibration.md]
 next_steps: [topics/quantum-control-software/concepts/public-and-internal-interfaces.md, topics/quantum-control-software/concepts/experiment-description-and-semantic-layer.md]
 related: [topics/calibration-systems/concepts/calibration-record.md, topics/quantum-control-software/concepts/acquisition-and-provenance.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/quantum-control-software/references.md]
 complexity_depth: 7
 complexity_prerequisite_count: 1
 complexity_score: 4.81
@@ -69,6 +69,6 @@ A notebook that works once for its author but cannot reconstruct which device st
 
 ## Sources and status
 
-Source-backed by repeated-CZ source page 13 and the [public stack model, source page 11](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide). Status: `draft`; the architecture is a reference model.
+Public context and model boundaries are recorded in the [claim map](../references.md#claim-map). Status: `draft`; the architecture is a reference model.
 
 Parent: [Quantum-control software](../README.md)

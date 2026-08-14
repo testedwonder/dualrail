@@ -5,7 +5,7 @@ status: draft
 prerequisites: []
 next_steps: [topics/circuit-qed/concepts/transmons-and-anharmonicity.md, topics/circuit-qed/concepts/microwave-cavity.md]
 related: [topics/circuit-qed/concepts/circuit-qed-and-dispersive-interaction.md, topics/circuit-qed/concepts/coherence-times.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/circuit-qed/references.md]
 complexity_depth: 0
 complexity_prerequisite_count: 0
 complexity_score: 0.0
@@ -68,6 +68,6 @@ Treating the command `CZ` as if it directly reaches a qubit without compilation,
 
 ## Sources and status
 
-Source-backed by the [device-physics stack, source page 6](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide). Status: `draft`.
+Source-backed by the [public claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Circuit QED and control](../README.md)

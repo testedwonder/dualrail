@@ -18,7 +18,6 @@ interface LibrarySidebarProps {
 }
 
 function groupLabel(document: KnowledgeDocument) {
-  if (document.collection === 'base') return 'Source material'
   if (document.collection === 'learning-path') return 'Learning paths'
   return document.topicTitle ?? 'Reference'
 }

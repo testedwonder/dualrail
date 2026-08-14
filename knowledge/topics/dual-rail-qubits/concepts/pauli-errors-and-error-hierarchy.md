@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/dual-rail-qubits/concepts/dual-rail-encoding.md, topics/dual-rail-qubits/concepts/leakage-and-erasure.md]
 next_steps: [topics/error-aware-gates/algorithms/swap-wait-swap-cz.md, topics/quantum-control-software/concepts/outcome-semantics.md]
 related: [topics/error-aware-gates/concepts/control-target-asymmetry.md, topics/error-aware-gates/concepts/no-jump-backaction.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/dual-rail-qubits/references.md]
 complexity_depth: 11
 complexity_prerequisite_count: 2
 complexity_score: 7.77
@@ -64,6 +64,6 @@ The 2024 measurement result reported decay as dominant, phase errors several tim
 
 ## Sources and status
 
-Source-backed by the [dual-rail guide, source pages 5, 7, 9, and 10](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide). Status: `draft`.
+Source-backed by the [public claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Dual-rail qubits](../README.md)

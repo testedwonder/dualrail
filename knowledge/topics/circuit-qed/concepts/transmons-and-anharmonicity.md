@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/circuit-qed/concepts/superconducting-circuit-stack.md]
 next_steps: [topics/circuit-qed/concepts/circuit-qed-and-dispersive-interaction.md, topics/circuit-qed/concepts/coherence-times.md]
 related: [topics/error-aware-gates/algorithms/swap-wait-swap-cz.md, topics/calibration-systems/concepts/stale-parameter-vs-changing-device.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/circuit-qed/references.md]
 complexity_depth: 1
 complexity_prerequisite_count: 1
 complexity_score: 1.12
@@ -68,6 +68,6 @@ Frequency, flux response, pulse amplitude, leakage, and coherence are device-spe
 
 ## Sources and status
 
-Source-backed by the [device-physics stack, source page 6](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide) and repeated-CZ source pages 5 and 12. Status: `draft`.
+Supported by the [public claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Circuit QED and control](../README.md)

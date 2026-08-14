@@ -3,7 +3,7 @@ title: Initial Concept Map
 kind: index
 status: draft
 prerequisites: []
-source_files: [base/DWave_Application_and_Study_Materials.md, base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md]
+source_files: [knowledge/research/public-technical-sources.md]
 ---
 
 # Concept and prerequisite map
@@ -13,16 +13,16 @@ source_files: [base/DWave_Application_and_Study_Materials.md, base/Mathematics_a
 | Topic | Content pages | Central question | Source coverage |
 | --- | ---: | --- | --- |
 | [Mathematics and quantum foundations](../topics/mathematics-and-quantum-foundations/README.md) | 10 | Which mathematical and physical ideas make states, measurement, gates, and calibration meaningful? | OpenStax, MIT OpenCourseWare, and IBM Quantum Learning, accessed 2026-08-14 |
-| [Dual-rail qubits and erasures](../topics/dual-rail-qubits/README.md) | 8 | How can one excitation across two modes expose photon loss? | Compendium section 3, pages 2, 5, 7, 9-10, 20-21 |
-| [Superconducting circuit QED and control](../topics/circuit-qed/README.md) | 7 | Which components and interactions realize the encoded operations? | Section 3, pages 6-7, 11, 19-21; section 4, pages 4-5, 10-12 |
-| [Error-aware gates and measurement](../topics/error-aware-gates/README.md) | 11 | How are gates and measurements qualified without flattening structured errors? | Section 3, pages 7, 9-10, 12, 20-21; section 4, pages 4-9, 12, 18 |
-| [Calibration systems](../topics/calibration-systems/README.md) | 7 | How does measured behavior become conditional, revocable control state? | Sections 3-4 |
-| [Quantum-control software](../topics/quantum-control-software/README.md) | 11 | How does experiment intent reach hardware and return as traceable evidence? | Section 3, pages 3, 8, 11-12, 15, 17-18; section 4, pages 13-19 |
-| [Annealing and evidence](../topics/annealing-and-evidence/README.md) | 12 | What does the annealing workflow do, and what supports a comparative claim? | Section 6, pages 2-13 |
+| [Dual-rail qubits and erasures](../topics/dual-rail-qubits/README.md) | 8 | How can one excitation across two modes expose photon loss? | Teoh, Chou, and Mehta open papers |
+| [Superconducting circuit QED and control](../topics/circuit-qed/README.md) | 7 | Which components and interactions realize the encoded operations? | Blais and Krantz reviews; Mehta system paper |
+| [Error-aware gates and measurement](../topics/error-aware-gates/README.md) | 11 | How are gates and measurements qualified without flattening structured errors? | Chou and Mehta open papers |
+| [Calibration systems](../topics/calibration-systems/README.md) | 7 | How does measured behavior become conditional, revocable control state? | Public gate appendices, quantum prerequisites, and bounded explanatory models |
+| [Quantum-control software](../topics/quantum-control-software/README.md) | 11 | How does experiment intent reach hardware and return as traceable evidence? | Public product and technology interfaces plus explicit reference architectures |
+| [Annealing and evidence](../topics/annealing-and-evidence/README.md) | 12 | What does the annealing workflow do, and what supports a comparative claim? | Developer documentation, open methodology, and peer-reviewed system papers |
 
 Total: **66 canonical content pages** plus topic indexes, references, learning paths, glossary, and metadata records.
 
-Private application and interview logistics remain source material, not reusable knowledge topics.
+The public tree includes technical learning material only.
 
 ## Cross-topic graph
 
@@ -87,7 +87,7 @@ This Mermaid view is deliberately compressed. Page front matter is the canonical
 
 See the [complexity model](complexity-model.md) for the exact formula. Derived values are recalculated by `tools/update_complexity.py` and checked by the main validator.
 
-Five current content pages are roots and therefore score `0.0`. The new true entry points include complex numbers and classical probability. [Feedback assessment 1](feedback-assessment.md) records how the former premature roots, Quantum States and Fock Notation and From Gates to Calibration, moved to depth `6` and complexity `4.69` after their real prerequisites were represented.
+Five current content pages are roots and therefore score `0.0`. The true entry points include complex numbers and classical probability. Quantum States and Fock Notation and From Gates to Calibration sit at depth `6` and complexity `4.69` after their prerequisites are represented.
 
 ## Navigation contract
 
@@ -114,4 +114,4 @@ A concept receives its own page when it has an independent definition, reuse, pr
 - QUBO and BQM;
 - quantum processing time and time to solution.
 
-The recursion stops where the source merely lists a keyword. QFT, Grover search, VQE, QAOA, BB84, quantum kernels, partial trace, and other resume-only terms are not expanded from model memory.
+The recursion stops where the public registry does not yet support a dedicated learning path. QFT, Grover search, VQE, QAOA, BB84, quantum kernels, and partial trace remain future sourced topics.

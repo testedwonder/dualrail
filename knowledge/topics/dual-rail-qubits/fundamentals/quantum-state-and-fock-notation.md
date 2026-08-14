@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/mathematics-and-quantum-foundations/concepts/oscillators-quantization-and-number-states.md, topics/mathematics-and-quantum-foundations/concepts/quantum-measurement-and-born-rule.md]
 next_steps: [topics/dual-rail-qubits/concepts/code-space.md, topics/circuit-qed/concepts/microwave-cavity.md]
 related: [topics/dual-rail-qubits/concepts/dual-rail-encoding.md, topics/error-aware-gates/concepts/quantum-state-tomography.md]
-source_files: [base/DWave_Application_and_Study_Materials.md, base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md]
+source_files: [knowledge/topics/dual-rail-qubits/references.md]
 complexity_depth: 6
 complexity_prerequisite_count: 2
 complexity_score: 4.69
@@ -54,7 +54,7 @@ Before this page, understand [oscillator number states](../../mathematics-and-qu
 
 ## Precise boundary
 
-The local dual-rail source supports the two-mode encoding and loss interpretation. The separate [authoritative foundations portfolio](../../../../base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md) supports the prerequisite treatment of states, measurement, and number states. This page applies those foundations; it does not attempt infinite-dimensional Hilbert-space rigor.
+The local dual-rail source supports the two-mode encoding and loss interpretation. The separate [public claim map](../references.md#claim-map) supports the prerequisite treatment of states, measurement, and number states. This page applies those foundations; it does not attempt infinite-dimensional Hilbert-space rigor.
 
 ## Example and non-example
 
@@ -70,6 +70,6 @@ The local dual-rail source supports the two-mode encoding and loss interpretatio
 
 ## Sources and status
 
-Source-backed by the [dual-rail guide, source pages 5 and 20](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide), with prerequisites supported by the [dated foundations portfolio](../../../../base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md). Status: `draft`.
+Source-backed by the [public claim map](../references.md#claim-map), with prerequisites supported by the [public claim map](../references.md#claim-map). Status: `draft`.
 
 Parent: [Dual-rail qubits](../README.md)

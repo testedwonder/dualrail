@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/quantum-control-software/concepts/compiler-and-scheduler.md, topics/quantum-control-software/concepts/outcome-semantics.md]
 next_steps: [topics/quantum-control-software/concepts/acquisition-and-provenance.md, topics/quantum-control-software/concepts/test-portfolio.md]
 related: [topics/dual-rail-qubits/concepts/detection-correction-and-postselection.md, topics/quantum-control-software/concepts/public-and-internal-interfaces.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [knowledge/topics/quantum-control-software/references.md]
 complexity_depth: 13
 complexity_prerequisite_count: 2
 complexity_score: 9.0
@@ -64,6 +64,6 @@ Ordinary host or cloud round trips are too slow for coherence-sensitive mid-circ
 
 ## Sources and status
 
-Source-backed by the [public interface summary, source page 11](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide) and Quantum Circuits public technology page. Status: `draft`.
+Source-backed by the [public claim map](../references.md#claim-map) and Quantum Circuits public technology page. Status: `draft`.
 
 Parent: [Quantum-control software](../README.md)

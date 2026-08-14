@@ -5,7 +5,7 @@ status: draft
 prerequisites: [topics/mathematics-and-quantum-foundations/fundamentals/complex-numbers-and-phase.md]
 next_steps: [topics/mathematics-and-quantum-foundations/fundamentals/matrices-and-linear-operators.md, topics/mathematics-and-quantum-foundations/concepts/quantum-states-and-bra-ket-notation.md]
 related: [topics/mathematics-and-quantum-foundations/fundamentals/eigenvalues-and-eigenvectors.md]
-source_files: [base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md]
+source_files: [knowledge/topics/mathematics-and-quantum-foundations/references.md]
 complexity_depth: 1
 complexity_prerequisite_count: 1
 complexity_score: 1.12
@@ -47,7 +47,7 @@ In the standard two-dimensional basis,
 
 $$v=3e_1+4e_2=\begin{pmatrix}3\\4\end{pmatrix}.$$
 
-Changing basis changes the coordinate column but not the abstract vector. MIT describes a basis as a minimal set whose combinations produce every vector in the space. [Source record](../../../../base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md#mit-opencourseware-vectors-bases-and-dimension).
+Changing basis changes the coordinate column but not the abstract vector. MIT describes a basis as a minimal set whose combinations produce every vector in the space. [public claim map](../references.md#claim-map).
 
 ## Inner product and norm
 
@@ -83,6 +83,6 @@ The vectors are orthogonal. Their norms are both $\sqrt{2}$, so dividing each by
 
 ## Sources and status
 
-Source-backed by [MIT OpenCourseWare through the dated source portfolio](../../../../base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md#mit-opencourseware-vectors-bases-and-dimension) and IBM's inner-product course introduction. Status: `draft`.
+Source-backed by [public claim map](../references.md#claim-map) and IBM's inner-product course introduction. Status: `draft`.
 
 Parent: [Mathematics and quantum foundations](../README.md)
