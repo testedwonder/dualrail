@@ -8,53 +8,69 @@ source_files: [base/DWave_Application_and_Study_Materials.md]
 
 # Bounded expansion plan
 
-## Batch 0: Architecture and calibration pilot
+## Completed: architecture and calibration pilot
 
-**Authorized by the first-run goal.**
+The first run established the root, glossary, metadata records, calibration pilot, deterministic validator, focused tests, and one executable dependency-invalidation example.
 
-Deliver only:
+## Completed: roadmap item 1 definition tree
 
-- root index, glossary, and one ordered learning path;
-- calibration-systems topic index and references;
-- one fundamentals page;
-- canonical pages for calibration records, validity, dependencies, and the stale-parameter/changing-device distinction;
-- one diagnostic algorithm;
-- one executable synthetic dependency-invalidation example;
-- deterministic validator, focused tests, and validation report.
+Authorized by `NEXT.md` roadmap item 1 and completed on 2026-08-14.
 
-Stop after these pass. Do not expand the full corpus.
+Delivered:
 
-## Exact next bounded batch for review
+- 56 canonical concepts, definitions, algorithms, and examples;
+- six implemented technical topics;
+- source-backed prerequisite, next-step, related, and provenance metadata on every content page;
+- two cross-topic learning paths plus the calibration path;
+- complete canonical glossary;
+- deterministic longest-path depth and direct-prerequisite analysis;
+- 80/20 depth/prerequisite complexity score;
+- red-to-violet wavelength, frequency, and hex-color metadata;
+- visible complexity badge and `0`-`10` understanding input;
+- manual understanding metadata preserved by regeneration;
+- stale-complexity, broken-navigation, cycle, orphan, source, and link validation;
+- focused tests for formula endpoints, manual ratings, idempotence, and failure cases.
 
-**Batch 1: Dual-rail encoding and erasure fundamentals. Approval required before implementation.**
+## Source-completeness boundary
 
-Proposed limit:
+The following areas are mapped because the corpus explains them substantively:
 
-1. One topic index for dual-rail qubits.
-2. One fundamentals page for two-mode occupation notation and coherent superposition.
-3. Canonical pages for dual-rail encoding, code space, photon loss, erasure, and leakage-versus-erasure.
-4. One worked state-transition example from `|1,0>` or `|0,1>` to `|0,0>` after loss.
-5. One comparison page for detection, correction, and postselection.
-6. Primary-source verification of the cited 2024 measurement paper and foundational dual-rail paper before any page is marked `verified`.
-7. Validator and learning-path updates limited to those pages.
-
-## Later candidate batches
-
-These are intentionally unordered until Batch 1 exposes the right boundaries:
-
+- dual-rail encoding, loss, erasure, and error hierarchy;
 - superconducting circuit-QED components and interactions;
-- swap-wait-swap CZ and structured error channels;
-- experiment, compiler, controller, acquisition, and analysis boundaries;
-- D-Wave annealing fundamentals and evidence categories;
-- calibration promotion, rollback, and observability as production patterns.
+- single- and two-qubit control, measurement, benchmarking, and structured errors;
+- calibration records, validity, dependencies, drift diagnosis, and invalidation;
+- production quantum-control semantics, orchestration, provenance, observability, and testing;
+- annealing models, embedding, sampling, hybrid workflows, timing, evidence, and benchmarking.
 
-## Deferred or blocked material
+The following remain intentionally unexpanded because they are only named in resume or training lists:
 
-- Personal cover-letter, resume, salary, interview-script, and contact information stays only in `base/`.
-- Time-sensitive company metrics remain blocked pending primary-source revalidation.
-- Ariadion-based examples remain blocked until its real API is available locally or authoritative documentation is approved for use.
-- Claims about D-Wave’s private control or calibration architecture remain unresolved unless a public primary source supports them.
+- QFT and inverse QFT;
+- Grover search;
+- VQE and QAOA;
+- BB84;
+- quantum kernels and classification;
+- density-matrix mechanics, partial trace, fidelity, and trace distance beyond the narrow uses already explained;
+- Mastermind, CHUBE, Ariadion internals, and the qubit-reuse study beyond first-party project claims.
 
-## Batch completion rule
+Adding those pages requires the relevant project repositories or authoritative primary sources. Model memory is not an acceptable substitute.
 
-A later batch is complete only when every new page is indexed, prerequisites remain acyclic, source references resolve, examples pass, and the validation report records the exact checks. Completing a batch does not authorize the next one.
+## Remaining roadmap items, not authorized here
+
+`NEXT.md` item 2 requests a simplified Obsidian-like visual application for navigation, graph visualization, search, filters, personal notes, durable understanding ratings, and export.
+
+Items 3-5 request feedback-driven refinement, a broader repository `README.md`, and a public-source research interface. `FEEDBACK.md` was empty when item 1 finished, so it introduced no additional item-1 requirement.
+
+Roadmap item 1 prepares the data contract for later work but does not implement items 2-5. The current HTML input in Markdown mirrors metadata; it is not durable note storage.
+
+## Future maintenance rule
+
+A later source batch is complete only when:
+
+1. every new content page has one canonical slug;
+2. prerequisite references are acyclic;
+3. next-step and related references resolve;
+4. source provenance is local and explicit;
+5. `tools/update_complexity.py` has regenerated derived fields;
+6. `tools/update_complexity.py --check` reports no stale pages;
+7. `tools/validate_knowledge.py` passes;
+8. focused tests and `git diff --check` pass.

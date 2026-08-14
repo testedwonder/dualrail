@@ -79,3 +79,45 @@ source_files: [base/DWave_Application_and_Study_Materials.md]
 - **Decision:** Treat official papers, open preprints, the live job posting, and first-party company pages as stronger than profile aggregators and search snippets.
 - **Reason:** LinkedIn was login-gated, and secondary aggregators can copy stale or generated information.
 - **Consequence:** Education and pre-quantum software details are labeled corroborated public background or provisional when an institutional record was unavailable.
+
+## D-013: Expand all substantively explained technical concepts
+
+- **Decision:** Treat `NEXT.md` roadmap item 1 as authorization for bulk technical expansion beyond the original pilot.
+- **Reason:** The user explicitly requested recursive definition coverage and iteration to completion.
+- **Consequence:** The tree now contains 56 canonical content pages across six topics; the original first-run stop no longer applies to this authorized batch.
+
+## D-014: Combine tightly coupled terms
+
+- **Decision:** Keep closely dependent terms on one canonical page when separating them would produce thin or circular explanations.
+- **Reason:** The source explains several pairs and contrasts as one usable unit: leakage/erasure, transmon/anharmonicity, circuit-QED/dispersive interaction, beamsplitter/parametric drive, detection/correction/postselection, QUBO/BQM, and quantum-processing-time/time-to-solution.
+- **Consequence:** The tree remains navigable and source-grounded rather than creating one file for every noun.
+
+## D-015: Weight depth above direct prerequisite count
+
+- **Decision:** Calculate complexity as 80% normalized longest prerequisite depth and 20% normalized direct prerequisite count.
+- **Reason:** The roadmap explicitly makes tree depth the determining factor while requiring prerequisite count to contribute.
+- **Consequence:** Deeper pages always receive the dominant complexity contribution; pages at similar depth can differ by direct dependency load.
+
+## D-016: Map complexity into visible-spectrum metadata
+
+- **Decision:** Map score `0` to 700 nm red and score `10` to 380 nm violet, derive frequency in THz, and interpolate a visible hex color through spectral anchors.
+- **Reason:** The roadmap requests a red-to-violet heatmap and frequency values.
+- **Consequence:** Every content page records depth, count, score, wavelength, frequency, and color and displays a generated badge.
+
+## D-017: Separate derived complexity from manual understanding
+
+- **Decision:** `tools/update_complexity.py` owns all complexity fields and rendered study-status blocks, while the learner owns `understanding` as an integer from `0` to `10`.
+- **Reason:** Graph-derived values must remain deterministic, but self-assessment must survive regeneration.
+- **Consequence:** Missing understanding defaults to `0`; a valid manual value is preserved and mirrored into the visible input.
+
+## D-018: Treat the Markdown input as a display control
+
+- **Decision:** Render a numeric HTML input next to the heatmap but keep metadata as the durable value for roadmap item 1.
+- **Reason:** A static Markdown preview cannot reliably write an edited form value back to a file.
+- **Consequence:** Durable in-interface rating and notes remain part of roadmap item 2; the root and complexity model state this boundary visibly.
+
+## D-019: Stop at the explanatory source boundary
+
+- **Decision:** Do not generate pages for terms that only appear in resume or training lists.
+- **Reason:** The corpus names QFT, Grover, VQE, QAOA, BB84, quantum kernels, partial trace, and project internals without enough material for accurate recursive teaching pages.
+- **Consequence:** These terms are listed as evidence-blocked exclusions until authoritative sources or project repositories enter the corpus.

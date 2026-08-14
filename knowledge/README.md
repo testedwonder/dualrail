@@ -8,11 +8,15 @@ source_files: []
 
 # Fundamentals-first knowledge tree
 
-This is the entry point for a source-traceable learning system built from the preserved material in [`base/`](../base/DWave_Application_and_Study_Materials.md). The first run establishes the architecture with one pilot. It does **not** claim to cover the full corpus.
+This is the entry point for a source-traceable learning system built from the preserved material in [`base/`](../base/DWave_Application_and_Study_Materials.md). The implemented tree covers every reusable technical concept that the local corpus explains substantively. Terms merely listed in a resume are excluded until an authoritative source can support a real teaching page.
 
 ## Start here
 
-New to the subject: follow [Calibration from first principles](learning-paths/calibration-first.md). It begins with what a gate asks hardware to do and ends with a procedure for separating stale software state from a changing device.
+New to gate-model hardware: follow [Dual rail from notation to gates](learning-paths/dual-rail-to-gates.md).
+
+New to annealing: follow [Annealing from model to evidence](learning-paths/annealing-first.md).
+
+Studying calibration software: follow [Calibration from first principles](learning-paths/calibration-first.md).
 
 Looking up a term: use the [glossary](glossary.md).
 
@@ -20,12 +24,23 @@ Looking up a term: use the [glossary](glossary.md).
 
 | Topic | What it answers | State |
 | --- | --- | --- |
-| [Calibration systems](topics/calibration-systems/README.md) | How measured device behavior becomes a versioned, conditional, and revocable control setting | Pilot implemented |
-| Dual-rail encoding and erasures | How one excitation across two modes can expose photon loss | Planned; not yet written |
-| Superconducting circuit QED and control | How cavities, transmons, couplers, and microwave controls relate | Planned; not yet written |
-| Error-aware measurement and gates | Why erasure, leakage, Pauli errors, SPAM, and postselection must stay distinct | Planned; not yet written |
-| Quantum-control software | How experiment intent reaches control hardware and returns as traceable evidence | Planned; not yet written |
-| D-Wave annealing and evidence | What the annealing stack does and how to read bounded advantage claims | Planned; not yet written |
+| [Dual-rail qubits and erasures](topics/dual-rail-qubits/README.md) | How one excitation across two modes can expose photon loss | Implemented |
+| [Superconducting circuit QED and control](topics/circuit-qed/README.md) | How cavities, transmons, couplers, interactions, coherence, and readout relate | Implemented |
+| [Error-aware gates and measurement](topics/error-aware-gates/README.md) | Why erasure, leakage, Pauli errors, SPAM, gate orientation, and postselection stay distinct | Implemented |
+| [Calibration systems](topics/calibration-systems/README.md) | How measured behavior becomes a versioned, conditional, and revocable control setting | Implemented |
+| [Quantum-control software](topics/quantum-control-software/README.md) | How experiment intent reaches control hardware and returns as traceable evidence | Implemented |
+| [Annealing and evidence](topics/annealing-and-evidence/README.md) | What the annealing workflow does and how to evaluate bounded advantage claims | Implemented |
+
+## Study status
+
+Every content page has a generated spectral complexity badge and an understanding input.
+
+- Red is the shallowest end of the current tree; violet is the deepest.
+- Tree depth contributes 80% of complexity and direct prerequisite count contributes 20%.
+- `understanding` is a manual integer from `0` to `10` in page metadata. The visible HTML input mirrors it; durable edits belong in metadata until the roadmap's interface is built.
+- Run `python tools/update_complexity.py` after changing prerequisites and `python tools/update_complexity.py --check` to detect stale values.
+
+The complete formula and spectral mapping are in the [complexity model](_meta/complexity-model.md).
 
 ## How to read evidence labels
 
@@ -43,10 +58,11 @@ Most technical pages remain `draft` because this run validates local provenance 
 - [Concept and prerequisite map](_meta/concept-map.md)
 - [Decision ledger](_meta/decision-ledger.md)
 - [Bounded expansion plan](_meta/expansion-plan.md)
+- [Complexity model](_meta/complexity-model.md)
 - [Validation report](_meta/validation-report.md)
 
 The source compendium contains private application and interview material. Generated pages deliberately omit personal contact details, salary notes, and interview logistics.
 
 ## Current boundary
 
-The exact next proposed batch is dual-rail encoding and erasure fundamentals. It is specified in the [expansion plan](_meta/expansion-plan.md) and requires review before implementation.
+Roadmap item 1 covers the source-backed definition tree and derived study metadata. Roadmap items 2-5, including the visual application, feedback-driven refinement, expanded root README, and public research interface, are not implemented by this batch.

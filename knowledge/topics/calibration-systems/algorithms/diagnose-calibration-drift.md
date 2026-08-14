@@ -3,10 +3,35 @@ title: Diagnose Calibration Drift
 kind: algorithm
 status: draft
 prerequisites: [topics/calibration-systems/concepts/stale-parameter-vs-changing-device.md]
+next_steps: [topics/quantum-control-software/concepts/observability.md, topics/calibration-systems/references.md]
+related: [topics/error-aware-gates/examples/repeated-cz-experiment.md, topics/quantum-control-software/concepts/acquisition-and-provenance.md]
 source_files: [base/DWave_Application_and_Study_Materials.md]
+complexity_depth: 4
+complexity_prerequisite_count: 1
+complexity_score: 5.07
+complexity_wavelength_nm: 538
+complexity_frequency_thz: 557.2
+complexity_color: "#29ff00"
+understanding: 0
 ---
 
 # Diagnose calibration drift
+
+<!-- study-status:start -->
+<div class="study-status" data-complexity="5.07" data-wavelength-nm="538">
+  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#29ff00;color:#111111;">Complexity 5.07/10 | 538 nm | 557.2 THz</span>
+  <label>Understanding <input type="number" min="0" max="10" value="0" aria-label="Understanding rating for Diagnose Calibration Drift"> / 10</label>
+</div>
+<!-- study-status:end -->
+
+<!-- learning-navigation:start -->
+## Learning navigation
+
+- **Prerequisites:** [Stale Parameter Versus Changing Device](../concepts/stale-parameter-vs-changing-device.md)
+- **Next steps:** [Two-Plane Observability](../../quantum-control-software/concepts/observability.md), [Calibration Systems References](../references.md)
+- **Related:** [Repeated-CZ Experiment](../../error-aware-gates/examples/repeated-cz-experiment.md), [Acquisition and Provenance](../../quantum-control-software/concepts/acquisition-and-provenance.md)
+
+<!-- learning-navigation:end -->
 
 Parent: [Calibration systems](../README.md)
 

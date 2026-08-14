@@ -1,10 +1,12 @@
 from __future__ import annotations
 
+import re
 import tempfile
 import textwrap
 import unittest
 from pathlib import Path
 
+from tools.update_complexity import update_complexity
 from tools.validate_knowledge import validate_repository
 
 
@@ -14,23 +16,40 @@ def page(
     kind: str = "concept",
     status: str = "draft",
     prerequisites: str = "[]",
+    next_steps: str = "[README.md]",
+    related: str = "[README.md]",
     source_files: str = "[base/source.md]",
     extra_metadata: str = "",
     body: str = "# Page\n",
 ) -> str:
-    return textwrap.dedent(
-        f"""\
-        ---
-        title: {title}
-        kind: {kind}
-        status: {status}
-        prerequisites: {prerequisites}
-        source_files: {source_files}
-        {extra_metadata}---
-
-        {body}
-        """
-    )
+    metadata = [
+        "---",
+        f"title: {title}",
+        f"kind: {kind}",
+        f"status: {status}",
+        f"prerequisites: {prerequisites}",
+        f"next_steps: {next_steps}",
+        f"related: {related}",
+        f"source_files: {source_files}",
+    ]
+    if extra_metadata:
+        metadata.extend(extra_metadata.rstrip().splitlines())
+    metadata.append("---")
+    rendered_body = body.rstrip()
+    if kind in {"concept", "definition", "algorithm", "example"}:
+        if kind in {"concept", "definition"} and "## Plain-language" not in rendered_body:
+            rendered_body += "\n\n## Plain-language meaning\n\nMeaning."
+        if kind in {"algorithm", "example"} and not re.search(
+            r"^## (Problem|Purpose)\s*$", rendered_body, re.MULTILINE
+        ):
+            rendered_body += "\n\n## Problem\n\nProblem."
+        if "## Self-check" not in rendered_body:
+            rendered_body += "\n\n## Self-check\n\n1. Check?"
+        if "## Sources and status" not in rendered_body:
+            rendered_body += "\n\n## Sources and status\n\nSource-backed."
+        if "Parent:" not in rendered_body:
+            rendered_body += "\n\nParent: [Root](README.md)"
+    return "\n".join(metadata) + "\n\n" + rendered_body + "\n"
 
 
 class KnowledgeValidatorTests(unittest.TestCase):
@@ -64,6 +83,7 @@ class KnowledgeValidatorTests(unittest.TestCase):
                 body="# Concept\n\n[Evidence](../base/source.md#evidence)\n",
             ),
         )
+        update_complexity(self.root)
 
     def errors(self, *, run_examples: bool = False) -> list[str]:
         return validate_repository(
@@ -105,6 +125,7 @@ class KnowledgeValidatorTests(unittest.TestCase):
     def test_orphan_page_fails(self) -> None:
         self.make_valid_tree()
         self.write("knowledge/orphan.md", page("Orphan", body="# Orphan\n"))
+        update_complexity(self.root)
 
         self.assertTrue(any("orphan page" in error for error in self.errors()))
 
@@ -120,6 +141,7 @@ class KnowledgeValidatorTests(unittest.TestCase):
         )
         self.write("knowledge/a/shared.md", page("A", body="# A\n"))
         self.write("knowledge/b/shared.md", page("B", body="# B\n"))
+        update_complexity(self.root)
 
         self.assertTrue(
             any("duplicate canonical slug 'shared'" in error for error in self.errors())
@@ -196,6 +218,7 @@ class KnowledgeValidatorTests(unittest.TestCase):
                 body="# Path\n",
             ),
         )
+        update_complexity(self.root)
 
         self.assertTrue(
             any("prerequisite appears after" in error for error in self.errors())
@@ -241,6 +264,55 @@ class KnowledgeValidatorTests(unittest.TestCase):
         concept.write_text(concept.read_text(encoding="utf-8") + "bad  \n", encoding="utf-8")
 
         self.assertTrue(any("trailing whitespace" in error for error in self.errors()))
+
+    def test_stale_complexity_metadata_fails(self) -> None:
+        self.make_valid_tree()
+        concept = self.root / "knowledge/concept.md"
+        concept.write_text(
+            concept.read_text(encoding="utf-8").replace(
+                "complexity_score: 0.0", "complexity_score: 9.0"
+            ),
+            encoding="utf-8",
+        )
+
+        self.assertTrue(
+            any("generated complexity metadata is stale" in error for error in self.errors())
+        )
+
+    def test_understanding_must_be_zero_to_ten(self) -> None:
+        self.make_valid_tree()
+        concept = self.root / "knowledge/concept.md"
+        concept.write_text(
+            concept.read_text(encoding="utf-8").replace(
+                "understanding: 0", "understanding: 11"
+            ),
+            encoding="utf-8",
+        )
+
+        self.assertTrue(any("understanding" in error for error in self.errors()))
+
+    def test_content_navigation_target_must_resolve(self) -> None:
+        self.make_valid_tree()
+        concept = self.root / "knowledge/concept.md"
+        concept.write_text(
+            concept.read_text(encoding="utf-8").replace(
+                "next_steps: [README.md]", "next_steps: [missing.md]"
+            ),
+            encoding="utf-8",
+        )
+
+        self.assertTrue(
+            any("unresolved next_steps page" in error for error in self.errors())
+        )
+
+    def test_content_page_requires_self_check(self) -> None:
+        self.make_valid_tree()
+        concept = self.root / "knowledge/concept.md"
+        text = concept.read_text(encoding="utf-8")
+        text = text.replace("## Self-check\n\n1. Check?\n\n", "")
+        concept.write_text(text, encoding="utf-8")
+
+        self.assertTrue(any("missing 'Self-check'" in error for error in self.errors()))
 
     def supplemental_conversation(self, luke_label: str = "Luke (simulated)") -> str:
         return textwrap.dedent(

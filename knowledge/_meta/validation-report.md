@@ -10,11 +10,11 @@ source_files: []
 
 Date: 2026-08-14
 
-Scope: Phase 1 architecture, one calibration-systems pilot, one deterministic example, the knowledge-tree validator, and the bounded Luke Mastalli-Kelly research and simulated-conversation supplement. This report does not certify the unexpanded corpus.
+Scope: Phase 1 architecture, the Luke Mastalli-Kelly research supplement, and `NEXT.md` roadmap item 1: recursive source-backed definitions, semantic navigation, complexity heatmaps, and manual understanding metadata.
 
 ## Result
 
-The local architecture, pilot, two supplemental source artifacts, and all executable checks pass. Git was unavailable during the initial run, but a repository was initialized before the supplemental task. Current Git checks are recorded below.
+The six-topic technical tree contains 56 content pages and reaches every substantively explained reusable concept in the source corpus. The expanded architecture, two supplemental source artifacts, derived study metadata, and all executable checks pass.
 
 ## Exact checks
 
@@ -24,7 +24,23 @@ The local architecture, pilot, two supplemental source artifacts, and all execut
 & "$env:LOCALAPPDATA\Programs\Python\Python311\python.exe" -B -m unittest discover -s tests -v
 ```
 
-Result: **PASS** - 15 tests. The tests cover valid trees, missing metadata, empty pages, broken links and anchors, orphans, duplicate canonical slugs, unresolved sources and prerequisites, prerequisite cycles, learning-path order, executable claims, trailing whitespace, supplemental source links, required evidence labels, and explicit simulation labels on invented Luke dialogue.
+Result: **PASS** - 23 tests. The tests cover valid trees, missing metadata, empty pages, broken links and anchors, orphans, duplicate canonical slugs, unresolved sources, prerequisites and next steps, prerequisite cycles, learning-path order, executable claims, trailing whitespace, supplemental source links, required evidence labels, explicit simulation labels, exact complexity endpoints, generated controls, manual-rating preservation, stale complexity, rating bounds, content sections, and idempotence.
+
+### Complexity calculation
+
+```powershell
+& "$env:LOCALAPPDATA\Programs\Python\Python311\python.exe" -B tools/update_complexity.py
+& "$env:LOCALAPPDATA\Programs\Python\Python311\python.exe" -B tools/update_complexity.py --check
+```
+
+Result: **PASS** - 56 content pages calculated; the no-write check reports 0 stale pages.
+
+Measured graph:
+
+- maximum prerequisite depth: 7;
+- maximum direct prerequisite count: 4;
+- complexity range: 0.0 to 9.5;
+- spectral range used by current pages: 700 nm red to 396 nm near violet.
 
 ### Repository knowledge-tree validation
 
@@ -32,7 +48,7 @@ Result: **PASS** - 15 tests. The tests cover valid trees, missing metadata, empt
 & "$env:LOCALAPPDATA\Programs\Python\Python311\python.exe" -B tools/validate_knowledge.py
 ```
 
-Result: **PASS** - 17 knowledge Markdown files, 2 supplemental source files, and 1 executable example.
+Result: **PASS** - 79 knowledge Markdown files, 2 supplemental source files, and 1 executable example.
 
 The command validates:
 
@@ -43,7 +59,16 @@ The command validates:
 - unique canonical slugs for content pages;
 - source references constrained to existing files under `base/`;
 - valid prerequisite references and an acyclic graph;
+- non-empty, resolving next-step and related-page references on content pages;
 - declared learning-path order and prerequisite coverage;
+- required depth, count, score, wavelength, frequency, color, and understanding metadata;
+- exact prerequisite counts and `0`-`10` understanding bounds;
+- one generated heatmap/rating block per content page;
+- one generated clickable learning-navigation block per content page;
+- generated-complexity freshness against the current graph;
+- plain-language openings for concepts and definitions;
+- problem or purpose sections for algorithms and examples;
+- self-check, source/status, and linked-parent sections on every content page;
 - local Python example links declared for execution;
 - successful execution of each declared example;
 - trailing whitespace and conflict markers in generated Markdown and Python.
@@ -69,14 +94,16 @@ The preserved compendium was not edited. Two user-authorized files were added un
 - `Luke_Mastalli_Kelly_Public_Evidence_Portfolio.md`, SHA-256 `6D18C7D2C59D6C30E1DF02D046779C1B163F1D368AA1D92D67CC6583BE59455D`;
 - `Luke_Mastalli_Kelly_Realistic_Conversation_Portfolio.md`, SHA-256 `065D0D040FAE330CB4D9A4DFD468DC34F3F271A549ED1F0B3563BD200ABE4FE7`.
 
-`GOAL.md` was intentionally untouched.
+`GOAL.md`, `NEXT.md`, and all files under `base/` were intentionally untouched during roadmap item 1.
 
 ### Editor diagnostics
 
 VS Code diagnostics were requested for:
 
 - `tools/validate_knowledge.py`;
+- `tools/update_complexity.py`;
 - `tests/test_validate_knowledge.py`;
+- `tests/test_update_complexity.py`;
 - `knowledge/topics/calibration-systems/examples/calibration_graph.py`.
 
 Result: **PASS** - no diagnostics reported.
@@ -96,15 +123,16 @@ git diff --check
 
 Initial result: **BLOCKED** - both commands reported that the path was not a Git repository.
 
-Current result after repository initialization:
+Current repository result:
 
 - `git diff --check`: **PASS** - no output.
-- `git status --short`: only the four intended tracked edits, the two intended supplemental files, and unrelated untracked `NEXT.md` are present.
-- `NEXT.md` was not read, edited, staged, or included in this task.
+- Roadmap item 1 began on clean `master` after the user committed `NEXT.md`.
+- During execution, concurrent user work switched the checkout to `main`, modified `NEXT.md`, and added empty `FEEDBACK.md` plus `assets/icon.png`.
+- The current item 1 wording is unchanged. Those user-owned paths were read only as needed to verify scope and were not edited by this task.
 
 ## Example evidence
 
-The [dependency-invalidation example](../topics/calibration-systems/examples/dependency-invalidation.md) is the only page marked `verified` for technical behavior. Its script asserts the full descendant order and two edge cases, then emits:
+The [dependency-invalidation example](../topics/calibration-systems/examples/dependency-invalidation.md) remains the only source-domain page marked `verified` for executable technical behavior. Its script asserts the full descendant order and two edge cases, then emits:
 
 ```text
 changed: coupler-frequency
@@ -112,6 +140,8 @@ stale: swap-pulse, wait-time, cz-calibration, gate-benchmark
 ```
 
 This verifies the synthetic graph traversal only. It does not validate hardware behavior or a private calibration architecture.
+
+The [complexity model](complexity-model.md) is also marked `verified`, but that status covers only deterministic graph calculation and rendering behavior.
 
 ## Remaining uncertainty
 
@@ -121,9 +151,11 @@ This verifies the synthetic graph traversal only. It does not validate hardware 
 - No stable institutional dissertation record was found for Luke; education details remain labeled corroborated public background.
 - LinkedIn was login-gated, and secondary profile aggregators may be stale or copy one another.
 - The physical cause of the reported long repeated-CZ degradation remains unresolved.
-- Time-sensitive company and hardware claims remain outside the pilot.
+- Time-sensitive company and hardware claims remain attributed and `draft`.
 - Public papers establish team outputs and named contribution groups; they do not prove that every author owns every skill represented in a paper.
+- Resume-only technical terms remain blocked until authoritative explanatory sources or project repositories enter the corpus.
+- The Markdown rating input mirrors metadata but cannot persist edits by itself; durable interface storage belongs to roadmap item 2.
 
 ## Stop point
 
-Bulk technical expansion has not begun. The person-specific research and conversation supplement does not authorize the dual-rail knowledge-tree batch. The exact proposed next technical batch remains documented in the [bounded expansion plan](expansion-plan.md) and requires review.
+Roadmap item 1 is complete. Roadmap items 2-5 have not begun. `FEEDBACK.md` is currently empty.

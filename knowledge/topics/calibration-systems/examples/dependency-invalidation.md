@@ -3,11 +3,36 @@ title: Dependency Invalidation Example
 kind: example
 status: verified
 prerequisites: [topics/calibration-systems/concepts/calibration-dependencies.md]
+next_steps: [topics/calibration-systems/concepts/stale-parameter-vs-changing-device.md, topics/quantum-control-software/concepts/promotion-and-rollback.md]
+related: [topics/quantum-control-software/concepts/reliable-orchestration.md, topics/calibration-systems/concepts/calibration-validity.md]
 source_files: [base/DWave_Application_and_Study_Materials.md]
 executable_examples: [topics/calibration-systems/examples/calibration_graph.py]
+complexity_depth: 3
+complexity_prerequisite_count: 1
+complexity_score: 3.93
+complexity_wavelength_nm: 574
+complexity_frequency_thz: 522.3
+complexity_color: "#e0ff00"
+understanding: 0
 ---
 
 # Dependency invalidation example
+
+<!-- study-status:start -->
+<div class="study-status" data-complexity="3.93" data-wavelength-nm="574">
+  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#e0ff00;color:#111111;">Complexity 3.93/10 | 574 nm | 522.3 THz</span>
+  <label>Understanding <input type="number" min="0" max="10" value="0" aria-label="Understanding rating for Dependency Invalidation Example"> / 10</label>
+</div>
+<!-- study-status:end -->
+
+<!-- learning-navigation:start -->
+## Learning navigation
+
+- **Prerequisites:** [Calibration Dependencies](../concepts/calibration-dependencies.md)
+- **Next steps:** [Stale Parameter Versus Changing Device](../concepts/stale-parameter-vs-changing-device.md), [Promotion and Rollback](../../quantum-control-software/concepts/promotion-and-rollback.md)
+- **Related:** [Reliable Orchestration](../../quantum-control-software/concepts/reliable-orchestration.md), [Calibration Validity](../concepts/calibration-validity.md)
+
+<!-- learning-navigation:end -->
 
 Parent: [Calibration systems](../README.md)
 

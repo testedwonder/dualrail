@@ -3,10 +3,35 @@ title: Calibration Record
 kind: concept
 status: draft
 prerequisites: [topics/calibration-systems/fundamentals/from-gates-to-calibration.md]
+next_steps: [topics/calibration-systems/concepts/calibration-validity.md, topics/calibration-systems/concepts/calibration-dependencies.md]
+related: [topics/quantum-control-software/concepts/acquisition-and-provenance.md, topics/quantum-control-software/concepts/promotion-and-rollback.md]
 source_files: [base/DWave_Application_and_Study_Materials.md]
+complexity_depth: 1
+complexity_prerequisite_count: 1
+complexity_score: 1.64
+complexity_wavelength_nm: 648
+complexity_frequency_thz: 462.6
+complexity_color: "#ff6e00"
+understanding: 0
 ---
 
 # Calibration record
+
+<!-- study-status:start -->
+<div class="study-status" data-complexity="1.64" data-wavelength-nm="648">
+  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#ff6e00;color:#ffffff;">Complexity 1.64/10 | 648 nm | 462.6 THz</span>
+  <label>Understanding <input type="number" min="0" max="10" value="0" aria-label="Understanding rating for Calibration Record"> / 10</label>
+</div>
+<!-- study-status:end -->
+
+<!-- learning-navigation:start -->
+## Learning navigation
+
+- **Prerequisites:** [From Gates to Calibration](../fundamentals/from-gates-to-calibration.md)
+- **Next steps:** [Calibration Validity](calibration-validity.md), [Calibration Dependencies](calibration-dependencies.md)
+- **Related:** [Acquisition and Provenance](../../quantum-control-software/concepts/acquisition-and-provenance.md), [Promotion and Rollback](../../quantum-control-software/concepts/promotion-and-rollback.md)
+
+<!-- learning-navigation:end -->
 
 Parent: [Calibration systems](../README.md)
 

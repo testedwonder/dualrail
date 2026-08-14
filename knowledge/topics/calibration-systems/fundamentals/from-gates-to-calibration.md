@@ -3,10 +3,35 @@ title: From Gates to Calibration
 kind: definition
 status: draft
 prerequisites: []
+next_steps: [topics/calibration-systems/concepts/calibration-record.md, topics/error-aware-gates/concepts/controlled-z-gate.md]
+related: [topics/quantum-control-software/concepts/production-stack.md, topics/error-aware-gates/examples/repeated-cz-experiment.md]
 source_files: [base/DWave_Application_and_Study_Materials.md]
+complexity_depth: 0
+complexity_prerequisite_count: 0
+complexity_score: 0.0
+complexity_wavelength_nm: 700
+complexity_frequency_thz: 428.3
+complexity_color: "#ff0000"
+understanding: 0
 ---
 
 # From gates to calibration
+
+<!-- study-status:start -->
+<div class="study-status" data-complexity="0.0" data-wavelength-nm="700">
+  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#ff0000;color:#ffffff;">Complexity 0.0/10 | 700 nm | 428.3 THz</span>
+  <label>Understanding <input type="number" min="0" max="10" value="0" aria-label="Understanding rating for From Gates to Calibration"> / 10</label>
+</div>
+<!-- study-status:end -->
+
+<!-- learning-navigation:start -->
+## Learning navigation
+
+- **Prerequisites:** None
+- **Next steps:** [Calibration Record](../concepts/calibration-record.md), [Controlled-Z Gate](../../error-aware-gates/concepts/controlled-z-gate.md)
+- **Related:** [Production Quantum-Control Stack](../../quantum-control-software/concepts/production-stack.md), [Repeated-CZ Experiment](../../error-aware-gates/examples/repeated-cz-experiment.md)
+
+<!-- learning-navigation:end -->
 
 Parent: [Calibration systems](../README.md)
 

@@ -1,0 +1,71 @@
+---
+title: Quantum Advantage
+kind: concept
+status: draft
+prerequisites: [topics/annealing-and-evidence/concepts/quantum-processing-time-and-time-to-solution.md, topics/annealing-and-evidence/concepts/evidence-levels.md]
+next_steps: [topics/annealing-and-evidence/concepts/end-to-end-benchmarking.md]
+related: [topics/annealing-and-evidence/concepts/hybrid-solver.md, topics/annealing-and-evidence/concepts/quantum-annealing.md]
+source_files: [base/DWave_Application_and_Study_Materials.md]
+complexity_depth: 6
+complexity_prerequisite_count: 2
+complexity_score: 7.86
+complexity_wavelength_nm: 448
+complexity_frequency_thz: 669.2
+complexity_color: "#0400ff"
+understanding: 0
+---
+
+# Quantum advantage
+
+<!-- study-status:start -->
+<div class="study-status" data-complexity="7.86" data-wavelength-nm="448">
+  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#0400ff;color:#ffffff;">Complexity 7.86/10 | 448 nm | 669.2 THz</span>
+  <label>Understanding <input type="number" min="0" max="10" value="0" aria-label="Understanding rating for Quantum Advantage"> / 10</label>
+</div>
+<!-- study-status:end -->
+
+<!-- learning-navigation:start -->
+## Learning navigation
+
+- **Prerequisites:** [Quantum Processing Time and Time to Solution](quantum-processing-time-and-time-to-solution.md), [Evidence Levels](evidence-levels.md)
+- **Next steps:** [End-to-End Benchmarking](end-to-end-benchmarking.md)
+- **Related:** [Hybrid Solver](hybrid-solver.md), [Quantum Annealing](quantum-annealing.md)
+
+<!-- learning-navigation:end -->
+
+## Plain-language meaning
+
+Quantum advantage is a demonstrated benefit over a specified classical method for a specified task, accuracy target, and metric. It is not automatically broad or permanent.
+
+## Required scope
+
+- Exact task and instance family
+- Output or accuracy being compared
+- Quantum and classical algorithms
+- Hardware and software versions
+- Tuning, preprocessing, and parallelism budgets
+- Timing and cost boundaries
+- Reproducible code, data, or artifacts where possible
+
+## Distinctions
+
+- Quantum behavior does not prove computational advantage.
+- Quantum simulation advantage does not imply general optimization advantage.
+- Hardware speed does not imply end-to-end business value.
+- A result can be strong and peer reviewed while its classical frontier remains contested.
+
+## Non-example
+
+“D-Wave proved quantum computers are faster” omits the method, task, comparator, accuracy, and boundary.
+
+## Self-check
+
+1. What must every advantage claim name?
+2. Why can the best classical baseline change later?
+3. What does a simulation result not establish about scheduling?
+
+## Sources and status
+
+Source-backed by the [research record and debate, source pages 6-7](../../../../base/DWave_Application_and_Study_Materials.md#6-d-wave-company-history-research-and-industry-study). Status: `draft`.
+
+Parent: [Annealing and evidence](../README.md)

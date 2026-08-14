@@ -11,10 +11,27 @@ from urllib.parse import unquote, urlsplit
 
 
 REQUIRED_FIELDS = ("title", "kind", "status", "prerequisites", "source_files")
-LIST_FIELDS = ("prerequisites", "source_files", "learning_path", "executable_examples")
+LIST_FIELDS = (
+    "prerequisites",
+    "next_steps",
+    "related",
+    "source_files",
+    "learning_path",
+    "executable_examples",
+)
 ALLOWED_KINDS = {"concept", "definition", "algorithm", "example", "index"}
 ALLOWED_STATUSES = {"draft", "verified", "blocked"}
 CONTENT_KINDS = {"concept", "definition", "algorithm", "example"}
+CONTENT_NAVIGATION_FIELDS = ("next_steps", "related")
+COMPLEXITY_FIELDS = (
+    "complexity_depth",
+    "complexity_prerequisite_count",
+    "complexity_score",
+    "complexity_wavelength_nm",
+    "complexity_frequency_thz",
+    "complexity_color",
+    "understanding",
+)
 LINK_PATTERN = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
 EXPLICIT_ANCHOR_PATTERN = re.compile(
     r"<a\s+[^>]*\bid=[\"']([^\"']+)[\"'][^>]*>", re.IGNORECASE
@@ -188,6 +205,19 @@ def _parse_document(path: Path, knowledge_root: Path) -> tuple[Document, list[st
 
     if kind in CONTENT_KINDS and metadata.get("source_files") == []:
         errors.append(f"{relative_path}: content page has no source provenance")
+    if kind in CONTENT_KINDS:
+        for field in CONTENT_NAVIGATION_FIELDS:
+            if field not in metadata:
+                errors.append(
+                    f"{relative_path}: missing content navigation field '{field}'"
+                )
+            elif metadata[field] == []:
+                errors.append(
+                    f"{relative_path}: content navigation field '{field}' is empty"
+                )
+        for field in COMPLEXITY_FIELDS:
+            if field not in metadata:
+                errors.append(f"{relative_path}: missing complexity field '{field}'")
 
     return Document(path, relative_path, metadata, body), errors
 
@@ -431,6 +461,169 @@ def _validate_prerequisites(
             break
 
     return graph
+
+
+def _validate_content_navigation(
+    documents: dict[Path, Document],
+    knowledge_root: Path,
+    errors: list[str],
+) -> None:
+    for document in documents.values():
+        if document.metadata.get("kind") not in CONTENT_KINDS:
+            continue
+        for field in CONTENT_NAVIGATION_FIELDS:
+            references = document.metadata.get(field)
+            if not isinstance(references, list):
+                continue
+            if len(set(references)) != len(references):
+                errors.append(
+                    f"{document.relative_path}: '{field}' contains a duplicate reference"
+                )
+            for reference in references:
+                target = _resolve_knowledge_reference(
+                    reference,
+                    knowledge_root,
+                    document.relative_path,
+                    field,
+                    errors,
+                )
+                if target is not None and target not in documents:
+                    errors.append(
+                        f"{document.relative_path}: unresolved {field} page: {reference}"
+                    )
+
+
+def _validate_complexity_metadata(
+    documents: dict[Path, Document], errors: list[str]
+) -> None:
+    for document in documents.values():
+        if document.metadata.get("kind") not in CONTENT_KINDS:
+            continue
+
+        def integer(field: str, minimum: int, maximum: int | None = None) -> int | None:
+            value = document.metadata.get(field)
+            if not isinstance(value, str):
+                return None
+            try:
+                parsed = int(value)
+            except ValueError:
+                errors.append(f"{document.relative_path}: '{field}' must be an integer")
+                return None
+            if parsed < minimum or (maximum is not None and parsed > maximum):
+                errors.append(
+                    f"{document.relative_path}: '{field}' is outside {minimum}"
+                    + (f"-{maximum}" if maximum is not None else "+")
+                )
+            return parsed
+
+        depth = integer("complexity_depth", 0)
+        prerequisite_count = integer("complexity_prerequisite_count", 0)
+        wavelength = integer("complexity_wavelength_nm", 380, 700)
+        understanding = integer("understanding", 0, 10)
+
+        prerequisites = document.metadata.get("prerequisites")
+        if (
+            prerequisite_count is not None
+            and isinstance(prerequisites, list)
+            and prerequisite_count != len(prerequisites)
+        ):
+            errors.append(
+                f"{document.relative_path}: complexity prerequisite count does not match prerequisites"
+            )
+
+        for field, minimum, maximum in (
+            ("complexity_score", 0.0, 10.0),
+            ("complexity_frequency_thz", 428.0, 790.0),
+        ):
+            value = document.metadata.get(field)
+            if not isinstance(value, str):
+                continue
+            try:
+                parsed_float = float(value)
+            except ValueError:
+                errors.append(f"{document.relative_path}: '{field}' must be numeric")
+                continue
+            if not minimum <= parsed_float <= maximum:
+                errors.append(
+                    f"{document.relative_path}: '{field}' is outside {minimum}-{maximum}"
+                )
+
+        color = document.metadata.get("complexity_color")
+        if isinstance(color, str) and not re.fullmatch(r"#[0-9a-fA-F]{6}", color):
+            errors.append(
+                f"{document.relative_path}: 'complexity_color' must be a hex color"
+            )
+
+        if depth is not None and prerequisite_count is not None and wavelength is not None:
+            if document.body.count("<!-- study-status:start -->") != 1 or document.body.count(
+                "<!-- study-status:end -->"
+            ) != 1:
+                errors.append(
+                    f"{document.relative_path}: expected one generated study-status block"
+                )
+            if document.body.count("<!-- learning-navigation:start -->") != 1 or document.body.count(
+                "<!-- learning-navigation:end -->"
+            ) != 1:
+                errors.append(
+                    f"{document.relative_path}: expected one generated learning-navigation block"
+                )
+        if understanding is not None:
+            expected_input = (
+                f'type="number" min="0" max="10" value="{understanding}"'
+            )
+            if expected_input not in document.body:
+                errors.append(
+                    f"{document.relative_path}: understanding input does not match metadata"
+                )
+
+
+def _validate_complexity_freshness(
+    repository_root: Path, errors: list[str]
+) -> None:
+    try:
+        try:
+            from tools.update_complexity import planned_updates
+        except ModuleNotFoundError:
+            from update_complexity import planned_updates
+
+        stale_updates = planned_updates(repository_root)
+    except (OSError, UnicodeError, ValueError) as error:
+        errors.append(f"complexity calculation failed: {error}")
+        return
+    for path, _ in stale_updates:
+        errors.append(
+            f"{_display_path(path, repository_root)}: generated complexity metadata is stale"
+        )
+
+
+def _validate_content_structure(
+    documents: dict[Path, Document], errors: list[str]
+) -> None:
+    for document in documents.values():
+        kind = document.metadata.get("kind")
+        if kind not in CONTENT_KINDS:
+            continue
+        if kind in {"concept", "definition"} and not re.search(
+            r"^## Plain-language", document.body, re.MULTILINE
+        ):
+            errors.append(
+                f"{document.relative_path}: concept or definition lacks a plain-language opening"
+            )
+        if kind in {"algorithm", "example"} and not re.search(
+            r"^## (Problem|Purpose)\s*$", document.body, re.MULTILINE
+        ):
+            errors.append(
+                f"{document.relative_path}: algorithm or example lacks a problem or purpose section"
+            )
+        for heading in ("Self-check", "Sources and status"):
+            if not re.search(
+                rf"^## {re.escape(heading)}\s*$", document.body, re.MULTILINE
+            ):
+                errors.append(
+                    f"{document.relative_path}: missing '{heading}' section"
+                )
+        if not re.search(r"^Parent:\s+\[[^\]]+\]\([^)]+\)", document.body, re.MULTILINE):
+            errors.append(f"{document.relative_path}: missing linked parent topic")
 
 
 def _validate_learning_paths(
@@ -738,6 +931,9 @@ def validate_repository(
     _validate_sources(documents, repository_root, base_root, errors)
     _validate_canonical_slugs(documents, errors)
     prerequisite_graph = _validate_prerequisites(documents, knowledge_root, errors)
+    _validate_content_navigation(documents, knowledge_root, errors)
+    _validate_complexity_metadata(documents, errors)
+    _validate_content_structure(documents, errors)
     _validate_learning_paths(documents, prerequisite_graph, knowledge_root, errors)
     link_graph = _validate_links(
         documents, repository_root, knowledge_root, errors
@@ -750,6 +946,7 @@ def validate_repository(
         run_examples,
         errors,
     )
+    _validate_complexity_freshness(repository_root, errors)
 
     return ValidationResult(
         errors,
