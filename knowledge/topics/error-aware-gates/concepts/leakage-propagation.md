@@ -6,7 +6,7 @@ prerequisites: [topics/error-aware-gates/algorithms/swap-wait-swap-cz.md, topics
 next_steps: [topics/quantum-control-software/concepts/outcome-semantics.md, topics/quantum-control-software/concepts/test-portfolio.md]
 related: [topics/dual-rail-qubits/examples/loss-to-vacuum.md, topics/error-aware-gates/concepts/no-jump-backaction.md]
 source_files: [base/DWave_Application_and_Study_Materials.md]
-complexity_depth: 7
+complexity_depth: 13
 complexity_prerequisite_count: 3
 complexity_score: 9.5
 complexity_wavelength_nm: 396

@@ -6,20 +6,20 @@ prerequisites: [topics/dual-rail-qubits/concepts/leakage-and-erasure.md]
 next_steps: [topics/error-aware-gates/algorithms/logical-measurement-with-erasure-detection.md, topics/quantum-control-software/concepts/realtime-control-and-error-handling.md]
 related: [topics/quantum-control-software/concepts/outcome-semantics.md, topics/dual-rail-qubits/concepts/pauli-errors-and-error-hierarchy.md]
 source_files: [base/DWave_Application_and_Study_Materials.md]
-complexity_depth: 5
+complexity_depth: 11
 complexity_prerequisite_count: 1
-complexity_score: 6.21
-complexity_wavelength_nm: 501
-complexity_frequency_thz: 598.4
-complexity_color: "#00ffb9"
+complexity_score: 7.27
+complexity_wavelength_nm: 467
+complexity_frequency_thz: 642.0
+complexity_color: "#006cff"
 understanding: 0
 ---
 
 # Detection, correction, and postselection
 
 <!-- study-status:start -->
-<div class="study-status" data-complexity="6.21" data-wavelength-nm="501">
-  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#00ffb9;color:#111111;">Complexity 6.21/10 | 501 nm | 598.4 THz</span>
+<div class="study-status" data-complexity="7.27" data-wavelength-nm="467">
+  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#006cff;color:#ffffff;">Complexity 7.27/10 | 467 nm | 642.0 THz</span>
   <label>Understanding <input type="number" min="0" max="10" value="0" aria-label="Understanding rating for Detection, Correction, and Postselection"> / 10</label>
 </div>
 <!-- study-status:end -->

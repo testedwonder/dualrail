@@ -6,7 +6,7 @@ prerequisites: [topics/quantum-control-software/concepts/compiler-and-scheduler.
 next_steps: [topics/quantum-control-software/concepts/acquisition-and-provenance.md, topics/quantum-control-software/concepts/test-portfolio.md]
 related: [topics/dual-rail-qubits/concepts/detection-correction-and-postselection.md, topics/quantum-control-software/concepts/public-and-internal-interfaces.md]
 source_files: [base/DWave_Application_and_Study_Materials.md]
-complexity_depth: 7
+complexity_depth: 13
 complexity_prerequisite_count: 2
 complexity_score: 9.0
 complexity_wavelength_nm: 412

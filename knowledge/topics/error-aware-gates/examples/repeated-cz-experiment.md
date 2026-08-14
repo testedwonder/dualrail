@@ -6,20 +6,20 @@ prerequisites: [topics/error-aware-gates/algorithms/swap-wait-swap-cz.md, topics
 next_steps: [topics/calibration-systems/concepts/stale-parameter-vs-changing-device.md, topics/calibration-systems/algorithms/diagnose-calibration-drift.md]
 related: [topics/error-aware-gates/concepts/no-jump-backaction.md, topics/error-aware-gates/concepts/control-target-asymmetry.md]
 source_files: [base/DWave_Application_and_Study_Materials.md]
-complexity_depth: 6
+complexity_depth: 11
 complexity_prerequisite_count: 4
-complexity_score: 8.86
-complexity_wavelength_nm: 416
-complexity_frequency_thz: 720.7
-complexity_color: "#4500ff"
+complexity_score: 8.77
+complexity_wavelength_nm: 419
+complexity_frequency_thz: 715.5
+complexity_color: "#3f00ff"
 understanding: 0
 ---
 
 # Repeated-CZ experiment
 
 <!-- study-status:start -->
-<div class="study-status" data-complexity="8.86" data-wavelength-nm="416">
-  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#4500ff;color:#ffffff;">Complexity 8.86/10 | 416 nm | 720.7 THz</span>
+<div class="study-status" data-complexity="8.77" data-wavelength-nm="419">
+  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#3f00ff;color:#ffffff;">Complexity 8.77/10 | 419 nm | 715.5 THz</span>
   <label>Understanding <input type="number" min="0" max="10" value="0" aria-label="Understanding rating for Repeated-CZ Experiment"> / 10</label>
 </div>
 <!-- study-status:end -->

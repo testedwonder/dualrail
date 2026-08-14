@@ -6,20 +6,20 @@ prerequisites: [topics/dual-rail-qubits/concepts/code-space.md, topics/circuit-q
 next_steps: [topics/error-aware-gates/algorithms/logical-measurement-with-erasure-detection.md, topics/error-aware-gates/examples/repeated-cz-experiment.md]
 related: [topics/error-aware-gates/concepts/quantum-state-tomography.md, topics/quantum-control-software/concepts/outcome-semantics.md]
 source_files: [base/DWave_Application_and_Study_Materials.md]
-complexity_depth: 4
+complexity_depth: 8
 complexity_prerequisite_count: 2
-complexity_score: 5.57
-complexity_wavelength_nm: 522
-complexity_frequency_thz: 574.3
-complexity_color: "#00ff33"
+complexity_score: 5.92
+complexity_wavelength_nm: 511
+complexity_frequency_thz: 586.7
+complexity_color: "#00ff79"
 understanding: 0
 ---
 
 # State-preparation-and-measurement error
 
 <!-- study-status:start -->
-<div class="study-status" data-complexity="5.57" data-wavelength-nm="522">
-  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#00ff33;color:#111111;">Complexity 5.57/10 | 522 nm | 574.3 THz</span>
+<div class="study-status" data-complexity="5.92" data-wavelength-nm="511">
+  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#00ff79;color:#111111;">Complexity 5.92/10 | 511 nm | 586.7 THz</span>
   <label>Understanding <input type="number" min="0" max="10" value="0" aria-label="Understanding rating for State-Preparation-and-Measurement Error"> / 10</label>
 </div>
 <!-- study-status:end -->

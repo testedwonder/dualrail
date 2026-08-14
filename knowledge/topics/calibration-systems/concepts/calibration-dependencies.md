@@ -6,20 +6,20 @@ prerequisites: [topics/calibration-systems/concepts/calibration-record.md]
 next_steps: [topics/calibration-systems/examples/dependency-invalidation.md, topics/calibration-systems/concepts/stale-parameter-vs-changing-device.md]
 related: [topics/quantum-control-software/concepts/reliable-orchestration.md, topics/quantum-control-software/concepts/promotion-and-rollback.md]
 source_files: [base/DWave_Application_and_Study_Materials.md]
-complexity_depth: 2
+complexity_depth: 8
 complexity_prerequisite_count: 1
-complexity_score: 2.79
-complexity_wavelength_nm: 611
-complexity_frequency_thz: 490.7
-complexity_color: "#ffbd00"
+complexity_score: 5.42
+complexity_wavelength_nm: 527
+complexity_frequency_thz: 568.9
+complexity_color: "#00ff13"
 understanding: 0
 ---
 
 # Calibration dependencies
 
 <!-- study-status:start -->
-<div class="study-status" data-complexity="2.79" data-wavelength-nm="611">
-  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#ffbd00;color:#111111;">Complexity 2.79/10 | 611 nm | 490.7 THz</span>
+<div class="study-status" data-complexity="5.42" data-wavelength-nm="527">
+  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#00ff13;color:#111111;">Complexity 5.42/10 | 527 nm | 568.9 THz</span>
   <label>Understanding <input type="number" min="0" max="10" value="0" aria-label="Understanding rating for Calibration Dependencies"> / 10</label>
 </div>
 <!-- study-status:end -->

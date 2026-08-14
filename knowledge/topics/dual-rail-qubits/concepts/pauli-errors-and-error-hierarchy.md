@@ -6,20 +6,20 @@ prerequisites: [topics/dual-rail-qubits/concepts/dual-rail-encoding.md, topics/d
 next_steps: [topics/error-aware-gates/algorithms/swap-wait-swap-cz.md, topics/quantum-control-software/concepts/outcome-semantics.md]
 related: [topics/error-aware-gates/concepts/control-target-asymmetry.md, topics/error-aware-gates/concepts/no-jump-backaction.md]
 source_files: [base/DWave_Application_and_Study_Materials.md]
-complexity_depth: 5
+complexity_depth: 11
 complexity_prerequisite_count: 2
-complexity_score: 6.71
-complexity_wavelength_nm: 485
-complexity_frequency_thz: 618.1
-complexity_color: "#00dfff"
+complexity_score: 7.77
+complexity_wavelength_nm: 451
+complexity_frequency_thz: 664.7
+complexity_color: "#0006ff"
 understanding: 0
 ---
 
 # Pauli errors and error hierarchy
 
 <!-- study-status:start -->
-<div class="study-status" data-complexity="6.71" data-wavelength-nm="485">
-  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#00dfff;color:#111111;">Complexity 6.71/10 | 485 nm | 618.1 THz</span>
+<div class="study-status" data-complexity="7.77" data-wavelength-nm="451">
+  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#0006ff;color:#ffffff;">Complexity 7.77/10 | 451 nm | 664.7 THz</span>
   <label>Understanding <input type="number" min="0" max="10" value="0" aria-label="Understanding rating for Pauli Errors and Error Hierarchy"> / 10</label>
 </div>
 <!-- study-status:end -->

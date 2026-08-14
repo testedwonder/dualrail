@@ -6,20 +6,20 @@ prerequisites: [topics/dual-rail-qubits/fundamentals/quantum-state-and-fock-nota
 next_steps: [topics/error-aware-gates/examples/repeated-cz-experiment.md]
 related: [topics/error-aware-gates/concepts/spam.md, topics/error-aware-gates/concepts/randomized-benchmarking.md]
 source_files: [base/DWave_Application_and_Study_Materials.md]
-complexity_depth: 4
+complexity_depth: 7
 complexity_prerequisite_count: 2
-complexity_score: 5.57
-complexity_wavelength_nm: 522
-complexity_frequency_thz: 574.3
-complexity_color: "#00ff33"
+complexity_score: 5.31
+complexity_wavelength_nm: 530
+complexity_frequency_thz: 565.6
+complexity_color: "#00ff00"
 understanding: 0
 ---
 
 # Quantum state tomography
 
 <!-- study-status:start -->
-<div class="study-status" data-complexity="5.57" data-wavelength-nm="522">
-  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#00ff33;color:#111111;">Complexity 5.57/10 | 522 nm | 574.3 THz</span>
+<div class="study-status" data-complexity="5.31" data-wavelength-nm="530">
+  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#00ff00;color:#111111;">Complexity 5.31/10 | 530 nm | 565.6 THz</span>
   <label>Understanding <input type="number" min="0" max="10" value="0" aria-label="Understanding rating for Quantum State Tomography"> / 10</label>
 </div>
 <!-- study-status:end -->

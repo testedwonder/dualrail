@@ -6,20 +6,20 @@ prerequisites: [topics/dual-rail-qubits/concepts/code-space.md, topics/dual-rail
 next_steps: [topics/quantum-control-software/concepts/outcome-semantics.md, topics/quantum-control-software/concepts/realtime-control-and-error-handling.md]
 related: [topics/dual-rail-qubits/concepts/detection-correction-and-postselection.md, topics/error-aware-gates/concepts/quantum-state-tomography.md]
 source_files: [base/DWave_Application_and_Study_Materials.md]
-complexity_depth: 5
+complexity_depth: 11
 complexity_prerequisite_count: 4
-complexity_score: 7.71
-complexity_wavelength_nm: 453
-complexity_frequency_thz: 661.8
-complexity_color: "#0013ff"
+complexity_score: 8.77
+complexity_wavelength_nm: 419
+complexity_frequency_thz: 715.5
+complexity_color: "#3f00ff"
 understanding: 0
 ---
 
 # Logical measurement with erasure detection
 
 <!-- study-status:start -->
-<div class="study-status" data-complexity="7.71" data-wavelength-nm="453">
-  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#0013ff;color:#ffffff;">Complexity 7.71/10 | 453 nm | 661.8 THz</span>
+<div class="study-status" data-complexity="8.77" data-wavelength-nm="419">
+  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#3f00ff;color:#ffffff;">Complexity 8.77/10 | 419 nm | 715.5 THz</span>
   <label>Understanding <input type="number" min="0" max="10" value="0" aria-label="Understanding rating for Logical Measurement with Erasure Detection"> / 10</label>
 </div>
 <!-- study-status:end -->

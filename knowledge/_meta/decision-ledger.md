@@ -139,3 +139,27 @@ source_files: [base/DWave_Application_and_Study_Materials.md]
 - **Decision:** Accept the low-score complaint without manually overriding generated complexity. Add a bounded mathematics and quantum-foundations branch in roadmap item 4, then let real prerequisite depth recalculate the two target scores.
 - **Reason:** Both disputed values are fresh and formula-correct, but both pages are advanced roots only because the tree omits concepts they assume. A score override would hide the pedagogical gap and break deterministic ownership.
 - **Consequence:** Item 3 records the architecture and evidence requirements only. Item 4 must acquire authoritative sources, implement the new route and immediate-feedback exercises, rewire prerequisites, and prove that Quantum States and Fock Notation reaches at least `3.0` naturally.
+
+## D-023: Keep exercises deterministic and source-adjacent
+
+- **Decision:** Render five exercise types from an optional `exercise_id` in canonical page metadata, with pure deterministic math and sampling logic in the application.
+- **Reason:** Exercises need immediate feedback and accessibility without embedding writable scripts in Markdown or pretending that browser samples are hardware results.
+- **Consequence:** Canonical pages remain read-only; the generated index requires the exact five known exercise IDs; seeded sampling is reproducible; native controls support keyboard operation; and every exercise links back to its canonical explanation.
+
+## D-024: Add a public-source portfolio under `base/`
+
+- **Decision:** Store the dated OpenStax, MIT OpenCourseWare, and IBM Quantum Learning acquisition record as one source artifact under `base/`.
+- **Reason:** Content pages require repository-local source provenance, while exact public URLs, access dates, authority, coverage, and limitations need one auditable record distinct from generated teaching prose.
+- **Consequence:** The original compendium remains unchanged, foundation pages cite the new portfolio, and future link replacement must update the source record before dependent pages.
+
+## D-025: Make the repository README an exhaustive navigation contract
+
+- **Decision:** Use root `README.md` as the human entry point and require it to link every canonical content page directly, while leaving detailed explanations in topic indexes and canonical pages.
+- **Reason:** Roadmap item 5 requires a complete table of contents, but duplicating explanations would create competing sources of truth. Direct links provide complete discovery without duplicating content ownership.
+- **Consequence:** The validator fails when `README.md` is missing, a local README link breaks or escapes the repository, or any canonical concept, definition, algorithm, or example is absent from its table of contents.
+
+## D-026: Keep roadmap item 5 free and local-first
+
+- **Decision:** Document only the existing offline application and source-backed tree. Do not add Ariadion, paid APIs, monetization, licensing, or Feedback 2/3 features in this batch.
+- **Reason:** The user explicitly asked that Feedback 2 and 3 provide context but not be implemented yet, and the core must remain usable without subscriptions or credentials.
+- **Consequence:** The README states current boundaries honestly. Optional integrations and commercial licensing remain deliberate future decisions rather than hidden dependencies.

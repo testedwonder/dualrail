@@ -8,18 +8,18 @@ related: [topics/annealing-and-evidence/concepts/hybrid-solver.md, topics/anneal
 source_files: [base/DWave_Application_and_Study_Materials.md]
 complexity_depth: 6
 complexity_prerequisite_count: 2
-complexity_score: 7.86
-complexity_wavelength_nm: 448
-complexity_frequency_thz: 669.2
-complexity_color: "#0400ff"
+complexity_score: 4.69
+complexity_wavelength_nm: 550
+complexity_frequency_thz: 545.1
+complexity_color: "#66ff00"
 understanding: 0
 ---
 
 # Quantum advantage
 
 <!-- study-status:start -->
-<div class="study-status" data-complexity="7.86" data-wavelength-nm="448">
-  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#0400ff;color:#ffffff;">Complexity 7.86/10 | 448 nm | 669.2 THz</span>
+<div class="study-status" data-complexity="4.69" data-wavelength-nm="550">
+  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#66ff00;color:#111111;">Complexity 4.69/10 | 550 nm | 545.1 THz</span>
   <label>Understanding <input type="number" min="0" max="10" value="0" aria-label="Understanding rating for Quantum Advantage"> / 10</label>
 </div>
 <!-- study-status:end -->

@@ -387,6 +387,65 @@ def _validate_text_quality(repository_root: Path, errors: list[str]) -> None:
                     )
 
 
+def _validate_repository_readme(
+    repository_root: Path,
+    documents: dict[Path, Document],
+    errors: list[str],
+) -> None:
+    readme_path = repository_root / "README.md"
+    if not readme_path.is_file():
+        errors.append("README.md: repository entry point is missing")
+        return
+
+    try:
+        text = readme_path.read_text(encoding="utf-8")
+    except (OSError, UnicodeError) as error:
+        errors.append(f"README.md: cannot read UTF-8 Markdown: {error}")
+        return
+
+    if not re.search(r"^#\s+\S", text, re.MULTILINE):
+        errors.append("README.md: repository entry point has no level-one heading")
+
+    for line_number, line in enumerate(text.splitlines(), start=1):
+        if line.endswith((" ", "\t")):
+            errors.append(f"README.md:{line_number}: trailing whitespace")
+        if re.match(r"^(<<<<<<<|=======|>>>>>>>)", line):
+            errors.append(f"README.md:{line_number}: conflict marker")
+
+    linked_documents: set[Path] = set()
+    for raw_destination in LINK_PATTERN.findall(text):
+        destination = raw_destination.strip()
+        split = urlsplit(destination)
+        if split.scheme or destination.startswith("//") or not split.path:
+            continue
+
+        path_text = unquote(split.path)
+        if Path(path_text).is_absolute() or re.match(r"^[A-Za-z]:", path_text):
+            errors.append(f"README.md: local link is not relative: {destination}")
+            continue
+
+        target = (repository_root / Path(path_text)).resolve()
+        if not _within(target, repository_root):
+            errors.append(f"README.md: local link escapes repository: {destination}")
+            continue
+        if not target.exists():
+            errors.append(f"README.md: broken local link '{destination}'")
+            continue
+        if target in documents:
+            linked_documents.add(target)
+
+    required_documents = {
+        path
+        for path, document in documents.items()
+        if document.metadata.get("kind") in CONTENT_KINDS
+    }
+    for missing_path in sorted(required_documents - linked_documents):
+        errors.append(
+            "README.md: canonical content page missing from table of contents: "
+            f"{_display_path(missing_path, repository_root)}"
+        )
+
+
 def _validate_canonical_slugs(
     documents: dict[Path, Document], errors: list[str]
 ) -> None:
@@ -928,6 +987,7 @@ def validate_repository(
         documents[resolved_path] = document
         errors.extend(parse_errors)
 
+    _validate_repository_readme(repository_root, documents, errors)
     _validate_sources(documents, repository_root, base_root, errors)
     _validate_canonical_slugs(documents, errors)
     prerequisite_graph = _validate_prerequisites(documents, knowledge_root, errors)

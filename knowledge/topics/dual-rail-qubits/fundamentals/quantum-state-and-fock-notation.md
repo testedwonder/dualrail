@@ -2,24 +2,24 @@
 title: Quantum States and Fock Notation
 kind: definition
 status: draft
-prerequisites: []
+prerequisites: [topics/mathematics-and-quantum-foundations/concepts/oscillators-quantization-and-number-states.md, topics/mathematics-and-quantum-foundations/concepts/quantum-measurement-and-born-rule.md]
 next_steps: [topics/dual-rail-qubits/concepts/code-space.md, topics/circuit-qed/concepts/microwave-cavity.md]
 related: [topics/dual-rail-qubits/concepts/dual-rail-encoding.md, topics/error-aware-gates/concepts/quantum-state-tomography.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
-complexity_depth: 0
-complexity_prerequisite_count: 0
-complexity_score: 0.0
-complexity_wavelength_nm: 700
-complexity_frequency_thz: 428.3
-complexity_color: "#ff0000"
+source_files: [base/DWave_Application_and_Study_Materials.md, base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md]
+complexity_depth: 6
+complexity_prerequisite_count: 2
+complexity_score: 4.69
+complexity_wavelength_nm: 550
+complexity_frequency_thz: 545.1
+complexity_color: "#66ff00"
 understanding: 0
 ---
 
 # Quantum states and Fock notation
 
 <!-- study-status:start -->
-<div class="study-status" data-complexity="0.0" data-wavelength-nm="700">
-  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#ff0000;color:#ffffff;">Complexity 0.0/10 | 700 nm | 428.3 THz</span>
+<div class="study-status" data-complexity="4.69" data-wavelength-nm="550">
+  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#66ff00;color:#111111;">Complexity 4.69/10 | 550 nm | 545.1 THz</span>
   <label>Understanding <input type="number" min="0" max="10" value="0" aria-label="Understanding rating for Quantum States and Fock Notation"> / 10</label>
 </div>
 <!-- study-status:end -->
@@ -27,7 +27,7 @@ understanding: 0
 <!-- learning-navigation:start -->
 ## Learning navigation
 
-- **Prerequisites:** None
+- **Prerequisites:** [Oscillators, Quantization, and Number States](../../mathematics-and-quantum-foundations/concepts/oscillators-quantization-and-number-states.md), [Quantum Measurement and the Born Rule](../../mathematics-and-quantum-foundations/concepts/quantum-measurement-and-born-rule.md)
 - **Next steps:** [Code Space](../concepts/code-space.md), [Microwave Cavity](../../circuit-qed/concepts/microwave-cavity.md)
 - **Related:** [Dual-Rail Encoding](../concepts/dual-rail-encoding.md), [Quantum State Tomography](../../error-aware-gates/concepts/quantum-state-tomography.md)
 
@@ -41,6 +41,10 @@ A quantum state records the alternatives a quantum system can occupy and their r
 
 Dual rail uses the two one-excitation states `|1,0>` and `|0,1>`. Reading the notation correctly is the first prerequisite for seeing why `|0,0>` signals photon loss.
 
+## Prerequisites now made explicit
+
+Before this page, understand [oscillator number states](../../mathematics-and-quantum-foundations/concepts/oscillators-quantization-and-number-states.md) and the [Born rule](../../mathematics-and-quantum-foundations/concepts/quantum-measurement-and-born-rule.md). Those pages explain what an excitation count means, why amplitudes are complex, and how a chosen measurement turns amplitudes into outcome probabilities.
+
 ## Step by step
 
 1. `|1,0>` means one excitation in A and none in B.
@@ -50,7 +54,7 @@ Dual rail uses the two one-excitation states `|1,0>` and `|0,1>`. Reading the no
 
 ## Precise boundary
 
-The local source introduces this notation for the dual-rail encoding. It does not provide a complete course on Hilbert spaces, normalization, or measurement theory. Those deeper foundations require an additional authoritative source before expansion.
+The local dual-rail source supports the two-mode encoding and loss interpretation. The separate [authoritative foundations portfolio](../../../../base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md) supports the prerequisite treatment of states, measurement, and number states. This page applies those foundations; it does not attempt infinite-dimensional Hilbert-space rigor.
 
 ## Example and non-example
 
@@ -66,6 +70,6 @@ The local source introduces this notation for the dual-rail encoding. It does no
 
 ## Sources and status
 
-Source-backed by the [dual-rail guide, source pages 5 and 20](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide). Status: `draft`.
+Source-backed by the [dual-rail guide, source pages 5 and 20](../../../../base/DWave_Application_and_Study_Materials.md#3-luke-mastalli-kelly-d-wave-and-the-dual-rail-stack-conversation-study-guide), with prerequisites supported by the [dated foundations portfolio](../../../../base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md). Status: `draft`.
 
 Parent: [Dual-rail qubits](../README.md)

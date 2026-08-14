@@ -6,20 +6,20 @@ prerequisites: [topics/dual-rail-qubits/concepts/dual-rail-encoding.md, topics/c
 next_steps: [topics/error-aware-gates/concepts/randomized-benchmarking.md, topics/error-aware-gates/algorithms/swap-wait-swap-cz.md]
 related: [topics/circuit-qed/concepts/coherence-times.md, topics/calibration-systems/fundamentals/from-gates-to-calibration.md]
 source_files: [base/DWave_Application_and_Study_Materials.md]
-complexity_depth: 4
+complexity_depth: 9
 complexity_prerequisite_count: 2
-complexity_score: 5.57
-complexity_wavelength_nm: 522
-complexity_frequency_thz: 574.3
-complexity_color: "#00ff33"
+complexity_score: 6.54
+complexity_wavelength_nm: 491
+complexity_frequency_thz: 610.6
+complexity_color: "#00fff9"
 understanding: 0
 ---
 
 # Single-qubit dual-rail control
 
 <!-- study-status:start -->
-<div class="study-status" data-complexity="5.57" data-wavelength-nm="522">
-  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#00ff33;color:#111111;">Complexity 5.57/10 | 522 nm | 574.3 THz</span>
+<div class="study-status" data-complexity="6.54" data-wavelength-nm="491">
+  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#00fff9;color:#111111;">Complexity 6.54/10 | 491 nm | 610.6 THz</span>
   <label>Understanding <input type="number" min="0" max="10" value="0" aria-label="Understanding rating for Single-Qubit Dual-Rail Control"> / 10</label>
 </div>
 <!-- study-status:end -->

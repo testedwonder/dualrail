@@ -8,18 +8,18 @@ related: [topics/annealing-and-evidence/concepts/hybrid-solver.md, topics/anneal
 source_files: [base/DWave_Application_and_Study_Materials.md]
 complexity_depth: 3
 complexity_prerequisite_count: 2
-complexity_score: 4.43
-complexity_wavelength_nm: 558
-complexity_frequency_thz: 537.3
-complexity_color: "#8fff00"
+complexity_score: 2.85
+complexity_wavelength_nm: 609
+complexity_frequency_thz: 492.3
+complexity_color: "#ffc100"
 understanding: 0
 ---
 
 # Minor embedding
 
 <!-- study-status:start -->
-<div class="study-status" data-complexity="4.43" data-wavelength-nm="558">
-  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#8fff00;color:#111111;">Complexity 4.43/10 | 558 nm | 537.3 THz</span>
+<div class="study-status" data-complexity="2.85" data-wavelength-nm="609">
+  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#ffc100;color:#111111;">Complexity 2.85/10 | 609 nm | 492.3 THz</span>
   <label>Understanding <input type="number" min="0" max="10" value="0" aria-label="Understanding rating for Minor Embedding"> / 10</label>
 </div>
 <!-- study-status:end -->

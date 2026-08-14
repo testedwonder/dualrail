@@ -8,6 +8,13 @@ const appRoot = path.resolve(scriptDirectory, '..')
 const repositoryRoot = path.resolve(appRoot, '..')
 const outputPath = path.join(appRoot, 'src', 'generated', 'knowledge.json')
 const contentKinds = new Set(['concept', 'definition', 'algorithm', 'example'])
+const expectedExerciseIds = new Set([
+  'foundations-diagnostic',
+  'complex-phase',
+  'matrix-eigenvector',
+  'measurement-lab',
+  'gate-calibration-order',
+])
 
 function toPosix(value) {
   return value.split(path.sep).join('/')
@@ -114,6 +121,7 @@ async function parseDocument(absolutePath) {
     defaultUnderstanding: Number.isInteger(understanding) && understanding >= 0 && understanding <= 10
       ? understanding
       : 0,
+    exerciseId: parsed.data.exercise_id ? String(parsed.data.exercise_id) : null,
     isRateable: relativePath.startsWith('base/') || contentKinds.has(kind),
     isPrivate: /private|personal|contact/i.test(privacy),
     wordCount: plainText(body).split(/\s+/).filter(Boolean).length,
@@ -156,9 +164,17 @@ const topics = [...topicTitles.entries()]
 
 const contentCount = documents.filter((document) => document.collection === 'topic' && document.isRateable).length
 const baseCount = documents.filter((document) => document.collection === 'base').length
-if (knowledgeFiles.length < 79 || contentCount < 56 || baseCount < 3) {
+const indexedExerciseIds = new Set(documents.map((document) => document.exerciseId).filter(Boolean))
+const missingExerciseIds = [...expectedExerciseIds].filter((exerciseId) => !indexedExerciseIds.has(exerciseId))
+const unknownExerciseIds = [...indexedExerciseIds].filter((exerciseId) => !expectedExerciseIds.has(exerciseId))
+if (knowledgeFiles.length < 93 || contentCount < 66 || baseCount < 4) {
   throw new Error(
     `Knowledge index is incomplete: ${knowledgeFiles.length} knowledge files, ${contentCount} topic items, ${baseCount} base files.`,
+  )
+}
+if (missingExerciseIds.length || unknownExerciseIds.length) {
+  throw new Error(
+    `Exercise index mismatch. Missing: ${missingExerciseIds.join(', ') || 'none'}. Unknown: ${unknownExerciseIds.join(', ') || 'none'}.`,
   )
 }
 
@@ -172,6 +188,7 @@ const output = {
     topicItems: contentCount,
     baseDocuments: baseCount,
     topics: topics.length,
+    exercises: indexedExerciseIds.size,
   },
 }
 

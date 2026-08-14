@@ -8,18 +8,18 @@ related: [topics/annealing-and-evidence/algorithms/annealing-sampling-workflow.m
 source_files: [base/DWave_Application_and_Study_Materials.md]
 complexity_depth: 2
 complexity_prerequisite_count: 1
-complexity_score: 2.79
-complexity_wavelength_nm: 611
-complexity_frequency_thz: 490.7
-complexity_color: "#ffbd00"
+complexity_score: 1.73
+complexity_wavelength_nm: 645
+complexity_frequency_thz: 464.8
+complexity_color: "#ff7500"
 understanding: 0
 ---
 
 # QUBO and binary quadratic models
 
 <!-- study-status:start -->
-<div class="study-status" data-complexity="2.79" data-wavelength-nm="611">
-  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#ffbd00;color:#111111;">Complexity 2.79/10 | 611 nm | 490.7 THz</span>
+<div class="study-status" data-complexity="1.73" data-wavelength-nm="645">
+  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#ff7500;color:#ffffff;">Complexity 1.73/10 | 645 nm | 464.8 THz</span>
   <label>Understanding <input type="number" min="0" max="10" value="0" aria-label="Understanding rating for QUBO and Binary Quadratic Models"> / 10</label>
 </div>
 <!-- study-status:end -->

@@ -3,7 +3,7 @@ title: Initial Concept Map
 kind: index
 status: draft
 prerequisites: []
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [base/DWave_Application_and_Study_Materials.md, base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md]
 ---
 
 # Concept and prerequisite map
@@ -12,6 +12,7 @@ source_files: [base/DWave_Application_and_Study_Materials.md]
 
 | Topic | Content pages | Central question | Source coverage |
 | --- | ---: | --- | --- |
+| [Mathematics and quantum foundations](../topics/mathematics-and-quantum-foundations/README.md) | 10 | Which mathematical and physical ideas make states, measurement, gates, and calibration meaningful? | OpenStax, MIT OpenCourseWare, and IBM Quantum Learning, accessed 2026-08-14 |
 | [Dual-rail qubits and erasures](../topics/dual-rail-qubits/README.md) | 8 | How can one excitation across two modes expose photon loss? | Compendium section 3, pages 2, 5, 7, 9-10, 20-21 |
 | [Superconducting circuit QED and control](../topics/circuit-qed/README.md) | 7 | Which components and interactions realize the encoded operations? | Section 3, pages 6-7, 11, 19-21; section 4, pages 4-5, 10-12 |
 | [Error-aware gates and measurement](../topics/error-aware-gates/README.md) | 11 | How are gates and measurements qualified without flattening structured errors? | Section 3, pages 7, 9-10, 12, 20-21; section 4, pages 4-9, 12, 18 |
@@ -19,7 +20,7 @@ source_files: [base/DWave_Application_and_Study_Materials.md]
 | [Quantum-control software](../topics/quantum-control-software/README.md) | 11 | How does experiment intent reach hardware and return as traceable evidence? | Section 3, pages 3, 8, 11-12, 15, 17-18; section 4, pages 13-19 |
 | [Annealing and evidence](../topics/annealing-and-evidence/README.md) | 12 | What does the annealing workflow do, and what supports a comparative claim? | Section 6, pages 2-13 |
 
-Total: **56 canonical content pages** plus topic indexes, references, learning paths, glossary, and metadata records.
+Total: **66 canonical content pages** plus topic indexes, references, learning paths, glossary, and metadata records.
 
 Private application and interview logistics remain source material, not reusable knowledge topics.
 
@@ -27,6 +28,20 @@ Private application and interview logistics remain source material, not reusable
 
 ```mermaid
 flowchart TD
+    CN[Complex numbers and phase] --> VB[Vectors, bases, and inner products]
+    VB --> ML[Matrices and linear operators]
+    ML --> EE[Eigenvalues and eigenvectors]
+    VB --> QSV[Quantum states and bra-ket notation]
+    EE --> QO[Quantum operators and observables]
+    QSV --> QO
+    PROB[Probability and measurement statistics] --> QM[Quantum measurement and Born rule]
+    QO --> QM
+    QO --> UG[Unitary evolution and gates]
+    QO --> NS[Oscillator number states]
+    NS --> QS
+    QM --> QS
+    QM --> GTC[From gates to calibration]
+    UG --> GTC
     QS[Quantum state and Fock notation] --> CS[Code space]
     SC[Superconducting circuit stack] --> T[Transmon]
     SC --> MC[Microwave cavity]
@@ -64,15 +79,15 @@ This Mermaid view is deliberately compressed. Page front matter is the canonical
 
 ## Graph measurements
 
-- Longest prerequisite-path depth: **7**.
+- Longest prerequisite-path depth: **13**.
 - Largest direct prerequisite set: **4**.
 - Lowest complexity score: **0.0** at 700 nm red.
 - Highest current complexity score: **9.5** at 396 nm near violet.
-- Deepest current pages: end-to-end benchmarking, leakage propagation, real-time control and error handling, and the quantum-control test portfolio.
+- Deepest current pages: leakage propagation, real-time control and error handling, and the quantum-control test portfolio.
 
 See the [complexity model](complexity-model.md) for the exact formula. Derived values are recalculated by `tools/update_complexity.py` and checked by the main validator.
 
-Five current content pages are roots and therefore score `0.0`. [Feedback assessment 1](feedback-assessment.md) accepts the finding that Quantum States and Fock Notation and From Gates to Calibration are roots only because required mathematics and quantum-mechanics foundations are not represented. The other root scores were not challenged by feedback and remain unchanged in this assessment batch.
+Five current content pages are roots and therefore score `0.0`. The new true entry points include complex numbers and classical probability. [Feedback assessment 1](feedback-assessment.md) records how the former premature roots, Quantum States and Fock Notation and From Gates to Calibration, moved to depth `6` and complexity `4.69` after their real prerequisites were represented.
 
 ## Navigation contract
 

@@ -115,3 +115,18 @@ The feedback is incorporated only when all of these are true:
 ## Item-3 conclusion
 
 Feedback 1 is accepted and actionable. The existing six-topic tree remains structurally valid, but it is not pedagogically complete at its entry boundary. Roadmap item 4 should implement the bounded foundation topic, prerequisite learning path, rewiring, exercises, sourced explanations, and recalculated complexity described above.
+
+## Item-4 completion
+
+Completed on 2026-08-14.
+
+- Added the ten-page [Mathematics and Quantum Foundations](../topics/mathematics-and-quantum-foundations/README.md) topic and its [ordered learning path](../learning-paths/foundations-to-quantum-systems.md).
+- Acquired and recorded exact OpenStax, MIT OpenCourseWare, and IBM Quantum Learning links in the [authoritative-source portfolio](../../base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md).
+- Rewired Quantum States and Fock Notation to number-state and measurement prerequisites.
+- Rewired From Gates to Calibration to unitary-gate and measurement prerequisites.
+- Regenerated the entire graph. Both target pages now have depth `6`, two direct prerequisites, and complexity `4.69`; no score was manually overridden.
+- Added five app-native exercises: prerequisite diagnostic, complex-phase explorer, matrix/eigenvector check, seeded Born-rule measurement lab, and gate-to-calibration ordering.
+- Added deterministic logic tests and component tests covering correct, incorrect, reset, keyboard, and seeded-repeatability paths.
+- Verified all exercise surfaces in a real browser. Desktop and `390 x 844` mobile geometry have no document-level horizontal overflow.
+
+All eight acceptance gates are satisfied. Feedback 1 is incorporated; later additions to `FEEDBACK.md` should receive a new numbered assessment rather than rewriting this record.

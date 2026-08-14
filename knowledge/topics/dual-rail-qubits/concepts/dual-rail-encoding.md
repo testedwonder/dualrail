@@ -6,20 +6,20 @@ prerequisites: [topics/dual-rail-qubits/fundamentals/quantum-state-and-fock-nota
 next_steps: [topics/dual-rail-qubits/concepts/photon-loss-and-vacuum.md, topics/error-aware-gates/concepts/single-qubit-dual-rail-control.md]
 related: [topics/dual-rail-qubits/concepts/leakage-and-erasure.md, topics/circuit-qed/concepts/beamsplitter-and-parametric-drive.md]
 source_files: [base/DWave_Application_and_Study_Materials.md]
-complexity_depth: 2
+complexity_depth: 8
 complexity_prerequisite_count: 3
-complexity_score: 3.79
-complexity_wavelength_nm: 579
-complexity_frequency_thz: 517.8
-complexity_color: "#faff00"
+complexity_score: 6.42
+complexity_wavelength_nm: 495
+complexity_frequency_thz: 605.6
+complexity_color: "#00ffdf"
 understanding: 0
 ---
 
 # Dual-rail encoding
 
 <!-- study-status:start -->
-<div class="study-status" data-complexity="3.79" data-wavelength-nm="579">
-  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#faff00;color:#111111;">Complexity 3.79/10 | 579 nm | 517.8 THz</span>
+<div class="study-status" data-complexity="6.42" data-wavelength-nm="495">
+  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#00ffdf;color:#111111;">Complexity 6.42/10 | 495 nm | 605.6 THz</span>
   <label>Understanding <input type="number" min="0" max="10" value="0" aria-label="Understanding rating for Dual-Rail Encoding"> / 10</label>
 </div>
 <!-- study-status:end -->

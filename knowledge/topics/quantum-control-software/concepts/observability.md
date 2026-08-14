@@ -6,20 +6,20 @@ prerequisites: [topics/quantum-control-software/concepts/acquisition-and-provena
 next_steps: [topics/calibration-systems/algorithms/diagnose-calibration-drift.md, topics/quantum-control-software/concepts/test-portfolio.md]
 related: [topics/quantum-control-software/concepts/reliable-orchestration.md, topics/error-aware-gates/examples/repeated-cz-experiment.md]
 source_files: [base/DWave_Application_and_Study_Materials.md]
-complexity_depth: 5
+complexity_depth: 10
 complexity_prerequisite_count: 2
-complexity_score: 6.71
-complexity_wavelength_nm: 485
-complexity_frequency_thz: 618.1
-complexity_color: "#00dfff"
+complexity_score: 7.15
+complexity_wavelength_nm: 471
+complexity_frequency_thz: 636.5
+complexity_color: "#0086ff"
 understanding: 0
 ---
 
 # Two-plane observability
 
 <!-- study-status:start -->
-<div class="study-status" data-complexity="6.71" data-wavelength-nm="485">
-  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#00dfff;color:#111111;">Complexity 6.71/10 | 485 nm | 618.1 THz</span>
+<div class="study-status" data-complexity="7.15" data-wavelength-nm="471">
+  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#0086ff;color:#ffffff;">Complexity 7.15/10 | 471 nm | 636.5 THz</span>
   <label>Understanding <input type="number" min="0" max="10" value="0" aria-label="Understanding rating for Two-Plane Observability"> / 10</label>
 </div>
 <!-- study-status:end -->

@@ -6,20 +6,20 @@ prerequisites: [topics/quantum-control-software/concepts/production-stack.md, to
 next_steps: [topics/quantum-control-software/concepts/observability.md, topics/quantum-control-software/concepts/promotion-and-rollback.md]
 related: [topics/quantum-control-software/concepts/outcome-semantics.md, topics/calibration-systems/algorithms/diagnose-calibration-drift.md]
 source_files: [base/DWave_Application_and_Study_Materials.md]
-complexity_depth: 4
+complexity_depth: 8
 complexity_prerequisite_count: 3
-complexity_score: 6.07
-complexity_wavelength_nm: 506
-complexity_frequency_thz: 592.5
-complexity_color: "#00ff99"
+complexity_score: 6.42
+complexity_wavelength_nm: 495
+complexity_frequency_thz: 605.6
+complexity_color: "#00ffdf"
 understanding: 0
 ---
 
 # Acquisition and provenance
 
 <!-- study-status:start -->
-<div class="study-status" data-complexity="6.07" data-wavelength-nm="506">
-  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#00ff99;color:#111111;">Complexity 6.07/10 | 506 nm | 592.5 THz</span>
+<div class="study-status" data-complexity="6.42" data-wavelength-nm="495">
+  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#00ffdf;color:#111111;">Complexity 6.42/10 | 495 nm | 605.6 THz</span>
   <label>Understanding <input type="number" min="0" max="10" value="0" aria-label="Understanding rating for Acquisition and Provenance"> / 10</label>
 </div>
 <!-- study-status:end -->

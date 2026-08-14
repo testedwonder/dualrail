@@ -64,15 +64,43 @@ The following remain intentionally unexpanded because they are only named in res
 
 Adding those pages requires the relevant project repositories or authoritative primary sources. Model memory is not an acceptable substitute.
 
-## Next bounded batch: roadmap item 4
+## Completed: roadmap item 4 foundations expansion
 
-Implement only the accepted scope in [Feedback assessment 1](feedback-assessment.md): acquire authoritative sources, add the mathematics and quantum-foundations topic and learning path, rewire the two named target pages, build the prerequisite exercises, regenerate complexity, and publish a feedback completion summary.
+Completed on 2026-08-14 under the acceptance contract in [Feedback assessment 1](feedback-assessment.md).
 
-Do not manually edit generated complexity values to satisfy the requested threshold. The new prerequisite graph must produce the increase, and the validator must remain authoritative.
+Delivered:
+
+- one dated, authority-ranked public-source portfolio;
+- 10 canonical mathematics and quantum-foundation pages;
+- one ordered foundations learning path and updates to existing dual-rail and calibration paths;
+- explicit target-page prerequisites and naturally generated complexity `4.69` for both disputed pages;
+- five immediate-feedback app exercises with deterministic logic;
+- 9 new app tests across pure logic and rendered interactions;
+- seven topic families, 66 canonical content pages, and 93 knowledge Markdown files.
+
+## Completed: roadmap item 5 repository guide
+
+Completed on 2026-08-14.
+
+Delivered:
+
+- a repository-level `README.md` with quick-start learning routes;
+- application launch and study instructions;
+- personal-note, understanding-rating, progress, import, and export guidance;
+- direct links to all 66 canonical content pages, grouped by topic;
+- visible topic-level prerequisite and next-step guidance;
+- all four learning paths and five interactive exercises;
+- local source records, authoritative public starting points, and source-evaluation guidance;
+- current limitations and an explicit free, offline core boundary;
+- deterministic validation for README presence, local links, and complete canonical-page coverage.
+
+## Next bounded batch: roadmap item 6
+
+Add the public-source research interface requested by the roadmap. It must remain useful without paid services, distinguish authority and evidence levels, and provide a local mechanism for proposed sources or corrections. Feedback 2 and 3 must receive separate assessment before their coding, Ariadion, ADHD-design, licensing, monetization, or optional-integration requests are implemented.
 
 ## Later roadmap items
 
-Items 5-8 remain outside this batch: the expanded repository README and complete table of contents, public-source research interface, immersive visual polish and simulations, and final bug and optimization work.
+Items 6-8 remain outside this batch: the public-source research interface, immersive visual polish and simulations, and final bug and optimization work.
 
 ## Future maintenance rule
 

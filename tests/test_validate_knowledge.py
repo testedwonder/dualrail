@@ -68,6 +68,11 @@ class KnowledgeValidatorTests(unittest.TestCase):
 
     def make_valid_tree(self) -> None:
         self.write(
+            "README.md",
+            "# Repository\n\n[Knowledge](knowledge/README.md)\n\n"
+            "[Concept](knowledge/concept.md)\n",
+        )
+        self.write(
             "knowledge/README.md",
             page(
                 "Root",
@@ -94,6 +99,38 @@ class KnowledgeValidatorTests(unittest.TestCase):
         self.make_valid_tree()
 
         self.assertEqual([], self.errors())
+
+    def test_repository_readme_is_required(self) -> None:
+        self.make_valid_tree()
+        (self.root / "README.md").unlink()
+
+        self.assertTrue(
+            any("repository entry point is missing" in error for error in self.errors())
+        )
+
+    def test_repository_readme_link_must_resolve(self) -> None:
+        self.make_valid_tree()
+        self.write(
+            "README.md",
+            "# Repository\n\n[Concept](knowledge/concept.md)\n\n"
+            "[Missing](missing.md)\n",
+        )
+
+        self.assertTrue(
+            any("broken local link 'missing.md'" in error for error in self.errors())
+        )
+
+    def test_repository_readme_must_list_every_content_page(self) -> None:
+        self.make_valid_tree()
+        self.write("README.md", "# Repository\n\n[Knowledge](knowledge/README.md)\n")
+
+        self.assertTrue(
+            any(
+                "canonical content page missing from table of contents: knowledge/concept.md"
+                in error
+                for error in self.errors()
+            )
+        )
 
     def test_missing_metadata_and_empty_page_fail(self) -> None:
         self.write("knowledge/README.md", "---\ntitle: Root\n---\n")

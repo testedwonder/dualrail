@@ -12,6 +12,8 @@ This is the entry point for a source-traceable learning system built from the pr
 
 ## Start here
 
+Need the mathematics and quantum prerequisites: follow [Foundations for quantum states and calibration](learning-paths/foundations-to-quantum-systems.md).
+
 New to gate-model hardware: follow [Dual rail from notation to gates](learning-paths/dual-rail-to-gates.md).
 
 New to annealing: follow [Annealing from model to evidence](learning-paths/annealing-first.md).
@@ -24,6 +26,7 @@ Looking up a term: use the [glossary](glossary.md).
 
 | Topic | What it answers | State |
 | --- | --- | --- |
+| [Mathematics and quantum foundations](topics/mathematics-and-quantum-foundations/README.md) | Which mathematical and physical ideas make state notation, measurement, gates, and calibration meaningful | Implemented |
 | [Dual-rail qubits and erasures](topics/dual-rail-qubits/README.md) | How one excitation across two modes can expose photon loss | Implemented |
 | [Superconducting circuit QED and control](topics/circuit-qed/README.md) | How cavities, transmons, couplers, interactions, coherence, and readout relate | Implemented |
 | [Error-aware gates and measurement](topics/error-aware-gates/README.md) | Why erasure, leakage, Pauli errors, SPAM, gate orientation, and postselection stay distinct | Implemented |
@@ -74,10 +77,10 @@ npm install
 npm run dev
 ```
 
-The interface provides a searchable and filterable library, rendered Markdown and MathJax, code-copy controls, prerequisite and related-page navigation, a topic-scoped relationship map, source links, local notes and ratings, JSON backup and restore, and progress views across canonical topics and the three files in `base/`.
+The interface provides a searchable and filterable library, rendered Markdown and MathJax, code-copy controls, prerequisite and related-page navigation, a topic-scoped relationship map, source links, local notes and ratings, JSON backup and restore, progress views, and five immediate-feedback foundation exercises. It indexes canonical topics and all four files in `base/`.
 
 The application regenerates its read-only corpus index before development, tests, and production builds. See the [application guide](../app/README.md) for the data boundary and validation commands.
 
 ## Current boundary
 
-Roadmap items 1-3 cover the source-backed definition tree, derived study metadata, visual study application, and validated feedback intake. [Feedback assessment 1](_meta/feedback-assessment.md) defines the next bounded foundation batch. Its sourced expansion and interactive exercises belong to roadmap item 4; the expanded repository README, public research interface, immersive visual work, and final optimization remain later items.
+Roadmap items 1-5 cover the source-backed definition tree, derived study metadata, visual study application, feedback intake, sourced foundation expansion, prerequisite rewiring, interactive exercises, and the exhaustive [repository guide](../README.md). [Feedback assessment 1](_meta/feedback-assessment.md) records the completed foundation batch. The public research interface, immersive visual work, and final optimization remain later items; Feedback 2 and 3 are context only until separately assessed.

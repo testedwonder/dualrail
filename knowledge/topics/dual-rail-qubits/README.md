@@ -12,6 +12,8 @@ A dual-rail cavity qubit stores one logical qubit in one excitation shared acros
 
 ## Start here
 
+Complete the [mathematics and quantum foundations route](../../learning-paths/foundations-to-quantum-systems.md) first if complex amplitudes, the Born rule, or oscillator number states are unfamiliar.
+
 1. [Quantum states and Fock notation](fundamentals/quantum-state-and-fock-notation.md)
 2. [Code space](concepts/code-space.md)
 3. [Dual-rail encoding](concepts/dual-rail-encoding.md)

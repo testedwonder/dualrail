@@ -6,20 +6,20 @@ prerequisites: [topics/error-aware-gates/algorithms/swap-wait-swap-cz.md, topics
 next_steps: [topics/error-aware-gates/examples/repeated-cz-experiment.md]
 related: [topics/error-aware-gates/concepts/control-target-asymmetry.md, topics/dual-rail-qubits/concepts/photon-loss-and-vacuum.md]
 source_files: [base/DWave_Application_and_Study_Materials.md]
-complexity_depth: 6
+complexity_depth: 12
 complexity_prerequisite_count: 3
-complexity_score: 8.36
-complexity_wavelength_nm: 432
-complexity_frequency_thz: 694.0
-complexity_color: "#2500ff"
+complexity_score: 8.88
+complexity_wavelength_nm: 416
+complexity_frequency_thz: 720.7
+complexity_color: "#4500ff"
 understanding: 0
 ---
 
 # No-jump backaction
 
 <!-- study-status:start -->
-<div class="study-status" data-complexity="8.36" data-wavelength-nm="432">
-  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#2500ff;color:#ffffff;">Complexity 8.36/10 | 432 nm | 694.0 THz</span>
+<div class="study-status" data-complexity="8.88" data-wavelength-nm="416">
+  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#4500ff;color:#ffffff;">Complexity 8.88/10 | 416 nm | 720.7 THz</span>
   <label>Understanding <input type="number" min="0" max="10" value="0" aria-label="Understanding rating for No-Jump Backaction"> / 10</label>
 </div>
 <!-- study-status:end -->

@@ -8,18 +8,18 @@ related: [topics/annealing-and-evidence/concepts/quantum-annealing.md, topics/an
 source_files: [base/DWave_Application_and_Study_Materials.md]
 complexity_depth: 4
 complexity_prerequisite_count: 2
-complexity_score: 5.57
-complexity_wavelength_nm: 522
-complexity_frequency_thz: 574.3
-complexity_color: "#00ff33"
+complexity_score: 3.46
+complexity_wavelength_nm: 589
+complexity_frequency_thz: 509.0
+complexity_color: "#ffec00"
 understanding: 0
 ---
 
 # Annealing sampling workflow
 
 <!-- study-status:start -->
-<div class="study-status" data-complexity="5.57" data-wavelength-nm="522">
-  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#00ff33;color:#111111;">Complexity 5.57/10 | 522 nm | 574.3 THz</span>
+<div class="study-status" data-complexity="3.46" data-wavelength-nm="589">
+  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#ffec00;color:#111111;">Complexity 3.46/10 | 589 nm | 509.0 THz</span>
   <label>Understanding <input type="number" min="0" max="10" value="0" aria-label="Understanding rating for Annealing Sampling Workflow"> / 10</label>
 </div>
 <!-- study-status:end -->

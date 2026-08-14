@@ -6,20 +6,20 @@ prerequisites: [topics/error-aware-gates/algorithms/logical-measurement-with-era
 next_steps: [topics/quantum-control-software/concepts/realtime-control-and-error-handling.md, topics/quantum-control-software/concepts/acquisition-and-provenance.md]
 related: [topics/error-aware-gates/concepts/spam.md, topics/dual-rail-qubits/concepts/detection-correction-and-postselection.md]
 source_files: [base/DWave_Application_and_Study_Materials.md]
-complexity_depth: 6
+complexity_depth: 12
 complexity_prerequisite_count: 2
-complexity_score: 7.86
-complexity_wavelength_nm: 448
-complexity_frequency_thz: 669.2
-complexity_color: "#0400ff"
+complexity_score: 8.38
+complexity_wavelength_nm: 432
+complexity_frequency_thz: 694.0
+complexity_color: "#2500ff"
 understanding: 0
 ---
 
 # Outcome semantics
 
 <!-- study-status:start -->
-<div class="study-status" data-complexity="7.86" data-wavelength-nm="448">
-  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#0400ff;color:#ffffff;">Complexity 7.86/10 | 448 nm | 669.2 THz</span>
+<div class="study-status" data-complexity="8.38" data-wavelength-nm="432">
+  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#2500ff;color:#ffffff;">Complexity 8.38/10 | 432 nm | 694.0 THz</span>
   <label>Understanding <input type="number" min="0" max="10" value="0" aria-label="Understanding rating for Outcome Semantics"> / 10</label>
 </div>
 <!-- study-status:end -->

@@ -28,6 +28,7 @@ export interface KnowledgeDocument {
   externalLinks: string[]
   complexity: Complexity | null
   defaultUnderstanding: number
+  exerciseId: string | null
   isRateable: boolean
   isPrivate: boolean
   wordCount: number
@@ -50,6 +51,7 @@ export interface KnowledgeIndex {
     topicItems: number
     baseDocuments: number
     topics: number
+    exercises: number
   }
 }
 

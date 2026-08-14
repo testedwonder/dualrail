@@ -18,6 +18,8 @@ A calibration system connects intended operations to a changing physical device.
 
 ### Foundation
 
+- [Unitary evolution and quantum gates](../mathematics-and-quantum-foundations/concepts/unitary-evolution-and-quantum-gates.md)
+- [Quantum measurement and the Born rule](../mathematics-and-quantum-foundations/concepts/quantum-measurement-and-born-rule.md)
 - [From gates to calibration](fundamentals/from-gates-to-calibration.md)
 
 ### Canonical concepts

@@ -6,20 +6,20 @@ prerequisites: [topics/dual-rail-qubits/concepts/code-space.md, topics/dual-rail
 next_steps: [topics/dual-rail-qubits/concepts/detection-correction-and-postselection.md, topics/dual-rail-qubits/concepts/pauli-errors-and-error-hierarchy.md]
 related: [topics/quantum-control-software/concepts/outcome-semantics.md, topics/error-aware-gates/concepts/leakage-propagation.md]
 source_files: [base/DWave_Application_and_Study_Materials.md]
-complexity_depth: 4
+complexity_depth: 10
 complexity_prerequisite_count: 2
-complexity_score: 5.57
-complexity_wavelength_nm: 522
-complexity_frequency_thz: 574.3
-complexity_color: "#00ff33"
+complexity_score: 7.15
+complexity_wavelength_nm: 471
+complexity_frequency_thz: 636.5
+complexity_color: "#0086ff"
 understanding: 0
 ---
 
 # Leakage and erasure
 
 <!-- study-status:start -->
-<div class="study-status" data-complexity="5.57" data-wavelength-nm="522">
-  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#00ff33;color:#111111;">Complexity 5.57/10 | 522 nm | 574.3 THz</span>
+<div class="study-status" data-complexity="7.15" data-wavelength-nm="471">
+  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#0086ff;color:#ffffff;">Complexity 7.15/10 | 471 nm | 636.5 THz</span>
   <label>Understanding <input type="number" min="0" max="10" value="0" aria-label="Understanding rating for Leakage and Erasure"> / 10</label>
 </div>
 <!-- study-status:end -->

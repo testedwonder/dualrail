@@ -6,20 +6,20 @@ prerequisites: [topics/dual-rail-qubits/fundamentals/quantum-state-and-fock-nota
 next_steps: [topics/dual-rail-qubits/concepts/dual-rail-encoding.md]
 related: [topics/dual-rail-qubits/concepts/leakage-and-erasure.md, topics/quantum-control-software/concepts/outcome-semantics.md]
 source_files: [base/DWave_Application_and_Study_Materials.md]
-complexity_depth: 1
+complexity_depth: 7
 complexity_prerequisite_count: 1
-complexity_score: 1.64
-complexity_wavelength_nm: 648
-complexity_frequency_thz: 462.6
-complexity_color: "#ff6e00"
+complexity_score: 4.81
+complexity_wavelength_nm: 546
+complexity_frequency_thz: 549.1
+complexity_color: "#52ff00"
 understanding: 0
 ---
 
 # Code space
 
 <!-- study-status:start -->
-<div class="study-status" data-complexity="1.64" data-wavelength-nm="648">
-  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#ff6e00;color:#ffffff;">Complexity 1.64/10 | 648 nm | 462.6 THz</span>
+<div class="study-status" data-complexity="4.81" data-wavelength-nm="546">
+  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#52ff00;color:#111111;">Complexity 4.81/10 | 546 nm | 549.1 THz</span>
   <label>Understanding <input type="number" min="0" max="10" value="0" aria-label="Understanding rating for Code Space"> / 10</label>
 </div>
 <!-- study-status:end -->

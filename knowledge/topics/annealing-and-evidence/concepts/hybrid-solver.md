@@ -8,18 +8,18 @@ related: [topics/annealing-and-evidence/concepts/minor-embedding.md, topics/anne
 source_files: [base/DWave_Application_and_Study_Materials.md]
 complexity_depth: 5
 complexity_prerequisite_count: 1
-complexity_score: 6.21
-complexity_wavelength_nm: 501
-complexity_frequency_thz: 598.4
-complexity_color: "#00ffb9"
+complexity_score: 3.58
+complexity_wavelength_nm: 585
+complexity_frequency_thz: 512.5
+complexity_color: "#fff400"
 understanding: 0
 ---
 
 # Hybrid solver
 
 <!-- study-status:start -->
-<div class="study-status" data-complexity="6.21" data-wavelength-nm="501">
-  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#00ffb9;color:#111111;">Complexity 6.21/10 | 501 nm | 598.4 THz</span>
+<div class="study-status" data-complexity="3.58" data-wavelength-nm="585">
+  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#fff400;color:#111111;">Complexity 3.58/10 | 585 nm | 512.5 THz</span>
   <label>Understanding <input type="number" min="0" max="10" value="0" aria-label="Understanding rating for Hybrid Solver"> / 10</label>
 </div>
 <!-- study-status:end -->

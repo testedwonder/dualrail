@@ -2,24 +2,25 @@
 title: From Gates to Calibration
 kind: definition
 status: draft
-prerequisites: []
+prerequisites: [topics/mathematics-and-quantum-foundations/concepts/unitary-evolution-and-quantum-gates.md, topics/mathematics-and-quantum-foundations/concepts/quantum-measurement-and-born-rule.md]
 next_steps: [topics/calibration-systems/concepts/calibration-record.md, topics/error-aware-gates/concepts/controlled-z-gate.md]
 related: [topics/quantum-control-software/concepts/production-stack.md, topics/error-aware-gates/examples/repeated-cz-experiment.md]
-source_files: [base/DWave_Application_and_Study_Materials.md]
-complexity_depth: 0
-complexity_prerequisite_count: 0
-complexity_score: 0.0
-complexity_wavelength_nm: 700
-complexity_frequency_thz: 428.3
-complexity_color: "#ff0000"
+source_files: [base/DWave_Application_and_Study_Materials.md, base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md]
+exercise_id: gate-calibration-order
+complexity_depth: 6
+complexity_prerequisite_count: 2
+complexity_score: 4.69
+complexity_wavelength_nm: 550
+complexity_frequency_thz: 545.1
+complexity_color: "#66ff00"
 understanding: 0
 ---
 
 # From gates to calibration
 
 <!-- study-status:start -->
-<div class="study-status" data-complexity="0.0" data-wavelength-nm="700">
-  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#ff0000;color:#ffffff;">Complexity 0.0/10 | 700 nm | 428.3 THz</span>
+<div class="study-status" data-complexity="4.69" data-wavelength-nm="550">
+  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#66ff00;color:#111111;">Complexity 4.69/10 | 550 nm | 545.1 THz</span>
   <label>Understanding <input type="number" min="0" max="10" value="0" aria-label="Understanding rating for From Gates to Calibration"> / 10</label>
 </div>
 <!-- study-status:end -->
@@ -27,7 +28,7 @@ understanding: 0
 <!-- learning-navigation:start -->
 ## Learning navigation
 
-- **Prerequisites:** None
+- **Prerequisites:** [Unitary Evolution and Quantum Gates](../../mathematics-and-quantum-foundations/concepts/unitary-evolution-and-quantum-gates.md), [Quantum Measurement and the Born Rule](../../mathematics-and-quantum-foundations/concepts/quantum-measurement-and-born-rule.md)
 - **Next steps:** [Calibration Record](../concepts/calibration-record.md), [Controlled-Z Gate](../../error-aware-gates/concepts/controlled-z-gate.md)
 - **Related:** [Production Quantum-Control Stack](../../quantum-control-software/concepts/production-stack.md), [Repeated-CZ Experiment](../../error-aware-gates/examples/repeated-cz-experiment.md)
 
@@ -35,7 +36,7 @@ understanding: 0
 
 Parent: [Calibration systems](../README.md)
 
-Prerequisites: None
+Prerequisites: [Unitary evolution and quantum gates](../../mathematics-and-quantum-foundations/concepts/unitary-evolution-and-quantum-gates.md) and [Quantum measurement and the Born rule](../../mathematics-and-quantum-foundations/concepts/quantum-measurement-and-born-rule.md)
 
 Next: [Calibration record](../concepts/calibration-record.md)
 
@@ -46,6 +47,8 @@ A software command such as “apply this quantum gate” is an intention. Hardwa
 ## Why it matters
 
 The device is not an abstract circuit diagram. Its resonances, couplings, electronics, and readout can vary. A setting that worked before may no longer produce the same action. Software therefore needs a [calibration record](../concepts/calibration-record.md), not a timeless constant.
+
+The prerequisite pages establish two things this explanation now relies on explicitly: a gate is an intended unitary transformation, and validation evidence comes from finite measurement outcomes. Calibration connects those abstractions to current device-specific controls.
 
 ## Step by step
 
@@ -110,5 +113,6 @@ The definition has four limits:
 ## Sources and status
 
 - Main evidence: [Repeated-CZ fundamentals, source pages 4–10](../../../../base/DWave_Application_and_Study_Materials.md#4-repeated-cz-calibration-question-fundamentals).
+- Gate and measurement prerequisites: [authoritative foundations portfolio](../../../../base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md).
 - Claim map: [Calibration references](../references.md).
 - Status: `draft`. Local evidence and links are explicit; the external paper cited by the compendium was not independently checked in this run.

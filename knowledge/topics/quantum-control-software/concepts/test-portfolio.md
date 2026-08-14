@@ -6,7 +6,7 @@ prerequisites: [topics/quantum-control-software/concepts/production-stack.md, to
 next_steps: [topics/calibration-systems/algorithms/diagnose-calibration-drift.md, topics/quantum-control-software/concepts/promotion-and-rollback.md]
 related: [topics/quantum-control-software/concepts/reliable-orchestration.md, topics/quantum-control-software/concepts/observability.md]
 source_files: [base/DWave_Application_and_Study_Materials.md]
-complexity_depth: 7
+complexity_depth: 13
 complexity_prerequisite_count: 3
 complexity_score: 9.5
 complexity_wavelength_nm: 396

@@ -6,20 +6,20 @@ prerequisites: [topics/dual-rail-qubits/concepts/dual-rail-encoding.md, topics/d
 next_steps: [topics/dual-rail-qubits/concepts/detection-correction-and-postselection.md, topics/error-aware-gates/algorithms/logical-measurement-with-erasure-detection.md]
 related: [topics/quantum-control-software/concepts/outcome-semantics.md, topics/error-aware-gates/concepts/leakage-propagation.md]
 source_files: [base/DWave_Application_and_Study_Materials.md]
-complexity_depth: 5
+complexity_depth: 11
 complexity_prerequisite_count: 3
-complexity_score: 7.21
-complexity_wavelength_nm: 469
-complexity_frequency_thz: 639.2
-complexity_color: "#0079ff"
+complexity_score: 8.27
+complexity_wavelength_nm: 435
+complexity_frequency_thz: 689.2
+complexity_color: "#1f00ff"
 understanding: 0
 ---
 
 # Loss to vacuum worked example
 
 <!-- study-status:start -->
-<div class="study-status" data-complexity="7.21" data-wavelength-nm="469">
-  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#0079ff;color:#ffffff;">Complexity 7.21/10 | 469 nm | 639.2 THz</span>
+<div class="study-status" data-complexity="8.27" data-wavelength-nm="435">
+  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#1f00ff;color:#ffffff;">Complexity 8.27/10 | 435 nm | 689.2 THz</span>
   <label>Understanding <input type="number" min="0" max="10" value="0" aria-label="Understanding rating for Loss to Vacuum Worked Example"> / 10</label>
 </div>
 <!-- study-status:end -->

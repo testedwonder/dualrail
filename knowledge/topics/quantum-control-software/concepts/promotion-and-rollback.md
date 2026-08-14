@@ -6,20 +6,20 @@ prerequisites: [topics/calibration-systems/concepts/calibration-validity.md, top
 next_steps: [topics/quantum-control-software/concepts/observability.md, topics/quantum-control-software/concepts/test-portfolio.md]
 related: [topics/calibration-systems/concepts/calibration-record.md, topics/calibration-systems/examples/dependency-invalidation.md]
 source_files: [base/DWave_Application_and_Study_Materials.md]
-complexity_depth: 4
+complexity_depth: 10
 complexity_prerequisite_count: 3
-complexity_score: 6.07
-complexity_wavelength_nm: 506
-complexity_frequency_thz: 592.5
-complexity_color: "#00ff99"
+complexity_score: 7.65
+complexity_wavelength_nm: 455
+complexity_frequency_thz: 658.9
+complexity_color: "#0020ff"
 understanding: 0
 ---
 
 # Promotion and rollback
 
 <!-- study-status:start -->
-<div class="study-status" data-complexity="6.07" data-wavelength-nm="506">
-  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#00ff99;color:#111111;">Complexity 6.07/10 | 506 nm | 592.5 THz</span>
+<div class="study-status" data-complexity="7.65" data-wavelength-nm="455">
+  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#0020ff;color:#ffffff;">Complexity 7.65/10 | 455 nm | 658.9 THz</span>
   <label>Understanding <input type="number" min="0" max="10" value="0" aria-label="Understanding rating for Promotion and Rollback"> / 10</label>
 </div>
 <!-- study-status:end -->

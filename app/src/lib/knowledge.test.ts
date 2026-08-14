@@ -37,6 +37,7 @@ function makeDocument(overrides: Partial<KnowledgeDocument> = {}): KnowledgeDocu
       color: '#9acd00',
     },
     defaultUnderstanding: 0,
+    exerciseId: null,
     isRateable: true,
     isPrivate: false,
     wordCount: 20,

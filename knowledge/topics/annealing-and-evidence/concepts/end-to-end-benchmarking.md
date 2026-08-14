@@ -8,18 +8,18 @@ related: [topics/annealing-and-evidence/concepts/hybrid-solver.md, topics/anneal
 source_files: [base/DWave_Application_and_Study_Materials.md]
 complexity_depth: 7
 complexity_prerequisite_count: 3
-complexity_score: 9.5
-complexity_wavelength_nm: 396
-complexity_frequency_thz: 757.1
-complexity_color: "#6e00ff"
+complexity_score: 5.81
+complexity_wavelength_nm: 514
+complexity_frequency_thz: 583.3
+complexity_color: "#00ff66"
 understanding: 0
 ---
 
 # End-to-end benchmarking
 
 <!-- study-status:start -->
-<div class="study-status" data-complexity="9.5" data-wavelength-nm="396">
-  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#6e00ff;color:#ffffff;">Complexity 9.5/10 | 396 nm | 757.1 THz</span>
+<div class="study-status" data-complexity="5.81" data-wavelength-nm="514">
+  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#00ff66;color:#111111;">Complexity 5.81/10 | 514 nm | 583.3 THz</span>
   <label>Understanding <input type="number" min="0" max="10" value="0" aria-label="Understanding rating for End-to-End Benchmarking"> / 10</label>
 </div>
 <!-- study-status:end -->

@@ -3,14 +3,14 @@ title: Source Inventory
 kind: index
 status: draft
 prerequisites: []
-source_files: [base/DWave_Application_and_Study_Materials.md, base/Luke_Mastalli_Kelly_Public_Evidence_Portfolio.md, base/Luke_Mastalli_Kelly_Realistic_Conversation_Portfolio.md]
+source_files: [base/DWave_Application_and_Study_Materials.md, base/Luke_Mastalli_Kelly_Public_Evidence_Portfolio.md, base/Luke_Mastalli_Kelly_Realistic_Conversation_Portfolio.md, base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md]
 ---
 
 # Source inventory
 
 ## Scope
 
-The repository contains one preserved source compendium and two user-authorized supplemental source artifacts. [D-Wave Application and Study Materials](../../base/DWave_Application_and_Study_Materials.md) is a converted compendium of six PDFs and includes private application and interview-preparation material. It remains read-only. The two Luke Mastalli-Kelly files were generated in `base/` only because the user explicitly requested that location.
+The repository contains one preserved source compendium, two user-authorized interview supplements, and one dated public-source portfolio for the feedback-driven foundation topic. [D-Wave Application and Study Materials](../../base/DWave_Application_and_Study_Materials.md) is a converted compendium of six PDFs and includes private application and interview-preparation material. It remains read-only.
 
 Roadmap item 1 maps every substantively explained reusable technical concept in the 66-page compendium. Personal application content and technical terms that appear only in lists remain intentionally out of scope.
 
@@ -21,6 +21,7 @@ Roadmap item 1 maps every substantively explained reusable technical concept in 
 | `base/DWave_Application_and_Study_Materials.md` | Compendium containing six converted source documents | mapped | Sections 3-4 and 6 support 56 canonical technical pages; sections 1-2 and 5 remain intentionally out of scope as personal application or interview material. |
 | `base/Luke_Mastalli_Kelly_Public_Evidence_Portfolio.md` | Dated research portfolio separating public evidence, secondary biography, inference, and unknowns | intentionally out of scope | Supports interview preparation and the simulated conversations; person-specific content is not a canonical technical topic. |
 | `base/Luke_Mastalli_Kelly_Realistic_Conversation_Portfolio.md` | Ten explicitly simulated interview branches grounded in the public evidence portfolio and candidate source material | intentionally out of scope | Rehearsal artifact only; simulated speech is not factual source material about Luke or D-Wave. |
+| `base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md` | Dated authority-ranked portfolio of OpenStax, MIT OpenCourseWare, and IBM Quantum Learning sources | mapped | Supports 10 canonical foundation pages, exact public links, access dates, verified coverage, and explicit limitations. |
 
 ## Embedded source units
 
@@ -41,11 +42,11 @@ Roadmap item 1 maps every substantively explained reusable technical concept in 
 - No source is marked `duplicate candidate` or `conflicting` in this pass.
 - Resume-only technical keywords are blocked by missing explanatory evidence, not silently expanded.
 
-## Feedback-driven source gap
+## Feedback-driven source acquisition
 
-[Feedback assessment 1](feedback-assessment.md) requires a new mathematics and quantum-foundations topic covering complex numbers, linear algebra, states, operators, measurements, gates, and number states. The current `base/` corpus uses those ideas but does not teach them deeply enough to support canonical foundation pages.
+[Feedback assessment 1](feedback-assessment.md) found that the original corpus used complex numbers, linear algebra, states, operators, measurements, gates, and number states without teaching them deeply enough. Roadmap item 4 resolved that evidence gap with the [dated authoritative-source portfolio](../../base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md).
 
-Roadmap item 4 must therefore acquire and date authoritative public educational or primary sources before writing that batch. The future source record must identify exact links, access dates, page coverage, and authority. Until that work is complete, these foundations are `blocked by missing evidence`; they must not be generated from model memory or attributed to the local compendium.
+The portfolio records exact links, the 2026-08-14 access date, page coverage, authority order, and limitations. The resulting foundation pages cite that local record and remain distinct from claims supported by the preserved D-Wave compendium.
 
 ## Overlap noted
 
@@ -56,6 +57,7 @@ The conversation study guide, source pages 8 and 10, summarizes calibration gove
 - Initial SHA-256 for `base/DWave_Application_and_Study_Materials.md`: `AEA8E3200A8AA5C0BB9C963B223E6627AA60A4B8F038B951F28546C67EAD9BBA`.
 - SHA-256 for `base/Luke_Mastalli_Kelly_Public_Evidence_Portfolio.md`: `6D18C7D2C59D6C30E1DF02D046779C1B163F1D368AA1D92D67CC6583BE59455D`.
 - SHA-256 for `base/Luke_Mastalli_Kelly_Realistic_Conversation_Portfolio.md`: `065D0D040FAE330CB4D9A4DFD468DC34F3F271A549ED1F0B3563BD200ABE4FE7`.
+- SHA-256 for `base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md`: `B7D8998D2F1ADCE9525495F0D7E93F6631ACF3A21B2A1C54C807A0117B2D649C`.
 - Git was unavailable during the first run and initialized before the supplemental Luke research task. Roadmap item 1 began on clean `master` after the user committed `NEXT.md`; its content was read as authorization and not edited.
 - The generated tree must not repeat personal contact details or private interview logistics from the source.
 

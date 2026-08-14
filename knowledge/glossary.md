@@ -3,12 +3,28 @@ title: Glossary
 kind: index
 status: draft
 prerequisites: []
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [base/DWave_Application_and_Study_Materials.md, base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md]
 ---
 
 # Glossary
 
 These are short lookup definitions. Follow each link for prerequisites, examples, failure modes, self-checks, and sources.
+
+## Mathematics and quantum foundations
+
+| Term | Concise meaning |
+| --- | --- |
+| Complex number | A number $a+bi$ represented by real and imaginary components, or equivalently magnitude and phase. [Full page](topics/mathematics-and-quantum-foundations/fundamentals/complex-numbers-and-phase.md) |
+| Basis | A minimal set of vectors whose linear combinations produce every vector in a space. [Full page](topics/mathematics-and-quantum-foundations/fundamentals/vectors-bases-and-inner-products.md) |
+| Inner product | A conjugate-linear comparison that defines vector length and orthogonality. [Full page](topics/mathematics-and-quantum-foundations/fundamentals/vectors-bases-and-inner-products.md) |
+| Linear operator | A map that respects vector addition and scalar multiplication; a matrix represents it in chosen bases. [Full page](topics/mathematics-and-quantum-foundations/fundamentals/matrices-and-linear-operators.md) |
+| Eigenvector and eigenvalue | A nonzero direction preserved by an operator and the scale factor applied along it. [Full page](topics/mathematics-and-quantum-foundations/fundamentals/eigenvalues-and-eigenvectors.md) |
+| Probability and frequency | A predicted outcome weight versus the observed fraction in a finite sample. [Full page](topics/mathematics-and-quantum-foundations/fundamentals/probability-and-measurement-statistics.md) |
+| Bra and ket | A ket is a state-vector column; its bra is the conjugate-transposed row. [Full page](topics/mathematics-and-quantum-foundations/concepts/quantum-states-and-bra-ket-notation.md) |
+| Observable | A Hermitian operator whose eigenvalues represent possible measurement values in this finite-dimensional treatment. [Full page](topics/mathematics-and-quantum-foundations/concepts/quantum-operators-observables-and-expectation-values.md) |
+| Born rule | Outcome probability equals the squared magnitude of the state's amplitude in the measurement basis. [Full page](topics/mathematics-and-quantum-foundations/concepts/quantum-measurement-and-born-rule.md) |
+| Unitary gate | A reversible linear operation that preserves inner products and state normalization. [Full page](topics/mathematics-and-quantum-foundations/concepts/unitary-evolution-and-quantum-gates.md) |
+| Number state | An oscillator eigenstate $|n\rangle$ with a definite nonnegative excitation count. [Full page](topics/mathematics-and-quantum-foundations/concepts/oscillators-quantization-and-number-states.md) |
 
 ## Dual rail and quantum states
 
@@ -108,4 +124,4 @@ These are short lookup definitions. Follow each link for prerequisites, examples
 
 The source lists QFT, Grover search, VQE, QAOA, BB84, quantum kernels, density matrices, partial trace, and several project-specific tools without enough local explanation to build source-grounded canonical pages. They remain inventoried but excluded until an authoritative source or the relevant project repository is added.
 
-**Source status:** Definitions trace to the [local compendium](../base/DWave_Application_and_Study_Materials.md); each full page states its exact embedded source pages and evidence limits.
+**Source status:** Domain definitions trace to the [local compendium](../base/DWave_Application_and_Study_Materials.md). Foundation definitions trace to the [dated authoritative-source portfolio](../base/Mathematics_and_Quantum_Foundations_Authoritative_Sources.md). Each full page states its exact evidence and limits.

@@ -8,18 +8,18 @@ related: [topics/annealing-and-evidence/concepts/ising-model.md, topics/annealin
 source_files: [base/DWave_Application_and_Study_Materials.md]
 complexity_depth: 3
 complexity_prerequisite_count: 1
-complexity_score: 3.93
-complexity_wavelength_nm: 574
-complexity_frequency_thz: 522.3
-complexity_color: "#e0ff00"
+complexity_score: 2.35
+complexity_wavelength_nm: 625
+complexity_frequency_thz: 479.7
+complexity_color: "#ff9f00"
 understanding: 0
 ---
 
 # Binary quadratic objective example
 
 <!-- study-status:start -->
-<div class="study-status" data-complexity="3.93" data-wavelength-nm="574">
-  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#e0ff00;color:#111111;">Complexity 3.93/10 | 574 nm | 522.3 THz</span>
+<div class="study-status" data-complexity="2.35" data-wavelength-nm="625">
+  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#ff9f00;color:#111111;">Complexity 2.35/10 | 625 nm | 479.7 THz</span>
   <label>Understanding <input type="number" min="0" max="10" value="0" aria-label="Understanding rating for Binary Quadratic Objective Example"> / 10</label>
 </div>
 <!-- study-status:end -->

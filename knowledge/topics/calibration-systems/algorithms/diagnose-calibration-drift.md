@@ -6,20 +6,20 @@ prerequisites: [topics/calibration-systems/concepts/stale-parameter-vs-changing-
 next_steps: [topics/quantum-control-software/concepts/observability.md, topics/calibration-systems/references.md]
 related: [topics/error-aware-gates/examples/repeated-cz-experiment.md, topics/quantum-control-software/concepts/acquisition-and-provenance.md]
 source_files: [base/DWave_Application_and_Study_Materials.md]
-complexity_depth: 4
+complexity_depth: 10
 complexity_prerequisite_count: 1
-complexity_score: 5.07
-complexity_wavelength_nm: 538
-complexity_frequency_thz: 557.2
-complexity_color: "#29ff00"
+complexity_score: 6.65
+complexity_wavelength_nm: 487
+complexity_frequency_thz: 615.6
+complexity_color: "#00ecff"
 understanding: 0
 ---
 
 # Diagnose calibration drift
 
 <!-- study-status:start -->
-<div class="study-status" data-complexity="5.07" data-wavelength-nm="538">
-  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#29ff00;color:#111111;">Complexity 5.07/10 | 538 nm | 557.2 THz</span>
+<div class="study-status" data-complexity="6.65" data-wavelength-nm="487">
+  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#00ecff;color:#111111;">Complexity 6.65/10 | 487 nm | 615.6 THz</span>
   <label>Understanding <input type="number" min="0" max="10" value="0" aria-label="Understanding rating for Diagnose Calibration Drift"> / 10</label>
 </div>
 <!-- study-status:end -->

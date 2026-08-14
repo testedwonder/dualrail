@@ -1,6 +1,7 @@
 import { ArrowRight, FileText, LockKeyhole } from 'lucide-react'
 import { documentIds, documentsById, knowledgeReferenceToId } from '../data'
 import type { KnowledgeDocument, PersonalEntry } from '../types'
+import { ExerciseLab } from './ExerciseLab'
 import { MarkdownView } from './MarkdownView'
 
 interface DocumentReaderProps {
@@ -108,6 +109,13 @@ export function DocumentReader({ document, personalEntry, onNavigate }: Document
         documentIds={documentIds}
         onNavigate={onNavigate}
       />
+      {document.exerciseId && (
+        <ExerciseLab
+          exerciseId={document.exerciseId}
+          documentId={document.id}
+          onNavigate={onNavigate}
+        />
+      )}
     </article>
   )
 }

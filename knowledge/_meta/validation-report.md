@@ -10,27 +10,37 @@ source_files: []
 
 Date: 2026-08-14
 
-Scope: Phase 1 architecture, the Luke Mastalli-Kelly research supplement, and `NEXT.md` roadmap items 1-3: recursive source-backed definitions, semantic navigation, complexity heatmaps, manual understanding metadata, the Dualrail Atlas visual study application, and feedback-driven structural assessment.
+Scope: Phase 1 architecture, the Luke Mastalli-Kelly research supplement, and `NEXT.md` roadmap items 1-5: recursive source-backed definitions, semantic navigation, complexity heatmaps, manual understanding metadata, the Dualrail Atlas visual study application, feedback assessment, sourced mathematics and quantum foundations, and the complete repository guide.
 
 ## Result
 
-The six-topic technical tree contains 56 content pages and reaches every substantively explained reusable concept in the source corpus. Dualrail Atlas indexes the knowledge tree and all 3 base documents into a read-only visual reader, graph, and progress system. Feedback 1 has been assessed against the live graph and converted into a bounded, source-gated item-4 contract. The expanded architecture, two supplemental source artifacts, derived study metadata, local personal-data workflow, and all scoped executable checks pass. The repository-wide whitespace gate reports one preserved issue in the incoming feedback, recorded below.
+The seven-topic technical tree contains 66 content pages. Dualrail Atlas indexes 93 knowledge files and all 4 base documents into a read-only visual reader, graph, progress system, and five-exercise foundation lab. The repository README now provides quick-start routes, complete canonical navigation, application and personal-data instructions, source-evaluation guidance, and current boundaries. The expanded architecture, source artifacts, derived metadata, personal-data boundary, exercises, guide, and executable checks pass.
 
-### Feedback assessment checks
+### Repository README checks
+
+Result: **PASS** - the repository entry point links every canonical content page directly.
+
+- 113 repository-relative README links resolve to existing files.
+- All 66 concepts, definitions, algorithms, and examples appear in the organized table of contents.
+- Seven topic sections state their important prerequisite and next-step boundaries.
+- All four learning paths, five interactive exercises, four source records, and architecture records are reachable.
+- The guide documents local startup, notes, understanding ratings, progress, JSON backup and restore, source evaluation, and current limitations.
+- Three focused validator regressions cover a missing README, a broken README link, and a canonical page omitted from the table of contents.
+- Feedback 2 and 3 influenced concise, low-friction guidance and the free-core boundary but were not implemented.
+
+### Feedback implementation checks
 
 Input: [`FEEDBACK.md`, feedback 1](../../FEEDBACK.md)
 
-Result: **PASS WITH ACCEPTED GAPS** - the existing structure is internally valid, and the feedback identifies missing prerequisite coverage rather than stale complexity data.
+Result: **PASS** - the accepted missing-foundations defect is implemented without a manual complexity override.
 
-- `tools/validate_knowledge.py` passed before assessment edits with 79 knowledge files.
-- `tools/update_complexity.py --check` passed with 0 stale pages.
-- Five content pages currently score `0.0`; both disputed pages are among them and declare no prerequisites.
-- No canonical pages currently teach basic linear algebra, complex numbers, general quantum operators, observables, or the Born rule.
-- Existing self-checks are static; the app has no immediate-feedback prerequisite exercise surface.
-- The [verified assessment](feedback-assessment.md) accepts a bounded ten-page foundation topic, one ordered learning path, prerequisite rewiring, five exercise surfaces, and a requirement for authoritative external sources.
-- No content or generated complexity value was changed during item 3; that implementation belongs to roadmap item 4.
-- `npm run check` regenerated an 80-file app index, passed all 8 Vitest checks, and completed the production build.
-- A browser search returned exactly one Feedback Assessment 1 result and opened its addressable document with no Vite error overlay.
+- Added 10 canonical foundation pages and one ordered learning path.
+- Recorded exact OpenStax, MIT OpenCourseWare, and IBM Quantum Learning links with an access date and evidence boundaries.
+- Quantum States and Fock Notation: depth `6`, prerequisite count `2`, complexity `4.69`.
+- From Gates to Calibration: depth `6`, prerequisite count `2`, complexity `4.69`.
+- Added five exercise surfaces and an index completeness guard requiring every known `exercise_id`.
+- Browser checks exercised incorrect, correct, reset, deterministic rerun, and ordering-repair paths.
+- The [verified assessment](feedback-assessment.md) records all eight acceptance gates as satisfied.
 
 ### Visual application checks
 
@@ -40,21 +50,24 @@ npm test
 npm run build
 ```
 
-Result: **PASS** - 8 Vitest checks across 2 files, followed by a successful TypeScript and Vite production build.
+Result: **PASS** - 17 Vitest checks across 4 files, followed by a successful TypeScript and Vite production build.
 
-The tests cover rating bounds, malformed-entry sanitation, JSON import/export round trips, combined library filters, progress summaries, internal Markdown-link resolution, real-corpus rendering, local persistence, search, and progress navigation. The pretest and prebuild hooks both regenerated the full index: 79 knowledge files, 56 rateable topic items, and 3 base documents.
+The tests cover rating bounds, malformed-entry sanitation, JSON import/export round trips, combined library filters, progress summaries, internal Markdown-link resolution, real-corpus rendering, local persistence, search, progress navigation, complex-plane math, eigenvector classification, seeded measurement sampling, calibration ordering, immediate feedback, reset, and keyboard activation. The pretest and prebuild hooks regenerate 93 knowledge files, 66 rateable topic items, 4 base documents, and 5 exercise IDs.
 
 Browser validation at desktop and emulated `390 x 844` mobile geometry also passed:
 
 - the library rendered with no console errors or document-level horizontal overflow;
 - each reader has one canonical H1, with MathJax SVG equations and highlighted code blocks with copy controls;
-- the default map showed 11 readable topic-scoped nodes, while the all-topic mode retained all 56 nodes and 96 prerequisite edges;
+- topic-scoped maps remain readable, while all-topic mode renders all 66 content nodes and 111 prerequisite edges;
 - graph-node selection opened the correct addressable `?doc=` URL;
 - understanding and notes survived a browser reload;
-- progress rendered 6 topic rows, 3 source rows, and a 6-item study queue;
+- progress renders 7 topic rows, 4 source rows, and a 6-item study queue;
 - the mobile library and study drawers remained inside the fixed viewport with their close and editing controls visible;
 - export produced a connected blob target with a dated JSON filename;
 - import restored a version-1 JSON rating and note, and the temporary validation state was cleared afterward.
+- the diagnostic produced miss and correction feedback and cleared all feedback on reset;
+- the complex explorer accepted the `3+4i` magnitude `5`, the eigenvector lab returned `Av=2v`, seeded sampling reproduced `74/26` against a `75/25` theory, and the repaired calibration order passed;
+- at `390 x 844`, the measurement lab occupied a 341-pixel reader, every editing control remained visible, and document width stayed 390 pixels.
 
 The production build reports a chunk-size warning because the local corpus, MathJax SVG renderer, and graph engine are bundled together. This is a performance advisory, not a failed gate; the application is local-first and the rendered workflow passed.
 
@@ -66,7 +79,7 @@ The production build reports a chunk-size warning because the local corpus, Math
 & "$env:LOCALAPPDATA\Programs\Python\Python311\python.exe" -B -m unittest discover -s tests -v
 ```
 
-Result: **PASS** - 23 tests. The tests cover valid trees, missing metadata, empty pages, broken links and anchors, orphans, duplicate canonical slugs, unresolved sources, prerequisites and next steps, prerequisite cycles, learning-path order, executable claims, trailing whitespace, supplemental source links, required evidence labels, explicit simulation labels, exact complexity endpoints, generated controls, manual-rating preservation, stale complexity, rating bounds, content sections, and idempotence.
+Result: **PASS** - 26 tests. The tests cover valid trees, repository README completeness, missing metadata, empty pages, broken links and anchors, orphans, duplicate canonical slugs, unresolved sources, prerequisites and next steps, prerequisite cycles, learning-path order, executable claims, trailing whitespace, supplemental source links, required evidence labels, explicit simulation labels, exact complexity endpoints, generated controls, manual-rating preservation, stale complexity, rating bounds, content sections, and idempotence.
 
 ### Complexity calculation
 
@@ -75,11 +88,11 @@ Result: **PASS** - 23 tests. The tests cover valid trees, missing metadata, empt
 & "$env:LOCALAPPDATA\Programs\Python\Python311\python.exe" -B tools/update_complexity.py --check
 ```
 
-Result: **PASS** - 56 content pages calculated; the no-write check reports 0 stale pages.
+Result: **PASS** - 66 content pages calculated; the no-write check reports 0 stale pages.
 
 Measured graph:
 
-- maximum prerequisite depth: 7;
+- maximum prerequisite depth: 13;
 - maximum direct prerequisite count: 4;
 - complexity range: 0.0 to 9.5;
 - spectral range used by current pages: 700 nm red to 396 nm near violet.
@@ -90,10 +103,11 @@ Measured graph:
 & "$env:LOCALAPPDATA\Programs\Python\Python311\python.exe" -B tools/validate_knowledge.py
 ```
 
-Result: **PASS** - 80 knowledge Markdown files, 2 supplemental source files, and 1 executable example after adding the item-3 assessment.
+Result: **PASS** - 93 knowledge Markdown files, 2 supplemental source files, and 1 executable example.
 
 The command validates:
 
+- repository README presence, local links, and complete canonical-page coverage;
 - UTF-8 readable, non-empty Markdown with required metadata;
 - allowed page kinds and statuses;
 - relative local links and target anchors;
@@ -136,6 +150,10 @@ The preserved compendium was not edited. Two user-authorized files were added un
 - `Luke_Mastalli_Kelly_Public_Evidence_Portfolio.md`, SHA-256 `6D18C7D2C59D6C30E1DF02D046779C1B163F1D368AA1D92D67CC6583BE59455D`;
 - `Luke_Mastalli_Kelly_Realistic_Conversation_Portfolio.md`, SHA-256 `065D0D040FAE330CB4D9A4DFD468DC34F3F271A549ED1F0B3563BD200ABE4FE7`.
 
+Roadmap item 4 added one public-source provenance record:
+
+- `Mathematics_and_Quantum_Foundations_Authoritative_Sources.md`, SHA-256 `B7D8998D2F1ADCE9525495F0D7E93F6631ACF3A21B2A1C54C807A0117B2D649C`.
+
 `GOAL.md`, `NEXT.md`, and all files under `base/` were intentionally untouched during roadmap item 1.
 
 ### Editor diagnostics
@@ -172,12 +190,7 @@ Current repository result:
 - During execution, concurrent user work switched the checkout to `main`, modified `NEXT.md`, and added empty `FEEDBACK.md` plus `assets/icon.png`.
 - The current item 1 wording is unchanged. Those user-owned paths were read only as needed to verify scope and were not edited by this task.
 
-Roadmap item 3 result:
-
-- Repository-wide `git diff --check`: **BLOCKED** - the incoming `FEEDBACK.md` has trailing whitespace on line 10.
-- Item-3 tracked output paths: **PASS** - targeted `git diff --check` produced no output.
-- The knowledge validator also checks trailing whitespace in all 80 knowledge files, including the new assessment, and passed.
-- The feedback text was preserved verbatim rather than silently normalizing a user-owned input file.
+Roadmap item 4 result: repository-wide `git diff --check` reports no whitespace errors.
 
 ## Example evidence
 
@@ -203,8 +216,9 @@ The [complexity model](complexity-model.md) is also marked `verified`, but that 
 - Time-sensitive company and hardware claims remain attributed and `draft`.
 - Public papers establish team outputs and named contribution groups; they do not prove that every author owns every skill represented in a paper.
 - Resume-only technical terms remain blocked until authoritative explanatory sources or project repositories enter the corpus.
+- The new foundation pages deliberately stop before infinite-dimensional rigor, density matrices, generalized measurements, open systems, and device-specific pulse physics.
 - The Markdown rating input remains a static metadata mirror. Dualrail Atlas now supplies durable personal ratings and notes without changing canonical Markdown.
 
 ## Stop point
 
-Roadmap items 1-3 are complete. The next bounded action is roadmap item 4: implement the sourced mathematics and quantum-foundations batch, prerequisite exercises, target-page rewiring, and natural complexity recalculation defined in [Feedback assessment 1](feedback-assessment.md).
+Roadmap items 1-5 are complete. The next bounded action is roadmap item 6: add a free-core public-source research interface and local correction workflow after separately assessing Feedback 2 and 3.

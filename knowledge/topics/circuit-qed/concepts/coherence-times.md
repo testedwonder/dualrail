@@ -8,18 +8,18 @@ related: [topics/dual-rail-qubits/concepts/photon-loss-and-vacuum.md, topics/err
 source_files: [base/DWave_Application_and_Study_Materials.md]
 complexity_depth: 2
 complexity_prerequisite_count: 2
-complexity_score: 3.29
-complexity_wavelength_nm: 595
-complexity_frequency_thz: 503.9
-complexity_color: "#ffdf00"
+complexity_score: 2.23
+complexity_wavelength_nm: 629
+complexity_frequency_thz: 476.6
+complexity_color: "#ff9700"
 understanding: 0
 ---
 
 # Coherence times
 
 <!-- study-status:start -->
-<div class="study-status" data-complexity="3.29" data-wavelength-nm="595">
-  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#ffdf00;color:#111111;">Complexity 3.29/10 | 595 nm | 503.9 THz</span>
+<div class="study-status" data-complexity="2.23" data-wavelength-nm="629">
+  <span style="display:inline-block;padding:0.2rem 0.45rem;border:1px solid #333;background:#ff9700;color:#111111;">Complexity 2.23/10 | 629 nm | 476.6 THz</span>
   <label>Understanding <input type="number" min="0" max="10" value="0" aria-label="Understanding rating for Coherence Times"> / 10</label>
 </div>
 <!-- study-status:end -->
