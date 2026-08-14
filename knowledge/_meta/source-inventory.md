@@ -41,6 +41,12 @@ Roadmap item 1 maps every substantively explained reusable technical concept in 
 - No source is marked `duplicate candidate` or `conflicting` in this pass.
 - Resume-only technical keywords are blocked by missing explanatory evidence, not silently expanded.
 
+## Feedback-driven source gap
+
+[Feedback assessment 1](feedback-assessment.md) requires a new mathematics and quantum-foundations topic covering complex numbers, linear algebra, states, operators, measurements, gates, and number states. The current `base/` corpus uses those ideas but does not teach them deeply enough to support canonical foundation pages.
+
+Roadmap item 4 must therefore acquire and date authoritative public educational or primary sources before writing that batch. The future source record must identify exact links, access dates, page coverage, and authority. Until that work is complete, these foundations are `blocked by missing evidence`; they must not be generated from model memory or attributed to the local compendium.
+
 ## Overlap noted
 
 The conversation study guide, source pages 8 and 10, summarizes calibration governance and the repeated-CZ question. The repeated-CZ fundamentals guide expands the same material across source pages 10–18. The expanded guide is canonical for the pilot; the conversation guide is supporting evidence rather than a second definition.

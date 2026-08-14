@@ -12,6 +12,8 @@ source_files: []
 
 Each concept, definition, algorithm, and example carries a derived complexity value and a manual understanding rating. Complexity comes from graph structure; understanding belongs to the learner.
 
+The score is a graph-relative workload proxy, not an intrinsic judgment of intellectual difficulty or importance. A root page receives `0.0` because the tree represents no prerequisites for it, not because the subject is trivial. [Feedback assessment 1](feedback-assessment.md) records a concrete case where missing foundations made that distinction misleading.
+
 ## Inputs
 
 For page $i$:
@@ -28,6 +30,13 @@ C_i=10\left(0.8\frac{d_i}{D}+0.2\frac{p_i}{P}\right).
 $$
 
 When a denominator is zero, that component contributes zero. Tree depth is the determining factor because it carries 80% of the score. Direct prerequisite count adjusts complexity within similar depths.
+
+## Interpretation boundary
+
+- Compare scores within the current prerequisite graph, not across unrelated curricula or historical versions of the tree.
+- Do not manually raise a generated score to express importance. Add missing, genuinely required prerequisites and regenerate.
+- A surprising root score is a prompt to inspect the learning model. It may be correct for a true entry point, or it may expose an omitted foundation.
+- Because $D$ and $P$ are normalized against the current tree, adding a deep branch can change scores outside that branch even when their local prerequisites do not change.
 
 ## Visible-spectrum mapping
 
@@ -61,7 +70,7 @@ Values above are illustrative; page values are generated from the current graph.
 
 `understanding` is an integer from `0` to `10` edited by the learner. The generator defaults missing values to `0` and preserves valid existing values. It also mirrors the value into a visible HTML number input.
 
-The input in a Markdown preview is not durable storage. Edit the front matter for persistence until the roadmap item 2 application provides note and rating storage.
+The input in a Markdown preview is not durable storage. The [Dualrail Atlas application](../../app/README.md) stores personal ratings and notes separately in browser local storage without rewriting canonical Markdown. Front matter remains the portable default displayed outside the application.
 
 ## Commands
 

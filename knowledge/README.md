@@ -37,7 +37,8 @@ Every content page has a generated spectral complexity badge and an understandin
 
 - Red is the shallowest end of the current tree; violet is the deepest.
 - Tree depth contributes 80% of complexity and direct prerequisite count contributes 20%.
-- `understanding` is a manual integer from `0` to `10` in page metadata. The visible HTML input mirrors it; durable edits belong in metadata until the roadmap's interface is built.
+- `understanding` is a manual integer from `0` to `10` in page metadata. The visible HTML input mirrors the default value.
+- [Dualrail Atlas](../app/README.md) stores durable personal ratings and notes separately in browser local storage; it never rewrites this source-backed tree.
 - Run `python tools/update_complexity.py` after changing prerequisites and `python tools/update_complexity.py --check` to detect stale values.
 
 The complete formula and spectral mapping are in the [complexity model](_meta/complexity-model.md).
@@ -59,10 +60,24 @@ Most technical pages remain `draft` because this run validates local provenance 
 - [Decision ledger](_meta/decision-ledger.md)
 - [Bounded expansion plan](_meta/expansion-plan.md)
 - [Complexity model](_meta/complexity-model.md)
+- [Feedback assessment 1](_meta/feedback-assessment.md)
 - [Validation report](_meta/validation-report.md)
 
 The source compendium contains private application and interview material. Generated pages deliberately omit personal contact details, salary notes, and interview logistics.
 
+## Visual application
+
+Run the local interface from `app/`:
+
+```powershell
+npm install
+npm run dev
+```
+
+The interface provides a searchable and filterable library, rendered Markdown and MathJax, code-copy controls, prerequisite and related-page navigation, a topic-scoped relationship map, source links, local notes and ratings, JSON backup and restore, and progress views across canonical topics and the three files in `base/`.
+
+The application regenerates its read-only corpus index before development, tests, and production builds. See the [application guide](../app/README.md) for the data boundary and validation commands.
+
 ## Current boundary
 
-Roadmap item 1 covers the source-backed definition tree and derived study metadata. Roadmap items 2-5, including the visual application, feedback-driven refinement, expanded root README, and public research interface, are not implemented by this batch.
+Roadmap items 1-3 cover the source-backed definition tree, derived study metadata, visual study application, and validated feedback intake. [Feedback assessment 1](_meta/feedback-assessment.md) defines the next bounded foundation batch. Its sourced expansion and interactive exercises belong to roadmap item 4; the expanded repository README, public research interface, immersive visual work, and final optimization remain later items.

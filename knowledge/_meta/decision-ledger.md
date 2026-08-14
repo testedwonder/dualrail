@@ -121,3 +121,21 @@ source_files: [base/DWave_Application_and_Study_Materials.md]
 - **Decision:** Do not generate pages for terms that only appear in resume or training lists.
 - **Reason:** The corpus names QFT, Grover, VQE, QAOA, BB84, quantum kernels, partial trace, and project internals without enough material for accurate recursive teaching pages.
 - **Consequence:** These terms are listed as evidence-blocked exclusions until authoritative sources or project repositories enter the corpus.
+
+## D-020: Keep canonical knowledge read-only in the visual application
+
+- **Decision:** Generate a deterministic application index from `knowledge/` and `base/`, but store ratings and notes only in versioned browser local storage and user-exported JSON.
+- **Reason:** Personal study state must persist without silently changing source-backed claims, provenance, derived complexity, or user-owned source material.
+- **Consequence:** The interface can search, render, connect, rate, annotate, import, and export the corpus, but canonical content remains an explicit repository editing workflow.
+
+## D-021: Scope the relationship map for readable navigation
+
+- **Decision:** Open the graph on the selected document's topic and retain an `All topics` overview plus independently toggleable prerequisite, next-step, related, and source edges.
+- **Reason:** Fitting all 56 study nodes into one viewport preserves topology but makes labels too small for practical navigation.
+- **Consequence:** A normal map view contains readable nodes for one topic; the complete cross-topic graph remains available on demand.
+
+## D-022: Treat feedback 1 as a missing-foundations defect
+
+- **Decision:** Accept the low-score complaint without manually overriding generated complexity. Add a bounded mathematics and quantum-foundations branch in roadmap item 4, then let real prerequisite depth recalculate the two target scores.
+- **Reason:** Both disputed values are fresh and formula-correct, but both pages are advanced roots only because the tree omits concepts they assume. A score override would hide the pedagogical gap and break deterministic ownership.
+- **Consequence:** Item 3 records the architecture and evidence requirements only. Item 4 must acquire authoritative sources, implement the new route and immediate-feedback exercises, rewire prerequisites, and prove that Quantum States and Fock Notation reaches at least `3.0` naturally.

@@ -31,6 +31,16 @@ Delivered:
 - stale-complexity, broken-navigation, cycle, orphan, source, and link validation;
 - focused tests for formula endpoints, manual ratings, idempotence, and failure cases.
 
+## Completed: roadmap item 2 visual application
+
+Completed on 2026-08-14 under `app/`. Dualrail Atlas provides read-only corpus indexing, searchable and filterable navigation, rendered Markdown and MathJax, source and relationship navigation, a topic-scoped graph, local ratings and notes, JSON backup and restore, progress summaries, and responsive desktop and mobile layouts.
+
+## Completed: roadmap item 3 feedback assessment
+
+Completed on 2026-08-14 in [Feedback assessment 1](feedback-assessment.md).
+
+The existing tree and generated complexity metadata pass all deterministic checks. Feedback 1 is accepted: Quantum States and Fock Notation and From Gates to Calibration are structurally valid but pedagogically premature roots. The assessment defines a bounded mathematics and quantum-foundations topic, prerequisite rewiring, five immediate-feedback exercise surfaces, external-source requirements, and acceptance gates for roadmap item 4.
+
 ## Source-completeness boundary
 
 The following areas are mapped because the corpus explains them substantively:
@@ -54,13 +64,15 @@ The following remain intentionally unexpanded because they are only named in res
 
 Adding those pages requires the relevant project repositories or authoritative primary sources. Model memory is not an acceptable substitute.
 
-## Remaining roadmap items, not authorized here
+## Next bounded batch: roadmap item 4
 
-`NEXT.md` item 2 requests a simplified Obsidian-like visual application for navigation, graph visualization, search, filters, personal notes, durable understanding ratings, and export.
+Implement only the accepted scope in [Feedback assessment 1](feedback-assessment.md): acquire authoritative sources, add the mathematics and quantum-foundations topic and learning path, rewire the two named target pages, build the prerequisite exercises, regenerate complexity, and publish a feedback completion summary.
 
-Items 3-5 request feedback-driven refinement, a broader repository `README.md`, and a public-source research interface. `FEEDBACK.md` was empty when item 1 finished, so it introduced no additional item-1 requirement.
+Do not manually edit generated complexity values to satisfy the requested threshold. The new prerequisite graph must produce the increase, and the validator must remain authoritative.
 
-Roadmap item 1 prepares the data contract for later work but does not implement items 2-5. The current HTML input in Markdown mirrors metadata; it is not durable note storage.
+## Later roadmap items
+
+Items 5-8 remain outside this batch: the expanded repository README and complete table of contents, public-source research interface, immersive visual polish and simulations, and final bug and optimization work.
 
 ## Future maintenance rule
 

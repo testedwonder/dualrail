@@ -1,0 +1,64 @@
+:root {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #17201d;
+  background: #edf2ef;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --ink: #17201d;
+  --muted: #68736d;
+  --line: #ccd5d0;
+  --line-strong: #aebbb4;
+  --paper: #fbfcfa;
+  --panel: #f3f6f3;
+  --teal: #176b62;
+  --coral: #d15d42;
+  --blue: #2969a7;
+  --gold: #c99323;
+  --focus: #0e7468;
+}
+
+* {
+  box-sizing: border-box;
+  letter-spacing: 0;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #edf2ef;
+  background-image:
+    linear-gradient(rgba(26, 70, 60, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26, 70, 60, 0.035) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a,
+input,
+select,
+textarea,
+summary {
+  outline-color: var(--focus);
+  outline-offset: 2px;
+}
+
+button {
+  color: inherit;
+}

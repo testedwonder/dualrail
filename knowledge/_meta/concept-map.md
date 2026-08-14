@@ -72,6 +72,8 @@ This Mermaid view is deliberately compressed. Page front matter is the canonical
 
 See the [complexity model](complexity-model.md) for the exact formula. Derived values are recalculated by `tools/update_complexity.py` and checked by the main validator.
 
+Five current content pages are roots and therefore score `0.0`. [Feedback assessment 1](feedback-assessment.md) accepts the finding that Quantum States and Fock Notation and From Gates to Calibration are roots only because required mathematics and quantum-mechanics foundations are not represented. The other root scores were not challenged by feedback and remain unchanged in this assessment batch.
+
 ## Navigation contract
 
 Every content page declares:
