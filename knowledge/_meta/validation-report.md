@@ -1,20 +1,20 @@
 ---
-title: First-Run Validation Report
+title: Validation Report
 kind: index
 status: verified
 prerequisites: []
 source_files: []
 ---
 
-# First-run validation report
+# Validation report
 
 Date: 2026-08-14
 
-Scope: Phase 1 architecture, one calibration-systems pilot, one deterministic example, and the knowledge-tree validator. This report does not certify the unexpanded corpus or independently verify external papers linked by the source compendium.
+Scope: Phase 1 architecture, one calibration-systems pilot, one deterministic example, the knowledge-tree validator, and the bounded Luke Mastalli-Kelly research and simulated-conversation supplement. This report does not certify the unexpanded corpus.
 
 ## Result
 
-The local architecture and pilot checks pass. One required repository gate is **blocked**: Git checks cannot operate because the workspace is not a Git repository. That limitation is not reclassified as a pass.
+The local architecture, pilot, two supplemental source artifacts, and all executable checks pass. Git was unavailable during the initial run, but a repository was initialized before the supplemental task. Current Git checks are recorded below.
 
 ## Exact checks
 
@@ -24,7 +24,7 @@ The local architecture and pilot checks pass. One required repository gate is **
 & "$env:LOCALAPPDATA\Programs\Python\Python311\python.exe" -B -m unittest discover -s tests -v
 ```
 
-Result: **PASS** — 11 tests. The tests cover valid trees, missing metadata, empty pages, broken links and anchors, orphans, duplicate canonical slugs, unresolved sources and prerequisites, prerequisite cycles, learning-path order, executable claims, and trailing whitespace.
+Result: **PASS** - 15 tests. The tests cover valid trees, missing metadata, empty pages, broken links and anchors, orphans, duplicate canonical slugs, unresolved sources and prerequisites, prerequisite cycles, learning-path order, executable claims, trailing whitespace, supplemental source links, required evidence labels, and explicit simulation labels on invented Luke dialogue.
 
 ### Repository knowledge-tree validation
 
@@ -32,7 +32,7 @@ Result: **PASS** — 11 tests. The tests cover valid trees, missing metadata, em
 & "$env:LOCALAPPDATA\Programs\Python\Python311\python.exe" -B tools/validate_knowledge.py
 ```
 
-Result: **PASS** — 17 Markdown files and 1 executable example.
+Result: **PASS** - 17 knowledge Markdown files, 2 supplemental source files, and 1 executable example.
 
 The command validates:
 
@@ -47,6 +47,10 @@ The command validates:
 - local Python example links declared for execution;
 - successful execution of each declared example;
 - trailing whitespace and conflict markers in generated Markdown and Python.
+- tailored metadata and evidence markers in the two named supplemental source files;
+- relative links and declared source files in the supplemental artifacts;
+- privacy and credential-like patterns in the supplemental artifacts;
+- `Luke (simulated)` attribution on every invented Luke dialogue turn.
 
 ### Source preservation
 
@@ -54,13 +58,18 @@ The command validates:
 Get-FileHash "base\DWave_Application_and_Study_Materials.md" -Algorithm SHA256
 ```
 
-Result: **PASS** — before and after SHA-256 values match:
+Result: **PASS** - before and after SHA-256 values match:
 
 ```text
 AEA8E3200A8AA5C0BB9C963B223E6627AA60A4B8F038B951F28546C67EAD9BBA
 ```
 
-No file under `base/` was edited. `GOAL.md` was also intentionally untouched.
+The preserved compendium was not edited. Two user-authorized files were added under `base/`:
+
+- `Luke_Mastalli_Kelly_Public_Evidence_Portfolio.md`, SHA-256 `6D18C7D2C59D6C30E1DF02D046779C1B163F1D368AA1D92D67CC6583BE59455D`;
+- `Luke_Mastalli_Kelly_Realistic_Conversation_Portfolio.md`, SHA-256 `065D0D040FAE330CB4D9A4DFD468DC34F3F271A549ED1F0B3563BD200ABE4FE7`.
+
+`GOAL.md` was intentionally untouched.
 
 ### Editor diagnostics
 
@@ -70,13 +79,13 @@ VS Code diagnostics were requested for:
 - `tests/test_validate_knowledge.py`;
 - `knowledge/topics/calibration-systems/examples/calibration_graph.py`.
 
-Result: **PASS** — no diagnostics reported.
+Result: **PASS** - no diagnostics reported.
 
 ### Privacy and credential scan
 
 The generated `knowledge/` tree was searched for the source email and phone fragments, Windows user-profile paths, API-key/password/secret assignments, and bearer-token patterns.
 
-Result: **PASS** — no matches. The tree names the existence of private source material but does not repeat its contact details or interview logistics.
+Result: **PASS** - no matches. The reusable tree and supplemental Luke artifacts do not repeat the candidate's contact details. The supplemental validator also checks Windows user-profile paths and common credential patterns.
 
 ### Git state and whitespace gate
 
@@ -85,7 +94,13 @@ git status --short --branch
 git diff --check
 ```
 
-Result: **BLOCKED** — both commands report that this path is not a Git repository. The validator’s text-quality checks pass, but they are recorded as a fallback and not as a Git result.
+Initial result: **BLOCKED** - both commands reported that the path was not a Git repository.
+
+Current result after repository initialization:
+
+- `git diff --check`: **PASS** - no output.
+- `git status --short`: only the four intended tracked edits, the two intended supplemental files, and unrelated untracked `NEXT.md` are present.
+- `NEXT.md` was not read, edited, staged, or included in this task.
 
 ## Example evidence
 
@@ -101,11 +116,14 @@ This verifies the synthetic graph traversal only. It does not validate hardware 
 ## Remaining uncertainty
 
 - The original six PDFs are absent, so visual conversion fidelity cannot be checked.
-- External primary sources cited inside the compendium were not fetched in this run.
+- Core public sources used by the Luke supplement were fetched on 2026-08-14: paper metadata, open preprints, the live role, product pages, the acquisition announcement, and public biography records.
+- The exact published 2024 author-contribution sentence could not be recovered independently; the portfolio marks it `TODO: verify` rather than repeating it as independently checked.
+- No stable institutional dissertation record was found for Luke; education details remain labeled corroborated public background.
+- LinkedIn was login-gated, and secondary profile aggregators may be stale or copy one another.
 - The physical cause of the reported long repeated-CZ degradation remains unresolved.
 - Time-sensitive company and hardware claims remain outside the pilot.
-- Unrelated-worktree isolation cannot be proven without Git metadata; the final file inventory contains only the two preserved inputs plus the intentional `knowledge/`, `tools/`, and `tests/` outputs.
+- Public papers establish team outputs and named contribution groups; they do not prove that every author owns every skill represented in a paper.
 
 ## Stop point
 
-Bulk expansion has not begun. The exact proposed next batch is documented in the [bounded expansion plan](expansion-plan.md) and requires review.
+Bulk technical expansion has not begun. The person-specific research and conversation supplement does not authorize the dual-rail knowledge-tree batch. The exact proposed next technical batch remains documented in the [bounded expansion plan](expansion-plan.md) and requires review.

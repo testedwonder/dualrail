@@ -242,6 +242,100 @@ class KnowledgeValidatorTests(unittest.TestCase):
 
         self.assertTrue(any("trailing whitespace" in error for error in self.errors()))
 
+    def supplemental_conversation(self, luke_label: str = "Luke (simulated)") -> str:
+        return textwrap.dedent(
+            f"""\
+            ---
+            title: Conversation
+            kind: simulated-conversation-set
+            status: draft
+            research_date: 2026-08-14
+            privacy: private interview preparation
+            simulation_notice: all Luke dialogue is invented
+            source_files:
+              - source.md
+            ---
+
+            # Conversation
+
+            Simulation notice
+
+            Personal evidence needed
+
+            What remains unknown
+
+            Private boundary
+
+            Claims to avoid
+
+            Sources and status
+
+            **{luke_label}:** Question?
+            """
+        )
+
+    def test_valid_supplemental_conversation_is_counted(self) -> None:
+        self.make_valid_tree()
+        self.write(
+            "base/Luke_Mastalli_Kelly_Realistic_Conversation_Portfolio.md",
+            self.supplemental_conversation(),
+        )
+
+        result = validate_repository(self.root, run_examples=False)
+
+        self.assertEqual([], result.errors)
+        self.assertEqual(1, result.checked_supplemental_files)
+
+    def test_luke_dialogue_must_be_marked_simulated(self) -> None:
+        self.make_valid_tree()
+        self.write(
+            "base/Luke_Mastalli_Kelly_Realistic_Conversation_Portfolio.md",
+            self.supplemental_conversation(luke_label="Luke"),
+        )
+
+        self.assertTrue(
+            any("Luke dialogue is not marked simulated" in error for error in self.errors())
+        )
+
+    def test_supplemental_local_link_must_resolve(self) -> None:
+        self.make_valid_tree()
+        conversation = self.supplemental_conversation() + "\n[Missing](missing.md)\n"
+        self.write(
+            "base/Luke_Mastalli_Kelly_Realistic_Conversation_Portfolio.md",
+            conversation,
+        )
+
+        self.assertTrue(
+            any("broken supplemental local link" in error for error in self.errors())
+        )
+
+    def test_public_portfolio_requires_evidence_markers(self) -> None:
+        self.make_valid_tree()
+        self.write(
+            "base/Luke_Mastalli_Kelly_Public_Evidence_Portfolio.md",
+            textwrap.dedent(
+                """\
+                ---
+                title: Portfolio
+                kind: research-portfolio
+                status: draft
+                research_date: 2026-08-14
+                privacy: public professional information only
+                subject: Luke Mastalli-Kelly
+                source_files:
+                  - source.md
+                external_research: public sources
+                ---
+
+                # Portfolio
+                """
+            ),
+        )
+
+        self.assertTrue(
+            any("missing supplemental evidence marker" in error for error in self.errors())
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

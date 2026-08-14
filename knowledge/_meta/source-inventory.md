@@ -3,14 +3,14 @@ title: Source Inventory
 kind: index
 status: draft
 prerequisites: []
-source_files: [base/DWave_Application_and_Study_Materials.md]
+source_files: [base/DWave_Application_and_Study_Materials.md, base/Luke_Mastalli_Kelly_Public_Evidence_Portfolio.md, base/Luke_Mastalli_Kelly_Realistic_Conversation_Portfolio.md]
 ---
 
 # Source inventory
 
 ## Scope
 
-The repository contains one physical source file: [D-Wave Application and Study Materials](../../base/DWave_Application_and_Study_Materials.md). It is a converted compendium of six PDFs and includes private application and interview-preparation material. The source is read-only for this project.
+The repository contains one preserved source compendium and two user-authorized supplemental source artifacts. [D-Wave Application and Study Materials](../../base/DWave_Application_and_Study_Materials.md) is a converted compendium of six PDFs and includes private application and interview-preparation material. It remains read-only. The two Luke Mastalli-Kelly files were generated in `base/` only because the user explicitly requested that location.
 
 The current knowledge-tree run maps one technical pilot. It does not imply that the full 66-page corpus has been converted.
 
@@ -19,6 +19,8 @@ The current knowledge-tree run maps one technical pilot. It does not imply that 
 | Source file | Corpus role | State | Current coverage |
 | --- | --- | --- | --- |
 | `base/DWave_Application_and_Study_Materials.md` | Compendium containing six converted source documents | partially mapped | Sections 3 and 4 support the calibration-systems pilot; the other sections remain inventoried for later review. |
+| `base/Luke_Mastalli_Kelly_Public_Evidence_Portfolio.md` | Dated research portfolio separating public evidence, secondary biography, inference, and unknowns | intentionally out of scope | Supports interview preparation and the simulated conversations; person-specific content is not a canonical technical topic. |
+| `base/Luke_Mastalli_Kelly_Realistic_Conversation_Portfolio.md` | Ten explicitly simulated interview branches grounded in the public evidence portfolio and candidate source material | intentionally out of scope | Rehearsal artifact only; simulated speech is not factual source material about Luke or D-Wave. |
 
 ## Embedded source units
 
@@ -45,11 +47,14 @@ The conversation study guide, source pages 8 and 10, summarizes calibration gove
 ## Preservation record
 
 - Initial SHA-256 for `base/DWave_Application_and_Study_Materials.md`: `AEA8E3200A8AA5C0BB9C963B223E6627AA60A4B8F038B951F28546C67EAD9BBA`.
-- Git state could not be recorded because the workspace is not inside a Git repository.
+- SHA-256 for `base/Luke_Mastalli_Kelly_Public_Evidence_Portfolio.md`: `6D18C7D2C59D6C30E1DF02D046779C1B163F1D368AA1D92D67CC6583BE59455D`.
+- SHA-256 for `base/Luke_Mastalli_Kelly_Realistic_Conversation_Portfolio.md`: `065D0D040FAE330CB4D9A4DFD468DC34F3F271A549ED1F0B3563BD200ABE4FE7`.
+- Git was unavailable during the first run but was initialized before the supplemental Luke research task. The pre-edit branch was `master` with no tracked changes; an unrelated untracked `NEXT.md` appeared during the task and was left untouched.
 - The generated tree must not repeat personal contact details or private interview logistics from the source.
 
 ## Open inventory questions
 
 - The six original PDFs named in the compendium metadata are not present in this workspace, so page-level visual fidelity cannot be checked here.
-- External links embedded in the compendium have not been independently fetched in this run.
+- Core paper, role, product, acquisition, scholarly-metadata, and public-biography links used by the supplemental Luke artifacts were fetched on 2026-08-14. The full set of links embedded in the original compendium has not been independently checked.
 - Time-sensitive 2025–2026 company and hardware claims remain unsuitable for `verified` pages until their primary sources are checked.
+- The exact 2024 author-contribution sentence and an institutional dissertation record remain unresolved in the supplemental portfolio and are marked `TODO: verify`.
